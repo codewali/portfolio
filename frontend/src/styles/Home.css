@@ -174,7 +174,7 @@
 
 .trinket-tooltip {
   position: absolute;
-  bottom: -60px;
+  bottom: -55px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.95);
@@ -189,6 +189,21 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   font-weight: 500;
   z-index: 1000;
+  max-width: 280px;
+  white-space: normal;
+  text-align: center;
+}
+
+/* Adjust tooltip position for top emojis to appear below */
+.trinket-item[style*="top:"] .trinket-tooltip {
+  bottom: auto;
+  top: calc(100% + 15px);
+}
+
+/* Adjust tooltip position for bottom emojis to appear above */
+.trinket-item[style*="bottom:"] .trinket-tooltip {
+  bottom: calc(100% + 15px);
+  top: auto;
 }
 
 .trinket-item:hover .trinket-tooltip {
@@ -648,64 +663,64 @@ a.contact-value:hover {
     text-align: center;
   }
 
-  /* Mobile: Keep same tight clustering - just scale down */
-  .trinket-item[style*="top: 8%"][style*="left: 30%"] {
-    top: 8% !important;
+  /* Mobile: Keep same tight clustering - adjusted positions */
+  .trinket-item[style*="top: 14%"][style*="left: 30%"] {
+    top: 14% !important;
     left: 20% !important;
   }
 
-  .trinket-item[style*="top: 6%"][style*="left: 43%"] {
-    top: 6% !important;
+  .trinket-item[style*="top: 12%"][style*="left: 43%"] {
+    top: 12% !important;
     left: 40% !important;
   }
 
-  .trinket-item[style*="top: 8%"][style*="right: 30%"] {
-    top: 8% !important;
+  .trinket-item[style*="top: 14%"][style*="right: 30%"] {
+    top: 14% !important;
     right: 20% !important;
   }
 
-  .trinket-item[style*="top: 18%"][style*="left: 34%"] {
-    top: 18% !important;
+  .trinket-item[style*="top: 24%"][style*="left: 34%"] {
+    top: 24% !important;
     left: 24% !important;
   }
 
-  .trinket-item[style*="top: 20%"][style*="left: 47%"] {
-    top: 20% !important;
+  .trinket-item[style*="top: 26%"][style*="left: 47%"] {
+    top: 26% !important;
     left: 42% !important;
   }
 
-  .trinket-item[style*="top: 18%"][style*="right: 34%"] {
-    top: 18% !important;
+  .trinket-item[style*="top: 24%"][style*="right: 34%"] {
+    top: 24% !important;
     right: 24% !important;
   }
 
-  .trinket-item[style*="bottom: 8%"][style*="left: 30%"] {
-    bottom: 8% !important;
+  .trinket-item[style*="bottom: 14%"][style*="left: 30%"] {
+    bottom: 14% !important;
     left: 20% !important;
   }
 
-  .trinket-item[style*="bottom: 6%"][style*="left: 43%"] {
-    bottom: 6% !important;
+  .trinket-item[style*="bottom: 12%"][style*="left: 43%"] {
+    bottom: 12% !important;
     left: 40% !important;
   }
 
-  .trinket-item[style*="bottom: 8%"][style*="right: 30%"] {
-    bottom: 8% !important;
+  .trinket-item[style*="bottom: 14%"][style*="right: 30%"] {
+    bottom: 14% !important;
     right: 20% !important;
   }
 
-  .trinket-item[style*="bottom: 18%"][style*="left: 34%"] {
-    bottom: 18% !important;
+  .trinket-item[style*="bottom: 24%"][style*="left: 34%"] {
+    bottom: 24% !important;
     left: 24% !important;
   }
 
-  .trinket-item[style*="bottom: 20%"][style*="left: 47%"] {
-    bottom: 20% !important;
+  .trinket-item[style*="bottom: 26%"][style*="left: 47%"] {
+    bottom: 26% !important;
     left: 42% !important;
   }
 
-  .trinket-item[style*="bottom: 18%"][style*="right: 34%"] {
-    bottom: 18% !important;
+  .trinket-item[style*="bottom: 24%"][style*="right: 34%"] {
+    bottom: 24% !important;
     right: 24% !important;
   }
 
