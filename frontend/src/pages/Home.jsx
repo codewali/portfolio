@@ -56,47 +56,102 @@ const Home = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section - Trinket Board */}
       <section className="hero-section">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <Sparkles className="badge-icon" size={16} />
-            <span>Available for freelance projects</span>
-          </div>
-          <h1 className="hero-title">
-            Hi, I'm <span className="accent-text">Paridhi Sinha</span>
-          </h1>
-          <h2 className="hero-subtitle">Senior Product Designer</h2>
-          <p className="hero-description">
-            Crafting aesthetic user-centered experiences and product strategy for B2B SaaS products in the Governance, Risk, and Compliance space.
-          </p>
-          <div className="hero-stats">
-            <div className="stat-item">
-              <div className="stat-number">6+</div>
-              <div className="stat-label">Years Experience</div>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <div className="stat-number">20+</div>
-              <div className="stat-label">Projects Delivered</div>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <div className="stat-number">B2B</div>
-              <div className="stat-label">SaaS Focus</div>
-            </div>
-          </div>
-          <Button 
-            onClick={() => scrollToSection('work')} 
-            className="hero-cta"
-          >
-            View My Work <ArrowRight size={18} />
-          </Button>
+        <div className="trinket-rope"></div>
+        
+        {/* Central Title */}
+        <div className="hero-central-title">
+          <h1 className="trinket-main-title">Paridhi Sinha</h1>
+          <p className="trinket-subtitle">Senior Product Designer</p>
         </div>
-        <div className="hero-decoration">
-          <div className="floating-shape shape-1"></div>
-          <div className="floating-shape shape-2"></div>
-          <div className="floating-shape shape-3"></div>
+
+        {/* Trinket Items */}
+        <div className="trinket-item trinket-sticky-note" style={{top: '15%', left: '8%', rotate: '-8deg'}}>
+          <div className="trinket-content">
+            <div className="sticky-note-text">GenAI Enthusiast</div>
+            <div className="trinket-tooltip">Introduced AI-powered UX workflows at Mitratech</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-polaroid" style={{top: '12%', right: '15%', rotate: '12deg'}}>
+          <div className="trinket-content">
+            <div className="polaroid-image">
+              <Star size={32} />
+            </div>
+            <div className="polaroid-caption">Bangalore</div>
+            <div className="trinket-tooltip">Based in Bengaluru, India</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-badge" style={{top: '45%', left: '12%', rotate: '5deg'}}>
+          <div className="trinket-content">
+            <div className="badge-content">
+              <div className="badge-text">6+</div>
+              <div className="badge-label">Years</div>
+            </div>
+            <div className="trinket-tooltip">6+ years in B2B SaaS design</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-sticker" style={{bottom: '25%', left: '18%', rotate: '-12deg'}}>
+          <div className="trinket-content">
+            <div className="sticker-text">Figma</div>
+            <div className="trinket-tooltip">Design tool of choice</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-flower" style={{top: '35%', right: '20%', rotate: '15deg'}}>
+          <div className="trinket-content">
+            <Sparkles size={40} />
+            <div className="trinket-tooltip">Crafting aesthetic experiences</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-ticket" style={{bottom: '30%', right: '12%', rotate: '-6deg'}}>
+          <div className="trinket-content">
+            <div className="ticket-header">MITRATECH</div>
+            <div className="ticket-body">Sr. Product Designer</div>
+            <div className="ticket-footer">2024 - Present</div>
+            <div className="trinket-tooltip">Current role at Mitratech</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-note" style={{top: '60%', left: '25%', rotate: '8deg'}}>
+          <div className="trinket-content">
+            <div className="note-text">UX Strategy</div>
+            <div className="trinket-tooltip">Leading cross-product UX initiatives</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-tag" style={{bottom: '18%', right: '25%', rotate: '-10deg'}}>
+          <div className="trinket-content">
+            <div className="tag-text">B2B SaaS</div>
+            <div className="trinket-tooltip">Specialized in enterprise products</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-photo" style={{top: '25%', left: '35%', rotate: '-5deg'}}>
+          <div className="trinket-content">
+            <div className="photo-frame">
+              <div className="photo-text">PES University</div>
+              <div className="photo-subtext">CS '19</div>
+            </div>
+            <div className="trinket-tooltip">Bachelor of Technology in Computer Science</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-coffee" style={{bottom: '35%', left: '45%', rotate: '12deg'}}>
+          <div className="trinket-content">
+            <div className="coffee-cup">☕</div>
+            <div className="trinket-tooltip">Fueled by coffee & creativity</div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="scroll-indicator">
+          <span>Scroll to explore</span>
+          <ArrowRight size={16} style={{rotate: '90deg'}} />
         </div>
       </section>
 

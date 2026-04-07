@@ -86,166 +86,401 @@
   width: 100%;
 }
 
-/* Hero Section */
+/* Hero Section - Trinket Board */
 .hero-section {
-  padding: 10rem 2rem 8rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  min-height: 100vh;
+  background: #0f0f10;
+  position: relative;
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Decorative rope */
+.trinket-rope {
+  position: absolute;
+  top: 80px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-pink), transparent);
+  opacity: 0.6;
+}
+
+.trinket-rope::before,
+.trinket-rope::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--accent-pink);
+  border-radius: 50%;
+  top: -8px;
+}
+
+.trinket-rope::before {
+  left: 0;
+}
+
+.trinket-rope::after {
+  right: 0;
+}
+
+/* Central Title */
+.hero-central-title {
+  text-align: center;
+  z-index: 10;
   position: relative;
 }
 
-.hero-content {
-  max-width: 700px;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--accent-pink-lighter);
-  color: var(--accent-pink);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
-
-.badge-icon {
-  color: var(--accent-pink);
-}
-
-.hero-title {
-  font-size: 4rem;
+.trinket-main-title {
+  font-size: 5rem;
   font-weight: 700;
-  line-height: 1.1;
+  color: white;
   margin-bottom: 0.5rem;
-  letter-spacing: -0.03em;
-}
-
-.accent-text {
-  color: var(--accent-pink);
-}
-
-.hero-subtitle {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text-gray);
-  margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(255, 0, 128, 0.3);
 }
 
-.hero-description {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--text-gray);
-  margin-bottom: 2.5rem;
-  max-width: 600px;
+.trinket-subtitle {
+  font-size: 1.5rem;
+  color: var(--accent-pink);
+  font-weight: 500;
+  margin: 0;
 }
 
-.hero-stats {
+/* Trinket Items */
+.trinket-item {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  z-index: 1;
+}
+
+.trinket-item:hover {
+  transform: scale(1.15) rotate(0deg) !important;
+  z-index: 100;
+}
+
+.trinket-content {
+  position: relative;
+}
+
+.trinket-tooltip {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.trinket-item:hover .trinket-tooltip {
+  opacity: 1;
+}
+
+/* Sticky Note */
+.trinket-sticky-note {
+  width: 140px;
+  height: 140px;
+}
+
+.trinket-sticky-note .trinket-content {
+  width: 100%;
+  height: 100%;
+  background: #FFE66D;
+  padding: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.stat-item {
+.sticky-note-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+/* Polaroid */
+.trinket-polaroid {
+  width: 160px;
+}
+
+.trinket-polaroid .trinket-content {
+  background: white;
+  padding: 0.75rem;
+  padding-bottom: 2.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.polaroid-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #FFE5F1, #FFF);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-pink);
+  margin-bottom: 0.5rem;
 }
 
-.stat-number {
+.polaroid-caption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Badge */
+.trinket-badge {
+  width: 100px;
+  height: 100px;
+}
+
+.trinket-badge .trinket-content {
+  width: 100%;
+  height: 100%;
+  background: var(--accent-pink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(255, 0, 128, 0.4);
+  border: 4px solid white;
+}
+
+.badge-content {
+  text-align: center;
+}
+
+.badge-text {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--accent-pink);
+  color: white;
   line-height: 1;
+}
+
+.badge-label {
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+/* Sticker */
+.trinket-sticker {
+  width: 120px;
+  height: 50px;
+}
+
+.trinket-sticker .trinket-content {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 3px solid var(--accent-pink);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.sticker-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-pink);
+}
+
+/* Flower */
+.trinket-flower {
+  width: 80px;
+  height: 80px;
+}
+
+.trinket-flower .trinket-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FFE5F1, #FFC0E5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-pink);
+  box-shadow: 0 6px 16px rgba(255, 0, 128, 0.3);
+}
+
+/* Ticket */
+.trinket-ticket {
+  width: 180px;
+}
+
+.trinket-ticket .trinket-content {
+  background: linear-gradient(135deg, #FFB6D9, #FF80BF);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+.ticket-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.1em;
   margin-bottom: 0.25rem;
 }
 
-.stat-label {
-  font-size: 0.875rem;
-  color: var(--text-light);
+.ticket-body {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.ticket-footer {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
 }
 
-.stat-divider {
-  width: 1px;
-  height: 40px;
-  background: var(--border-light);
+/* Note */
+.trinket-note {
+  width: 130px;
+  height: 60px;
 }
 
-.hero-cta {
-  background: var(--accent-pink);
-  color: white;
-  padding: 0.875rem 1.75rem;
-  font-size: 1rem;
+.trinket-note .trinket-content {
+  width: 100%;
+  height: 100%;
+  background: #B4E4FF;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 4px solid #0096FF;
+}
+
+.note-text {
+  font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 8px;
-  display: inline-flex;
+  color: #003D7A;
+  text-align: center;
+}
+
+/* Tag */
+.trinket-tag {
+  width: 110px;
+  height: 70px;
+}
+
+.trinket-tag .trinket-content {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.tag-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+/* Photo Frame */
+.trinket-photo {
+  width: 140px;
+}
+
+.trinket-photo .trinket-content {
+  background: white;
+  padding: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ddd;
+}
+
+.photo-frame {
+  background: linear-gradient(135deg, #E5E5E5, #F5F5F5);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.photo-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.photo-subtext {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Coffee Cup */
+.trinket-coffee {
+  width: 90px;
+  height: 90px;
+}
+
+.trinket-coffee .trinket-content {
+  width: 100%;
+  height: 100%;
+  background: #F5F5DC;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  border: 3px solid #D2B48C;
+}
+
+.coffee-cup {
+  font-size: 2.5rem;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: none;
-  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  animation: bounce 2s infinite;
 }
 
-.hero-cta:hover {
-  background: var(--accent-pink-light);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 0, 128, 0.3);
-}
-
-.hero-decoration {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 400px;
-  height: 400px;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.floating-shape {
-  position: absolute;
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
-}
-
-.shape-1 {
-  width: 100px;
-  height: 100px;
-  background: var(--accent-pink-lighter);
-  top: 100px;
-  right: 100px;
-  animation-delay: 0s;
-}
-
-.shape-2 {
-  width: 60px;
-  height: 60px;
-  background: var(--accent-pink-lighter);
-  top: 250px;
-  right: 50px;
-  animation-delay: 1s;
-}
-
-.shape-3 {
-  width: 40px;
-  height: 40px;
-  background: var(--accent-pink-lighter);
-  top: 180px;
-  right: 250px;
-  animation-delay: 2s;
-}
-
-@keyframes float {
+@keyframes bounce {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateX(-50%) translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateX(-50%) translateY(10px);
   }
 }
 
@@ -592,12 +827,12 @@ a.contact-value:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero-title {
+  .trinket-main-title {
     font-size: 2.5rem;
   }
 
-  .hero-subtitle {
-    font-size: 1.5rem;
+  .trinket-subtitle {
+    font-size: 1.125rem;
   }
 
   .section-title {
@@ -617,16 +852,57 @@ a.contact-value:hover {
     padding: 8rem 1.5rem 6rem;
   }
 
-  .hero-decoration {
-    width: 200px;
-    height: 200px;
+  /* Adjust trinket positions for mobile */
+  .trinket-item {
+    transform: scale(0.85) !important;
   }
 
-  .shape-1,
-  .shape-2,
-  .shape-3 {
-    width: 50px;
-    height: 50px;
+  .trinket-sticky-note {
+    top: 10% !important;
+    left: 5% !important;
+  }
+
+  .trinket-polaroid {
+    top: 10% !important;
+    right: 5% !important;
+  }
+
+  .trinket-badge {
+    top: 40% !important;
+    left: 8% !important;
+  }
+
+  .trinket-sticker {
+    bottom: 25% !important;
+    left: 10% !important;
+  }
+
+  .trinket-flower {
+    top: 30% !important;
+    right: 10% !important;
+  }
+
+  .trinket-ticket {
+    bottom: 25% !important;
+    right: 8% !important;
+  }
+
+  .trinket-note {
+    top: 55% !important;
+    left: 15% !important;
+  }
+
+  .trinket-tag {
+    bottom: 15% !important;
+    right: 15% !important;
+  }
+
+  .trinket-photo {
+    display: none; /* Hide on mobile for less clutter */
+  }
+
+  .trinket-coffee {
+    display: none; /* Hide on mobile for less clutter */
   }
 
   .footer-content {
