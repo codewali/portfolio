@@ -35,7 +35,7 @@ const Home = () => {
             <button onClick={() => scrollToSection('work')} className="nav-link">Work</button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
             <a 
-              href="https://drive.google.com/drive/folders/1dQu3E7I66IZP_WQADL7QoivpD8nT4sW6?usp=sharing" 
+              href="https://drive.google.com/file/d/1zkgGzeLt7KLRzlb-T73jcdxnjpkaRUQJ/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="resume-download-btn"
