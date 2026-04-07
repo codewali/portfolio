@@ -66,89 +66,87 @@ const Home = () => {
           <p className="trinket-subtitle">Senior Product Designer</p>
         </div>
 
-        {/* Trinket Items - Bigger and evenly scattered */}
-        {/* Top row */}
-        <div className="trinket-item trinket-emoji" style={{top: '18%', left: '20%', rotate: '-12deg'}}>
+        {/* Trinket Items - MASSIVE and clustered at center */}
+        {/* Top cluster - above name */}
+        <div className="trinket-item trinket-emoji" style={{top: '12%', left: '32%', rotate: '-15deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">🤖</div>
             <div className="trinket-tooltip">GenAI Enthusiast - Introduced AI-powered UX workflows</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-emoji" style={{top: '15%', left: '42%', rotate: '8deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '10%', left: '44%', rotate: '8deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">🎓</div>
             <div className="trinket-tooltip">PES University - B.Tech Computer Science '19</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-emoji" style={{top: '18%', right: '20%', rotate: '-15deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '12%', right: '32%', rotate: '-12deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">📍</div>
             <div className="trinket-tooltip">Based in Bengaluru, India</div>
           </div>
         </div>
 
-        {/* Middle left */}
-        <div className="trinket-item trinket-emoji" style={{top: '38%', left: '18%', rotate: '10deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '22%', left: '36%', rotate: '12deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">🎯</div>
             <div className="trinket-tooltip">6+ years in B2B SaaS design</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-emoji" style={{top: '42%', left: '35%', rotate: '-8deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '24%', left: '48%', rotate: '-8deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">🎨</div>
             <div className="trinket-tooltip">Design tool of choice: Figma</div>
           </div>
         </div>
 
-        {/* Middle right */}
-        <div className="trinket-item trinket-emoji" style={{top: '40%', right: '35%', rotate: '12deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '22%', right: '36%', rotate: '10deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">✨</div>
             <div className="trinket-tooltip">Crafting aesthetic user experiences</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-emoji" style={{top: '38%', right: '18%', rotate: '-6deg'}}>
+        {/* Bottom cluster - below name */}
+        <div className="trinket-item trinket-emoji" style={{bottom: '18%', left: '32%', rotate: '14deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">💼</div>
             <div className="trinket-tooltip">Currently at Mitratech as Sr. Product Designer</div>
           </div>
         </div>
 
-        {/* Bottom row */}
-        <div className="trinket-item trinket-emoji" style={{bottom: '22%', left: '22%', rotate: '14deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '16%', left: '44%', rotate: '-11deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">🧭</div>
             <div className="trinket-tooltip">Leading cross-product UX strategy</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-emoji" style={{bottom: '20%', left: '40%', rotate: '-10deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '18%', right: '32%', rotate: '9deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">🌸</div>
             <div className="trinket-tooltip">Passionate about beautiful design</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-emoji" style={{bottom: '20%', right: '40%', rotate: '7deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '28%', left: '36%', rotate: '-13deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">☕</div>
             <div className="trinket-tooltip">Fueled by coffee & creativity</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-emoji" style={{bottom: '22%', right: '22%', rotate: '-9deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '26%', left: '48%', rotate: '7deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">📊</div>
             <div className="trinket-tooltip">Data-driven design decisions</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-emoji" style={{bottom: '25%', right: '10%', rotate: '11deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '28%', right: '36%', rotate: '-10deg'}}>
           <div className="trinket-content">
             <div className="emoji-display">🏢</div>
             <div className="trinket-tooltip">Specialized in B2B SaaS enterprise products</div>
@@ -170,9 +168,11 @@ const Home = () => {
         </div>
         <div className="about-content">
           <div className="about-image">
-            <div className="image-placeholder">
-              <Star className="placeholder-icon" size={48} />
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/pa8y1lfc_pp.jpg" 
+              alt="Paridhi Sinha"
+              className="profile-image"
+            />
           </div>
           <div className="about-text">
             <p className="about-paragraph">
