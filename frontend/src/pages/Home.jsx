@@ -66,85 +66,88 @@ const Home = () => {
           <p className="trinket-subtitle">Senior Product Designer</p>
         </div>
 
-        {/* Trinket Items */}
-        <div className="trinket-item trinket-sticky-note" style={{top: '15%', left: '8%', rotate: '-8deg'}}>
+        {/* Trinket Items - Clustered closer together */}
+        <div className="trinket-item trinket-emoji" style={{top: '20%', left: '25%', rotate: '-8deg'}}>
           <div className="trinket-content">
-            <div className="sticky-note-text">GenAI Enthusiast</div>
-            <div className="trinket-tooltip">Introduced AI-powered UX workflows at Mitratech</div>
+            <div className="emoji-display">🤖</div>
+            <div className="trinket-tooltip">GenAI Enthusiast - Introduced AI-powered UX workflows</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-polaroid" style={{top: '12%', right: '15%', rotate: '12deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '15%', right: '28%', rotate: '12deg'}}>
           <div className="trinket-content">
-            <div className="polaroid-image">
-              <Star size={32} />
-            </div>
-            <div className="polaroid-caption">Bangalore</div>
+            <div className="emoji-display">📍</div>
             <div className="trinket-tooltip">Based in Bengaluru, India</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-badge" style={{top: '45%', left: '12%', rotate: '5deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '40%', left: '22%', rotate: '5deg'}}>
           <div className="trinket-content">
-            <div className="badge-content">
-              <div className="badge-text">6+</div>
-              <div className="badge-label">Years</div>
-            </div>
+            <div className="emoji-display">🎯</div>
             <div className="trinket-tooltip">6+ years in B2B SaaS design</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-sticker" style={{bottom: '25%', left: '18%', rotate: '-12deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '28%', left: '28%', rotate: '-12deg'}}>
           <div className="trinket-content">
-            <div className="sticker-text">Figma</div>
-            <div className="trinket-tooltip">Design tool of choice</div>
+            <div className="emoji-display">🎨</div>
+            <div className="trinket-tooltip">Design tool of choice: Figma</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-flower" style={{top: '35%', right: '20%', rotate: '15deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '32%', right: '24%', rotate: '15deg'}}>
           <div className="trinket-content">
-            <Sparkles size={40} />
-            <div className="trinket-tooltip">Crafting aesthetic experiences</div>
+            <div className="emoji-display">✨</div>
+            <div className="trinket-tooltip">Crafting aesthetic user experiences</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-ticket" style={{bottom: '30%', right: '12%', rotate: '-6deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '25%', right: '26%', rotate: '-6deg'}}>
           <div className="trinket-content">
-            <div className="ticket-header">MITRATECH</div>
-            <div className="ticket-body">Sr. Product Designer</div>
-            <div className="ticket-footer">2024 - Present</div>
-            <div className="trinket-tooltip">Current role at Mitratech</div>
+            <div className="emoji-display">💼</div>
+            <div className="trinket-tooltip">Currently at Mitratech as Sr. Product Designer</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-note" style={{top: '60%', left: '25%', rotate: '8deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '55%', left: '30%', rotate: '8deg'}}>
           <div className="trinket-content">
-            <div className="note-text">UX Strategy</div>
-            <div className="trinket-tooltip">Leading cross-product UX initiatives</div>
+            <div className="emoji-display">🧭</div>
+            <div className="trinket-tooltip">Leading cross-product UX strategy</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-tag" style={{bottom: '18%', right: '25%', rotate: '-10deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '20%', right: '32%', rotate: '-10deg'}}>
           <div className="trinket-content">
-            <div className="tag-text">B2B SaaS</div>
-            <div className="trinket-tooltip">Specialized in enterprise products</div>
+            <div className="emoji-display">🏢</div>
+            <div className="trinket-tooltip">Specialized in B2B SaaS enterprise products</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-photo" style={{top: '25%', left: '35%', rotate: '-5deg'}}>
+        <div className="trinket-item trinket-emoji" style={{top: '25%', left: '38%', rotate: '-5deg'}}>
           <div className="trinket-content">
-            <div className="photo-frame">
-              <div className="photo-text">PES University</div>
-              <div className="photo-subtext">CS '19</div>
-            </div>
-            <div className="trinket-tooltip">Bachelor of Technology in Computer Science</div>
+            <div className="emoji-display">🎓</div>
+            <div className="trinket-tooltip">PES University - B.Tech Computer Science '19</div>
           </div>
         </div>
 
-        <div className="trinket-item trinket-coffee" style={{bottom: '35%', left: '45%', rotate: '12deg'}}>
+        <div className="trinket-item trinket-emoji" style={{bottom: '35%', right: '38%', rotate: '12deg'}}>
           <div className="trinket-content">
-            <div className="coffee-cup">☕</div>
+            <div className="emoji-display">☕</div>
             <div className="trinket-tooltip">Fueled by coffee & creativity</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-emoji" style={{top: '48%', left: '35%', rotate: '-7deg'}}>
+          <div className="trinket-content">
+            <div className="emoji-display">🌸</div>
+            <div className="trinket-tooltip">Passionate about beautiful design</div>
+          </div>
+        </div>
+
+        <div className="trinket-item trinket-emoji" style={{top: '50%', right: '35%', rotate: '9deg'}}>
+          <div className="trinket-content">
+            <div className="emoji-display">📊</div>
+            <div className="trinket-tooltip">Data-driven design decisions</div>
           </div>
         </div>
 
