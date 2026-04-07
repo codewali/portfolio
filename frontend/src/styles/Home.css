@@ -56,6 +56,7 @@
 .nav {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav-link {
@@ -87,6 +88,25 @@
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.resume-download-btn {
+  background: var(--accent-pink);
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.resume-download-btn:hover {
+  background: var(--accent-pink-light);
+  transform: translateY(-2px);
 }
 
 /* Hero Section - Trinket Board */
@@ -314,7 +334,7 @@
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 50%;
   border: 3px solid var(--accent-pink);
   box-shadow: 0 12px 40px rgba(255, 0, 128, 0.3);
 }
@@ -374,8 +394,10 @@
 /* Case Studies */
 .case-studies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .case-study-card {
@@ -394,7 +416,7 @@
 
 .card-image-placeholder {
   width: 100%;
-  height: 240px;
+  height: 400px;
   background: linear-gradient(135deg, rgba(255, 0, 128, 0.15) 0%, rgba(255, 0, 128, 0.05) 100%);
   display: flex;
   align-items: center;
@@ -497,13 +519,18 @@
   gap: 0.5rem;
   color: var(--accent-pink);
   font-weight: 600;
-  padding: 0;
-  transition: gap 0.2s ease;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 0, 128, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--accent-pink);
 }
 
 .card-cta:hover {
   gap: 0.75rem;
-  background: transparent;
+  background: var(--accent-pink);
+  color: white;
+  transform: translateX(4px);
 }
 
 /* Contact Section */

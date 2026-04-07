@@ -14,24 +14,6 @@ const Home = () => {
       description: 'Introduced GenAI-powered workflows for policy generation, summarization, and version comparison to improve efficiency and reduce user effort in compliance management.',
       tags: ['GenAI', 'UX Design', 'Efficiency'],
       impact: '40% reduction in policy creation time'
-    },
-    {
-      id: 2,
-      title: 'Cross-Product UX Strategy',
-      company: 'Mitratech',
-      year: '2025-Present',
-      description: 'Leading cross-product UX strategy across enterprise risk and compliance platforms, shaping direction for interconnected products and driving platform-wide consistency.',
-      tags: ['Strategy', 'Enterprise UX', 'Leadership'],
-      impact: 'Unified experience across 5+ products'
-    },
-    {
-      id: 3,
-      title: 'Regulated Workflows Design',
-      company: 'Mitratech',
-      year: '2024-2025',
-      description: 'Designed complex regulated workflows balancing usability, scalability, and compliance constraints for enterprise customers in highly regulated industries.',
-      tags: ['Compliance', 'Enterprise', 'Scalability'],
-      impact: 'Improved user satisfaction by 35%'
     }
   ];
 
@@ -52,6 +34,13 @@ const Home = () => {
             <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
             <button onClick={() => scrollToSection('work')} className="nav-link">Work</button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
+            <a 
+              href="https://customer-assets.emergentagent.com/job_6863b872-bace-4a4f-a9bf-433ce3354bf5/artifacts/m9629mi2_Paridhi%20Sinha%20Resume%20%282%29.pdf" 
+              download="Paridhi_Sinha_Resume.pdf"
+              className="resume-download-btn"
+            >
+              Download Resume
+            </a>
           </nav>
         </div>
       </header>
