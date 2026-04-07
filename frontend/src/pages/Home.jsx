@@ -36,7 +36,8 @@ const Home = () => {
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
             <a 
               href="https://customer-assets.emergentagent.com/job_6863b872-bace-4a4f-a9bf-433ce3354bf5/artifacts/m9629mi2_Paridhi%20Sinha%20Resume%20%282%29.pdf" 
-              download="Paridhi_Sinha_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="resume-download-btn"
             >
               Download Resume
