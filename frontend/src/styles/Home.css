@@ -143,7 +143,7 @@
   font-size: 5rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   letter-spacing: -0.02em;
   text-shadow: 0 4px 20px rgba(255, 0, 128, 0.3);
 }
@@ -663,64 +663,64 @@ a.contact-value:hover {
     text-align: center;
   }
 
-  /* Mobile: Keep same tight clustering - adjusted positions */
-  .trinket-item[style*="top: 14%"][style*="left: 30%"] {
-    top: 14% !important;
+  /* Mobile: Keep same positioning */
+  .trinket-item[style*="top: 10%"][style*="left: 30%"] {
+    top: 10% !important;
     left: 20% !important;
   }
 
-  .trinket-item[style*="top: 12%"][style*="left: 43%"] {
-    top: 12% !important;
+  .trinket-item[style*="top: 8%"][style*="left: 43%"] {
+    top: 8% !important;
     left: 40% !important;
   }
 
-  .trinket-item[style*="top: 14%"][style*="right: 30%"] {
-    top: 14% !important;
+  .trinket-item[style*="top: 10%"][style*="right: 30%"] {
+    top: 10% !important;
     right: 20% !important;
   }
 
-  .trinket-item[style*="top: 24%"][style*="left: 34%"] {
-    top: 24% !important;
+  .trinket-item[style*="top: 20%"][style*="left: 34%"] {
+    top: 20% !important;
     left: 24% !important;
   }
 
-  .trinket-item[style*="top: 26%"][style*="left: 47%"] {
-    top: 26% !important;
+  .trinket-item[style*="top: 22%"][style*="left: 47%"] {
+    top: 22% !important;
     left: 42% !important;
   }
 
-  .trinket-item[style*="top: 24%"][style*="right: 34%"] {
-    top: 24% !important;
+  .trinket-item[style*="top: 20%"][style*="right: 34%"] {
+    top: 20% !important;
     right: 24% !important;
   }
 
-  .trinket-item[style*="bottom: 14%"][style*="left: 30%"] {
-    bottom: 14% !important;
+  .trinket-item[style*="bottom: 10%"][style*="left: 30%"] {
+    bottom: 10% !important;
     left: 20% !important;
   }
 
-  .trinket-item[style*="bottom: 12%"][style*="left: 43%"] {
-    bottom: 12% !important;
+  .trinket-item[style*="bottom: 8%"][style*="left: 43%"] {
+    bottom: 8% !important;
     left: 40% !important;
   }
 
-  .trinket-item[style*="bottom: 14%"][style*="right: 30%"] {
-    bottom: 14% !important;
+  .trinket-item[style*="bottom: 10%"][style*="right: 30%"] {
+    bottom: 10% !important;
     right: 20% !important;
   }
 
-  .trinket-item[style*="bottom: 24%"][style*="left: 34%"] {
-    bottom: 24% !important;
+  .trinket-item[style*="bottom: 20%"][style*="left: 34%"] {
+    bottom: 20% !important;
     left: 24% !important;
   }
 
-  .trinket-item[style*="bottom: 26%"][style*="left: 47%"] {
-    bottom: 26% !important;
+  .trinket-item[style*="bottom: 22%"][style*="left: 47%"] {
+    bottom: 22% !important;
     left: 42% !important;
   }
 
-  .trinket-item[style*="bottom: 24%"][style*="right: 34%"] {
-    bottom: 24% !important;
+  .trinket-item[style*="bottom: 20%"][style*="right: 34%"] {
+    bottom: 20% !important;
     right: 24% !important;
   }
 
