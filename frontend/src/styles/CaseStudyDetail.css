@@ -186,7 +186,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Grid Sizes */
+/* Grid Sizes - More uniform, less white space */
 .bento-card.large {
   grid-column: span 8;
 }
@@ -201,6 +201,18 @@
 }
 
 .bento-card.xlarge {
+  grid-column: span 12;
+}
+
+/* Specific adjustments for uniform heights */
+/* The Idea and Problem Framing match Design System height */
+.bento-card.medium:nth-child(2),
+.bento-card.medium:nth-child(3) {
+  grid-row: span 2;
+}
+
+/* Future Scope full width */
+.bento-card:has(.future-columns) {
   grid-column: span 12;
 }
 

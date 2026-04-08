@@ -132,8 +132,8 @@ const CaseStudyDetail = () => {
               </ul>
             </div>
 
-            {/* Future Scope */}
-            <div className="bento-card large">
+            {/* Future Scope - Full Width */}
+            <div className="bento-card xlarge">
               <h2>Future Scope</h2>
               <div className="future-columns">
                 <div>

@@ -396,8 +396,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 .case-study-card {
@@ -552,7 +551,6 @@
   line-height: 1.7;
   color: var(--text-gray-on-dark);
   margin-bottom: 3rem;
-  text-align: center;
 }
 
 .contact-info-grid {
