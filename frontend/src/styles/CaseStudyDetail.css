@@ -176,7 +176,8 @@
 
 .bento-card ul {
   margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 0;
+  list-style: none;
 }
 
 .bento-card li {
@@ -184,6 +185,16 @@
   line-height: 1.6;
   color: #B0B0B0;
   margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.bento-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #FF0080;
+  font-weight: 600;
 }
 
 /* Grid Sizes - More uniform, less white space */
@@ -293,6 +304,54 @@
 .final-answer strong {
   color: white;
   font-size: 1.25rem;
+}
+
+/* Decorative Hand-Drawn Elements */
+.bento-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card::after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 0, 128, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bento-card.tall::after {
+  width: 80px;
+  height: 80px;
+  top: auto;
+  bottom: 2rem;
+}
+
+.bento-card.medium::after {
+  width: 50px;
+  height: 50px;
+}
+
+.bento-card.highlight-card::after {
+  border-color: rgba(255, 0, 128, 0.2);
+  width: 70px;
+  height: 70px;
+}
+
+/* Additional decorative line */
+.bento-card.large::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 128, 0.15));
+  pointer-events: none;
 }
 
 /* Responsive */

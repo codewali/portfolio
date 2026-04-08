@@ -31,19 +31,6 @@ const CaseStudyDetail = () => {
         />
       </section>
 
-      {/* Prototype Link */}
-      <section className="prototype-link-section">
-        <a 
-          href="#" 
-          className="prototype-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ExternalLink size={20} />
-          View Prototype
-        </a>
-      </section>
-
       {/* Content */}
       <section className="detail-content">
         <div className="content-container">
