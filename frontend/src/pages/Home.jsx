@@ -16,7 +16,19 @@ const Home = () => {
       description: 'A sketch-based exploration of virtual fashion fitting. Instead of focusing on realism or AI accuracy, this project explores how hand-drawn fashion sketches could be translated into an interactive, minimal digital experience.',
       tags: ['Fashion Tech', 'UX Design', 'Prototyping'],
       impact: 'Proof of concept for sketch-driven apparel interaction',
-      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png'
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
+      slug: 'virtual-fitting-room'
+    },
+    {
+      id: 2,
+      title: 'BC/DR Executive Dashboard',
+      company: 'Mitratech',
+      year: '2024-2025',
+      description: 'An enterprise analytics interface helping business continuity leaders monitor and act on technology and vendor recovery readiness. Transformed passive reporting into an active decision system.',
+      tags: ['Enterprise UX', 'Data Visualization', 'B2B SaaS'],
+      impact: '24+ hours/month saved, real-time insights vs 2-3 day reporting',
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/y191dcei_Screen%20Recording%202026-04-08%20at%206.13.33%E2%80%AFAM.mov',
+      slug: 'bcdr-executive-dashboard'
     }
   ];
 
@@ -199,11 +211,20 @@ const Home = () => {
           {caseStudies.map((study) => (
             <Card key={study.id} className="case-study-card">
               {study.image ? (
-                <img 
-                  src={study.image} 
-                  alt={study.title}
-                  className="card-image"
-                />
+                study.image.endsWith('.mov') || study.image.endsWith('.mp4') ? (
+                  <video 
+                    src={study.image} 
+                    className="card-image"
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="card-image"
+                  />
+                )
               ) : (
                 <div className="card-image-placeholder">
                   <div className="placeholder-content">
@@ -231,7 +252,7 @@ const Home = () => {
                 <Button 
                   variant="ghost" 
                   className="card-cta"
-                  onClick={() => navigate('/case-study/virtual-fitting-room')}
+                  onClick={() => navigate(`/case-study/${study.slug}`)}
                 >
                   View Case Study <ArrowRight size={16} />
                 </Button>

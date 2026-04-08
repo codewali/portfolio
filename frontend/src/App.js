@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import Home from "./pages/Home";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
+import BCDRCaseStudy from "./pages/BCDRCaseStudy";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/case-study/virtual-fitting-room" element={<CaseStudyDetail />} />
+          <Route path="/case-study/bcdr-executive-dashboard" element={<BCDRCaseStudy />} />
         </Routes>
       </BrowserRouter>
     </div>
