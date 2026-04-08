@@ -55,7 +55,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="resume-download-btn"
             >
-              Download Resume
+              View Resume
             </a>
           </nav>
         </div>
