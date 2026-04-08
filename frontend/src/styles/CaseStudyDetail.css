@@ -57,6 +57,14 @@
   object-fit: contain;
 }
 
+.hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
 /* Prototype Link */
 .prototype-link-section {
   padding: 2rem;

@@ -19,12 +19,15 @@ const CaseStudyDetail = () => {
         </div>
       </header>
 
-      {/* Hero Image */}
+      {/* Hero Video */}
       <section className="detail-hero">
-        <img 
-          src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png"
-          alt="Virtual Fitting Room"
-          className="hero-image"
+        <video 
+          src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/913ls062_Screen%20Recording%202026-04-08%20at%205.53.38%E2%80%AFAM.mov"
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
       </section>
 
