@@ -1,10 +1,12 @@
 import React from 'react';
 import { Mail, Linkedin, Phone, MapPin, ArrowRight, Sparkles, Star } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import '../styles/Home.css';
 
 const Home = () => {
+  const navigate = useNavigate();
   const caseStudies = [
     {
       id: 1,
@@ -226,7 +228,11 @@ const Home = () => {
                   <div className="impact-label">Impact</div>
                   <div className="impact-value">{study.impact}</div>
                 </div>
-                <Button variant="ghost" className="card-cta">
+                <Button 
+                  variant="ghost" 
+                  className="card-cta"
+                  onClick={() => navigate('/case-study/virtual-fitting-room')}
+                >
                   View Case Study <ArrowRight size={16} />
                 </Button>
               </CardContent>
