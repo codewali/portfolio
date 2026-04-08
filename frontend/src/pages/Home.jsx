@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Phone, MapPin, ArrowRight, Sparkles, Star } from 'lucide-react';
+import { Mail, Linkedin, MapPin, ArrowRight, Sparkles, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -281,15 +281,6 @@ const Home = () => {
                 <div className="contact-details">
                   <div className="contact-label">Email</div>
                   <a href="mailto:pari.sin17@gmail.com" className="contact-value">pari.sin17@gmail.com</a>
-                </div>
-              </div>
-              <div className="contact-info-item">
-                <div className="contact-icon">
-                  <Phone size={24} />
-                </div>
-                <div className="contact-details">
-                  <div className="contact-label">Phone</div>
-                  <a href="tel:+918884912388" className="contact-value">+91 888 491 2388</a>
                 </div>
               </div>
               <div className="contact-info-item">
