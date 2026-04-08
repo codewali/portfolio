@@ -8,12 +8,13 @@ const Home = () => {
   const caseStudies = [
     {
       id: 1,
-      title: 'GenAI-Powered UX Workflows',
-      company: 'Mitratech',
-      year: '2024-2025',
-      description: 'Introduced GenAI-powered workflows for policy generation, summarization, and version comparison to improve efficiency and reduce user effort in compliance management.',
-      tags: ['GenAI', 'UX Design', 'Efficiency'],
-      impact: '40% reduction in policy creation time'
+      title: 'Virtual Fitting Room',
+      company: 'Personal Project',
+      year: '2025',
+      description: 'A sketch-based exploration of virtual fashion fitting. Instead of focusing on realism or AI accuracy, this project explores how hand-drawn fashion sketches could be translated into an interactive, minimal digital experience.',
+      tags: ['Fashion Tech', 'UX Design', 'Prototyping'],
+      impact: 'Proof of concept for sketch-driven apparel interaction',
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png'
     }
   ];
 
@@ -195,12 +196,20 @@ const Home = () => {
         <div className="case-studies-grid">
           {caseStudies.map((study) => (
             <Card key={study.id} className="case-study-card">
-              <div className="card-image-placeholder">
-                <div className="placeholder-content">
-                  <Sparkles size={32} />
-                  <span className="placeholder-text">Project Visual</span>
+              {study.image ? (
+                <img 
+                  src={study.image} 
+                  alt={study.title}
+                  className="card-image"
+                />
+              ) : (
+                <div className="card-image-placeholder">
+                  <div className="placeholder-content">
+                    <Sparkles size={32} />
+                    <span className="placeholder-text">Project Visual</span>
+                  </div>
                 </div>
-              </div>
+              )}
               <CardContent className="card-content">
                 <div className="card-meta">
                   <span className="card-company">{study.company}</span>

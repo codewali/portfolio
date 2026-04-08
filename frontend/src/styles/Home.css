@@ -424,6 +424,13 @@
   border-bottom: 1px solid var(--border-light);
 }
 
+.card-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-light);
+}
+
 .placeholder-content {
   display: flex;
   flex-direction: column;
