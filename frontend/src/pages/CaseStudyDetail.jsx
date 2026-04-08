@@ -7,6 +7,10 @@ import '../styles/CaseStudyDetail.css';
 const CaseStudyDetail = () => {
   const navigate = useNavigate();
 
+  const handleBackToPortfolio = () => {
+    navigate('/', { state: { scrollTo: 'work' } });
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,7 +20,7 @@ const CaseStudyDetail = () => {
       {/* Header */}
       <header className="detail-header">
         <div className="detail-header-content">
-          <button onClick={() => navigate('/')} className="back-button">
+          <button onClick={handleBackToPortfolio} className="back-button">
             <ArrowLeft size={20} />
             <span>Back to Portfolio</span>
           </button>
@@ -171,7 +175,7 @@ const CaseStudyDetail = () => {
 
       {/* Footer */}
       <footer className="detail-footer">
-        <button onClick={() => navigate('/')} className="back-to-portfolio">
+        <button onClick={handleBackToPortfolio} className="back-to-portfolio">
           <ArrowLeft size={18} />
           Back to Portfolio
         </button>
