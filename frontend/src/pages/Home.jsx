@@ -247,46 +247,70 @@ const Home = () => {
           <div className="section-label">Get In Touch</div>
           <h2 className="section-title">Let's work together</h2>
         </div>
-        <div className="contact-content">
-          <p className="contact-intro">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-          </p>
-          <div className="contact-info-grid">
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <Mail size={24} />
+        <div className="contact-layout">
+          <div className="contact-left">
+            <p className="contact-intro">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+            <div className="contact-info-grid">
+              <div className="contact-info-item">
+                <div className="contact-icon">
+                  <Mail size={24} />
+                </div>
+                <div className="contact-details">
+                  <div className="contact-label">Email</div>
+                  <a href="mailto:pari.sin17@gmail.com" className="contact-value">pari.sin17@gmail.com</a>
+                </div>
               </div>
-              <div className="contact-details">
-                <div className="contact-label">Email</div>
-                <a href="mailto:pari.sin17@gmail.com" className="contact-value">pari.sin17@gmail.com</a>
+              <div className="contact-info-item">
+                <div className="contact-icon">
+                  <Phone size={24} />
+                </div>
+                <div className="contact-details">
+                  <div className="contact-label">Phone</div>
+                  <a href="tel:+918884912388" className="contact-value">+91 888 491 2388</a>
+                </div>
+              </div>
+              <div className="contact-info-item">
+                <div className="contact-icon">
+                  <Linkedin size={24} />
+                </div>
+                <div className="contact-details">
+                  <div className="contact-label">LinkedIn</div>
+                  <a href="https://linkedin.com/in/paridhisinha" target="_blank" rel="noopener noreferrer" className="contact-value">linkedin.com/in/paridhisinha</a>
+                </div>
+              </div>
+              <div className="contact-info-item">
+                <div className="contact-icon">
+                  <MapPin size={24} />
+                </div>
+                <div className="contact-details">
+                  <div className="contact-label">Location</div>
+                  <div className="contact-value">Bengaluru, Karnataka, India</div>
+                </div>
               </div>
             </div>
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <Phone size={24} />
+          </div>
+          
+          <div className="contact-right">
+            <div className="illustration-container">
+              <div className="sparkle sparkle-1">
+                <Sparkles size={40} />
               </div>
-              <div className="contact-details">
-                <div className="contact-label">Phone</div>
-                <a href="tel:+918884912388" className="contact-value">+91 888 491 2388</a>
+              <div className="sparkle sparkle-2">
+                <Sparkles size={60} />
               </div>
-            </div>
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <Linkedin size={24} />
+              <div className="sparkle sparkle-3">
+                <Sparkles size={30} />
               </div>
-              <div className="contact-details">
-                <div className="contact-label">LinkedIn</div>
-                <a href="https://linkedin.com/in/paridhisinha" target="_blank" rel="noopener noreferrer" className="contact-value">linkedin.com/in/paridhisinha</a>
+              <div className="sparkle sparkle-4">
+                <Star size={35} />
               </div>
-            </div>
-            <div className="contact-info-item">
-              <div className="contact-icon">
-                <MapPin size={24} />
+              <div className="sparkle sparkle-5">
+                <Star size={45} />
               </div>
-              <div className="contact-details">
-                <div className="contact-label">Location</div>
-                <div className="contact-value">Bengaluru, Karnataka, India</div>
-              </div>
+              <div className="hand-drawn-circle"></div>
+              <div className="hand-drawn-line"></div>
             </div>
           </div>
         </div>
