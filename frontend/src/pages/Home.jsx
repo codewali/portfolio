@@ -39,6 +39,17 @@ const Home = () => {
       impact: '24+ hours/month saved, real-time insights vs 2-3 day reporting',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/y191dcei_Screen%20Recording%202026-04-08%20at%206.13.33%E2%80%AFAM.mov',
       slug: 'bcdr-executive-dashboard'
+    },
+    {
+      id: 3,
+      title: 'Swiggy Group Ordering',
+      company: 'Personal Project',
+      year: '2023',
+      description: 'Redesigning Swiggy\'s group ordering experience to make coordinating meals with friends seamless. Focused on reducing friction, improving transparency, and creating delightful social interactions.',
+      tags: ['FoodTech', 'Social Features', 'Mobile UX'],
+      impact: 'Streamlined multi-user ordering flow with real-time coordination',
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c4of3v95_Screen%20Recording%202026-04-30%20at%205.54.19%E2%80%AFPM.mov',
+      slug: 'swiggy-group-ordering'
     }
   ];
 
