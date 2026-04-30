@@ -49,6 +49,13 @@
   background: #000;
 }
 
+.hero-with-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-image {
   width: 100%;
   height: auto;
@@ -63,6 +70,32 @@
   display: block;
   max-height: 80vh;
   object-fit: contain;
+}
+
+.hero-cta-button {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #FF0080;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(255, 0, 128, 0.3);
+  z-index: 10;
+}
+
+.hero-cta-button:hover {
+  background: #FF4DA6;
+  transform: translateX(-50%) translateY(-4px);
+  box-shadow: 0 12px 32px rgba(255, 0, 128, 0.4);
 }
 
 /* Prototype Link */
