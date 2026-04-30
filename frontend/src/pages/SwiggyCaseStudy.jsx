@@ -155,6 +155,53 @@ const SwiggyCaseStudy = () => {
               </div>
             </div>
 
+            {/* User Journey Wireframes */}
+            <div className="bento-card large">
+              <h2>User Journey</h2>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/cdofz00g_Frame%2046357.svg" 
+                alt="User journey mapping for group ordering flow"
+                className="journey-image"
+              />
+            </div>
+
+            {/* Initial Sketches */}
+            <div className="bento-card medium">
+              <h2>Early Sketches</h2>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/yjyv23gd_Frame%2046358.svg" 
+                alt="Initial wireframe sketches"
+                className="sketch-image"
+              />
+            </div>
+
+            {/* Iteration 1 */}
+            <div className="bento-card medium">
+              <h2>Iteration Exploration</h2>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/r360a02z_Frame%2046359.svg" 
+                alt="Design iteration process"
+                className="sketch-image"
+              />
+            </div>
+
+            {/* Design Refinement */}
+            <div className="bento-card xlarge">
+              <h2>Design Refinement</h2>
+              <div className="refinement-images">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/g0zhe6hw_Frame%2046357.svg" 
+                  alt="Design refinement phase 1"
+                  className="refinement-image"
+                />
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/fjko7htr_Frame%2046360.svg" 
+                  alt="Design refinement phase 2"
+                  className="refinement-image"
+                />
+              </div>
+            </div>
+
             {/* Design System */}
             <div className="bento-card medium">
               <h2>Design System</h2>

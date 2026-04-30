@@ -418,6 +418,34 @@
   transform: translateY(-2px);
 }
 
+/* Journey and Sketch Images */
+.journey-image,
+.sketch-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 1rem;
+  border-radius: 8px;
+  background: #1a1a1a;
+  padding: 1rem;
+}
+
+.refinement-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.refinement-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  background: #1a1a1a;
+  padding: 1rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .project-title {
@@ -443,5 +471,9 @@
 
   .hero-image {
     max-height: 60vh;
+  }
+
+  .refinement-images {
+    grid-template-columns: 1fr;
   }
 }
