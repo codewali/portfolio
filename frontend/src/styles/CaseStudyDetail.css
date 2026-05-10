@@ -46,7 +46,7 @@
 .detail-hero {
   padding-top: 80px;
   width: 100%;
-  background: #FFFFFF;
+  background: #F5F1E8;
 }
 
 .hero-with-button {
@@ -76,7 +76,7 @@
 .behance-link-wrapper {
   text-align: right;
   padding: 1rem 3rem;
-  background: #FFFFFF;
+  background: #F5F1E8;
 }
 
 .behance-link {
@@ -119,6 +119,159 @@
   color: #4A4A4A;
   margin-bottom: 3rem;
   max-width: 800px;
+}
+
+/* Metrics Section - Always at top */
+.metrics-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.metric-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #E5DFD0;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #E91E8C;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #4A4A4A;
+  font-weight: 600;
+}
+
+/* Key Cards Section */
+.key-cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.key-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 2.5rem;
+  border: 1px solid #E5DFD0;
+}
+
+.key-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 1rem;
+}
+
+.key-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4A4A4A;
+  margin-bottom: 0.75rem;
+}
+
+.key-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.key-card li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4A4A4A;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.key-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #E91E8C;
+  font-weight: 600;
+}
+
+/* Article Style Content */
+.article-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.article-section {
+  margin-bottom: 3rem;
+}
+
+.article-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+.article-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #E91E8C;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.article-section h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.article-section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4A4A4A;
+  margin-bottom: 1.25rem;
+}
+
+.article-section ul,
+.article-section ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-section li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4A4A4A;
+  margin-bottom: 0.75rem;
+}
+
+.article-section strong {
+  color: #E91E8C;
+  font-weight: 600;
+}
+
+.highlight-box {
+  background: rgba(233, 30, 140, 0.05);
+  border-left: 4px solid #E91E8C;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+}
+
+.highlight-box p {
+  margin-bottom: 0;
+  color: #1A1A1A;
+  font-weight: 500;
 }
 
 /* Bento Grid */

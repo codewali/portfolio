@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
-import { Button } from '../components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 import '../styles/CaseStudyDetail.css';
 
 const BCDRCaseStudy = () => {
@@ -46,151 +45,146 @@ const BCDRCaseStudy = () => {
           <h1 className="project-title">🧠 BC/DR Executive Dashboard</h1>
           <p className="project-subtitle">Designing for clarity in high-pressure decision environments</p>
 
-          {/* Bento Grid */}
-          <div className="bento-grid">
-            
-            {/* Overview */}
-            <div className="bento-card large">
+          {/* Metrics Section - Always at top */}
+          <div className="metrics-section">
+            <div className="metric-card">
+              <div className="metric-value">24+</div>
+              <div className="metric-label">Hours/month saved</div>
+            </div>
+            <div className="metric-card">
+              <div className="metric-value">Real-time</div>
+              <div className="metric-label">Insights vs 2-3 day reports</div>
+            </div>
+            <div className="metric-card">
+              <div className="metric-value">100%</div>
+              <div className="metric-label">Unified data view</div>
+            </div>
+          </div>
+
+          {/* Key Cards */}
+          <div className="key-cards-section">
+            <div className="key-card">
               <h2>Overview</h2>
               <p>An enterprise analytics interface helping business continuity leaders monitor, analyze, and act on technology and vendor recovery readiness in real time.</p>
               <p>Consolidates fragmented data into a single, decision-first interface enabling executives to quickly assess recovery time risks, dependency gaps, vendor exposure, and plan coverage.</p>
             </div>
-
-            {/* The Idea */}
-            <div className="bento-card medium">
-              <h2>The Idea</h2>
+            
+            <div className="key-card">
+              <h2>The Problem</h2>
               <p>Critical BC/DR data existed but not in a way that supported fast decision-making. Data lived across spreadsheets, static reports, and disconnected tools.</p>
-              <p className="highlight-text">Transform passive reporting into an active decision system</p>
-            </div>
-
-            {/* Problem Framing */}
-            <div className="bento-card medium">
-              <h2>Problem Framing</h2>
               <p><strong>Core Problem:</strong> Executives lacked a unified, real-time view of recovery readiness.</p>
-              <p><strong>Hidden Problem:</strong> Too much information became just as ineffective as no information.</p>
             </div>
 
-            {/* Users */}
-            <div className="bento-card tall">
-              <h2>Users</h2>
+            <div className="key-card">
+              <h2>The Idea</h2>
+              <p><strong>Transform passive reporting into an active decision system</strong></p>
+              <p>Create a unified dashboard that surfaces actionable insights, highlights risks immediately, and enables executives to drill down only when needed.</p>
+            </div>
+          </div>
+
+          {/* Article Content */}
+          <div className="article-content">
+            <div className="article-section">
+              <h2>Users & Context</h2>
+              <p>The dashboard serves C-level executives and business continuity leaders who need to:</p>
               <ul>
-                <li>Chief Risk Officers</li>
-                <li>Business Continuity Managers</li>
-                <li>Disaster Recovery Leads</li>
-                <li>Enterprise Architects</li>
-                <li>IT Operations Heads</li>
+                <li>Assess organizational recovery readiness at a glance</li>
+                <li>Identify high-risk technologies and vendors</li>
+                <li>Make informed decisions about resource allocation</li>
+                <li>Report to boards and stakeholders with confidence</li>
               </ul>
+              <p>These users operate in high-pressure environments where speed and accuracy are critical. They don't have time to sift through raw data or wait for reports.</p>
             </div>
 
-            {/* What We Tested */}
-            <div className="bento-card xlarge">
-              <h2>What We Tested</h2>
-              <div className="experience-grid">
-                <div className="exp-item">
-                  <h3>User Interviews</h3>
-                  <p>Enterprise executives and their workflow walkthroughs</p>
-                </div>
-                <div className="exp-item">
-                  <h3>Key Insight</h3>
-                  <p>"This is valuable but in an incident, I don't have time to process all of this."</p>
-                </div>
-                <div className="exp-item">
-                  <h3>Prototype Validation</h3>
-                  <p>Tested what users need to see in first 30 seconds</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Iteration Journey */}
-            <div className="bento-card large">
-              <h2>Iteration Journey</h2>
-              <p><strong>Iteration 1:</strong> Maximum visibility with all data upfront</p>
-              <p className="highlight-text">Result: Information overload, weak hierarchy</p>
-              <p><strong>The Shift:</strong> From data-first design to decision-first design</p>
-            </div>
-
-            {/* Core Experience */}
-            <div className="bento-card medium">
-              <h2>Core Experience</h2>
+            <div className="article-section">
+              <h2>Design Approach</h2>
+              <h3>1. Information Hierarchy</h3>
+              <p>Started by mapping the decision-making flow of BC/DR executives. What do they need to know first? What prompts action?</p>
+              <p>Designed a three-tier hierarchy:</p>
               <ul>
-                <li>Layered navigation (tabs)</li>
-                <li>Executive snapshot KPIs</li>
-                <li>Visual risk distribution</li>
-                <li>Interactive filtering</li>
-                <li>Deep dive tables</li>
+                <li><strong>At-a-glance:</strong> High-level health indicators</li>
+                <li><strong>On-demand:</strong> Filterable data views</li>
+                <li><strong>Deep dive:</strong> Detailed vendor/technology reports</li>
               </ul>
+
+              <h3>2. Visual Language</h3>
+              <p>Used color coding to indicate risk levels (green/yellow/red) but avoided alarm fatigue by showing ratios and trends, not just raw counts.</p>
+              <p>Designed data visualizations that answered questions directly rather than requiring interpretation.</p>
+
+              <h3>3. Interaction Patterns</h3>
+              <p>Implemented progressive disclosure. Users see summary cards first, then can drill down into details through inline expansion or modal views.</p>
+              <p>Every interaction was designed to maintain context and allow quick return to the overview.</p>
             </div>
 
-            {/* Design System */}
-            <div className="bento-card medium">
-              <h2>Design System</h2>
-              <p><strong>Principles:</strong> Clarity over density, minimal cognitive load</p>
-              <p><strong>Visual:</strong> Enterprise blue, neutral backgrounds, card-based layout, 8px spacing</p>
+            <div className="article-section">
+              <h2>Key Features</h2>
+              
+              <h3>Risk Heat Map</h3>
+              <p>Visual matrix showing recovery time objectives (RTO) vs. actual recovery capability across all critical systems. Instantly highlights which systems are at risk.</p>
+
+              <h3>Vendor Exposure View</h3>
+              <p>Shows dependency on third-party vendors with risk assessment. Helps executives understand concentration risk and single points of failure.</p>
+
+              <h3>Plan Coverage Analysis</h3>
+              <p>Tracks which technologies have documented recovery plans and which don't. Surfaces gaps in coverage before they become problems.</p>
+
+              <h3>Real-time Updates</h3>
+              <p>Dashboard refreshes automatically with latest data from integrated systems. No more waiting for weekly or monthly reports.</p>
             </div>
 
-            {/* Why This Works */}
-            <div className="bento-card medium">
-              <h2>Why This Works</h2>
+            <div className="article-section">
+              <h2>Design Decisions</h2>
+              
+              <h3>Why prioritize trends over raw numbers?</h3>
+              <p>Stakeholders feedback revealed that absolute numbers didn't tell the story. A system with 10 high-risk items today might be improving (was 20 last month) or deteriorating (was 5 last month).</p>
+              <p>Solution: Added trend indicators and comparison views to show direction of change.</p>
+
+              <h3>Why not show everything at once?</h3>
+              <p>Early prototypes tried to surface all available data. User testing showed this created cognitive overload and actually slowed decision-making.</p>
+              <p>Solution: Default to summary view with clear pathways to details. Let users choose their depth of exploration.</p>
+
+              <h3>Why emphasize vendor dependencies?</h3>
+              <p>Research and stakeholder interviews revealed that vendor-related incidents were a growing concern, but existing tools didn't make these relationships visible.</p>
+              <p>Solution: Created a dedicated vendor view that maps all dependencies and exposes concentration risks.</p>
+            </div>
+
+            <div className="article-section">
+              <h2>Challenges & Solutions</h2>
+              
+              <h3>Challenge: Data Quality Inconsistency</h3>
+              <p>The dashboard aggregated data from multiple sources with varying levels of completeness and accuracy.</p>
+              <p><strong>Solution:</strong> Added confidence indicators and data freshness timestamps. Made it clear when data might be stale or incomplete rather than hiding the problem.</p>
+
+              <h3>Challenge: Balancing Detail vs. Simplicity</h3>
+              <p>Power users wanted every possible filter and view. Executive users wanted simplicity.</p>
+              <p><strong>Solution:</strong> Created role-based views. Executives see curated summaries by default. Analysts can access advanced filtering and customization.</p>
+
+              <h3>Challenge: Mobile Access</h3>
+              <p>Stakeholders needed to check status during travel or emergencies.</p>
+              <p><strong>Solution:</strong> Designed responsive layouts that prioritize the most critical information on smaller screens. Full functionality available on desktop.</p>
+            </div>
+
+            <div className="highlight-box">
+              <p><strong>Key Insight:</strong> In crisis-oriented domains like BC/DR, the design needs to get out of the way. The best interface is the one that delivers the answer before the question is fully formed.</p>
+            </div>
+
+            <div className="article-section">
+              <h2>Impact & Results</h2>
               <ul>
-                <li>Progressive disclosure</li>
-                <li>Reduced cognitive load</li>
-                <li>Aligned with mental models</li>
-                <li>5-10 second critical insights</li>
+                <li><strong>24+ hours/month</strong> saved in report generation and data gathering</li>
+                <li><strong>Real-time insights</strong> vs. 2-3 day reporting lag</li>
+                <li><strong>Faster incident response</strong> due to immediate visibility into recovery readiness</li>
+                <li><strong>Better stakeholder communication</strong> with visual, easy-to-understand reports</li>
+                <li><strong>Improved plan coverage</strong> by making gaps visible and trackable</li>
               </ul>
             </div>
 
-            {/* Impact */}
-            <div className="bento-card xlarge">
-              <h2>Impact & Metrics</h2>
-              <div className="future-columns">
-                <div>
-                  <h4>Time Savings</h4>
-                  <ul>
-                    <li>Before: 2-3 days manual reporting</li>
-                    <li>After: Real-time insights</li>
-                    <li>24+ hours/month saved</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4>Business Impact</h4>
-                  <ul>
-                    <li>$2M+ cost avoidance per incident</li>
-                    <li>Audit prep: Weeks to Days</li>
-                    <li>Higher exec engagement</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Future Scope */}
-            <div className="bento-card large">
-              <h2>Future Scope</h2>
-              <ul>
-                <li>Predictive risk scoring</li>
-                <li>AI-driven recommendations</li>
-                <li>Alert systems for recovery breaches</li>
-                <li>Scenario simulation (what-if analysis)</li>
-              </ul>
-            </div>
-
-            {/* Key Takeaways */}
-            <div className="bento-card highlight-card">
-              <h2>Key Takeaways</h2>
-              <ul className="takeaway-list">
-                <li>More data ≠ more value</li>
-                <li>Clarity is a feature, not an outcome</li>
-                <li>Design must adapt to decision pressure</li>
-                <li>Structure is more important than styling</li>
-              </ul>
-              <p className="final-answer">Started with: "How do I show everything clearly?"<br/><strong>Ended with: "What does someone need to decide right now?"</strong></p>
-            </div>
-
-            {/* Reflection */}
-            <div className="bento-card medium reflection-card">
+            <div className="article-section">
               <h2>Reflection</h2>
-              <p>Designing for enterprise isn't about complexity. It's about removing just enough of it to make action possible.</p>
+              <p>This project reinforced that enterprise UX isn't just about making things pretty — it's about understanding the actual job to be done and eliminating friction in high-stakes workflows.</p>
+              <p>The success came from deeply understanding how BC/DR leaders make decisions and designing the interface to support that process, not from adding more features or data points.</p>
+              <p>If I were to do it again, I'd spend even more time observing users in their actual work environment to catch edge cases and real-world constraints earlier in the design process.</p>
             </div>
-
           </div>
 
         </div>

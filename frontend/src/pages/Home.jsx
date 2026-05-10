@@ -26,7 +26,7 @@ const Home = () => {
       tags: ['Fashion Tech', 'UX Design', 'Prototyping'],
       impact: 'Proof of concept for sketch-driven apparel interaction',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
-      video: null,
+      video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/913ls062_Screen%20Recording%202026-04-08%20at%205.53.38%E2%80%AFAM.mov',
       slug: 'virtual-fitting-room'
     },
     {
@@ -88,7 +88,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <span className="label">Product Designer</span>
+            <span className="label">Senior Product Designer, GRC</span>
             <h1>PORTFOLIO</h1>
             <p className="subtitle">
               Designing, building and testing enterprise SaaS products for the past 7 years, currently somewhere between GRC workflows, AI experiments, and asking "wait, why does this flow work like this?"
@@ -99,12 +99,6 @@ const Home = () => {
             <p className="subtitle">
               Outside work, I build fashion and lifestyle concepts, experiment with visuals, and start side projects because of the love for the game ✨
             </p>
-          </div>
-          <div className="hero-image">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c2u618er_Untitled_Artwork%206.JPG" 
-              alt="Artwork" 
-            />
           </div>
         </div>
       </section>

@@ -76,15 +76,46 @@
 /* Hero Section */
 .hero {
   padding: 10rem 3rem 6rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  position: relative;
+  background-image: url('https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c2u618er_Untitled_Artwork%206.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 15, 16, 0.75);
+  z-index: 1;
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  max-width: 900px;
+}
+
+.hero-text .label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .hero-text h1 {
@@ -101,33 +132,9 @@
 .hero-text .subtitle {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #4A4A4A;
-  max-width: 500px;
+  color: #FFFFFF;
+  max-width: 700px;
   margin-bottom: 1rem;
-}
-
-.hero-text .label {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #8A8A8A;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.hero-image {
-  width: 100%;
-  height: 600px;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* About Section */
@@ -442,12 +449,21 @@
     font-size: 4rem;
   }
 
+  .hero {
+    padding: 8rem 2rem 4rem;
+  }
+
   .about-content {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
   .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-section,
+  .key-cards-section {
     grid-template-columns: 1fr;
   }
 }
