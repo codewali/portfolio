@@ -35,6 +35,7 @@ const Home = () => {
       title: 'Swiggy Group Ordering',
       company: 'Personal Project',
       year: '2023',
+      note: 'Done prior to Swiggy introducing group ordering',
       description: 'Redesigning Swiggy\'s group ordering experience to make coordinating meals with friends seamless. Focused on reducing friction, improving transparency, and creating delightful social interactions.',
       tags: ['FoodTech', 'Social Features', 'Mobile UX'],
       impact: 'Streamlined multi-user ordering flow with real-time coordination',
@@ -216,6 +217,7 @@ const Home = () => {
                     <div className="case-study-year">{study.year}</div>
                   </div>
                   <h3 className="case-study-title">{study.title}</h3>
+                  {study.note && <p className="case-study-note">{study.note}</p>}
                   <p className="case-study-description">{study.description}</p>
                   <div className="case-study-tags">
                     {study.tags.map((tag, index) => (
