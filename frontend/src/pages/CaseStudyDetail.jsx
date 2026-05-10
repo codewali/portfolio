@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import '../styles/CaseStudyDetail.css';
 
 const CaseStudyDetail = () => {
   const navigate = useNavigate();
+  const videoRef = useRef(null);
 
   const handleBackToPortfolio = () => {
     navigate('/', { state: { scrollTo: 'work' } });
@@ -12,6 +13,13 @@ const CaseStudyDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Force video to play
+    if (videoRef.current) {
+      videoRef.current.play().catch(err => {
+        console.log('Video autoplay failed:', err);
+      });
+    }
   }, []);
 
   return (
@@ -29,13 +37,25 @@ const CaseStudyDetail = () => {
       {/* Hero Video */}
       <section className="detail-hero">
         <video 
-          src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/d2fxjq4q_VTR%20recording.mov"
+          ref={videoRef}
           className="hero-video"
           autoPlay
           loop
           muted
           playsInline
-        />
+          controls={false}
+          preload="auto"
+        >
+          <source 
+            src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/d2fxjq4q_VTR%20recording.mov" 
+            type="video/quicktime"
+          />
+          <source 
+            src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/d2fxjq4q_VTR%20recording.mov" 
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
       </section>
 
       {/* Content */}
