@@ -262,19 +262,21 @@ const Home = () => {
           <p className="contact-text">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
-          <a href="mailto:pari.sin17@gmail.com" className="contact-email">
-            pari.sin17@gmail.com
-          </a>
-          <button 
-            onClick={() => {
-              navigator.clipboard.writeText('pari.sin17@gmail.com');
-              alert('Email copied to clipboard!');
-            }}
-            className="copy-email-btn"
-            title="Copy email"
-          >
-            📋
-          </button>
+          <div className="email-wrapper">
+            <a href="mailto:pari.sin17@gmail.com" className="contact-email">
+              pari.sin17@gmail.com
+            </a>
+            <button 
+              onClick={() => {
+                navigator.clipboard.writeText('pari.sin17@gmail.com');
+                alert('Email copied to clipboard!');
+              }}
+              className="copy-email-icon"
+              title="Copy email"
+            >
+              📋
+            </button>
+          </div>
         </div>
       </section>
 

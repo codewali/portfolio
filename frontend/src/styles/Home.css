@@ -421,6 +421,13 @@
   margin: 0 auto 3rem;
 }
 
+.email-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
 .contact-email {
   font-size: 1.5rem;
   color: #E91E8C;
@@ -428,28 +435,34 @@
   text-decoration: none;
   display: inline-block;
   transition: transform 0.3s ease;
-  margin-right: 1rem;
 }
 
 .contact-email:hover {
   transform: translateY(-4px);
 }
 
-.copy-email-btn {
-  background: #E91E8C;
-  color: white;
-  border: none;
-  padding: 0.75rem 1rem;
+.copy-email-icon {
+  background: transparent;
+  border: 1px solid #E5DFD0;
+  color: #4A4A4A;
+  padding: 0.5rem;
   border-radius: 8px;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  vertical-align: middle;
+  opacity: 0;
+  transform: translateX(-10px);
 }
 
-.copy-email-btn:hover {
-  background: #D11A7A;
-  transform: translateY(-2px);
+.email-wrapper:hover .copy-email-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.copy-email-icon:hover {
+  background: #F5F1E8;
+  border-color: #E91E8C;
+  color: #E91E8C;
 }
 
 /* Footer */
