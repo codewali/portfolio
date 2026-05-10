@@ -81,7 +81,7 @@ const Home = () => {
             <button onClick={() => scrollToSection('work')} className="nav-link">Work</button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
             <a 
-              href="https://drive.google.com/file/d/1a-PQezdYih5L_9YeZUnY-2Gx6Qn5mXY8/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1Ed_Wq31OTAiJlj1ewbX57-BLrzKi_fOs/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="nav-cta"
@@ -93,7 +93,7 @@ const Home = () => {
           {/* Mobile Nav */}
           <div className="mobile-nav">
             <a 
-              href="https://drive.google.com/file/d/1a-PQezdYih5L_9YeZUnY-2Gx6Qn5mXY8/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1Ed_Wq31OTAiJlj1ewbX57-BLrzKi_fOs/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="nav-cta-mobile"
