@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Home.css';
@@ -6,6 +6,7 @@ import '../styles/Home.css';
 const Home = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -62,6 +63,7 @@ const Home = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
     }
   };
 
@@ -71,7 +73,9 @@ const Home = () => {
       <nav className="nav">
         <div className="nav-content">
           <a href="/" className="nav-logo">Paridhi Sinha</a>
-          <div className="nav-links">
+          
+          {/* Desktop Nav Links */}
+          <div className="nav-links desktop-nav">
             <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
             <button onClick={() => scrollToSection('work')} className="nav-link">Work</button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
@@ -84,7 +88,37 @@ const Home = () => {
               View Resume
             </a>
           </div>
+
+          {/* Mobile Nav */}
+          <div className="mobile-nav">
+            <a 
+              href="https://drive.google.com/file/d/1a-PQezdYih5L_9YeZUnY-2Gx6Qn5mXY8/view?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-cta-mobile"
+            >
+              Resume
+            </a>
+            <button 
+              className="hamburger-btn"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="mobile-menu">
+            <button onClick={() => scrollToSection('about')} className="mobile-menu-link">About</button>
+            <button onClick={() => scrollToSection('work')} className="mobile-menu-link">Work</button>
+            <button onClick={() => scrollToSection('contact')} className="mobile-menu-link">Contact</button>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
