@@ -128,13 +128,16 @@ const Home = () => {
             <span className="label">Senior Product Designer, GRC</span>
             <h1>PORTFOLIO</h1>
             <p className="subtitle">
-              Designing, building and testing enterprise SaaS products for the past 7 years, currently somewhere between GRC workflows, AI experiments, and asking "wait, why does this flow work like this?"
+              I started out with breaking product flows for a living, ended up suggesting fixes and finding solutions.
             </p>
             <p className="subtitle">
-              I like simplifying complex systems, thinking through edge cases, and building products that feel structured without feeling heavy.
+              And then, switched to thinking about how to make it easier for the people on the other side of the screen trying to make sense of it all.
             </p>
             <p className="subtitle">
-              Outside work, I build fashion and lifestyle concepts, experiment with visuals, and start side projects because of the love for the game ✨
+              The journey from QA → Product → Design has taught me a lot ✨
+            </p>
+            <p className="subtitle">
+              Outside work, I build fashion and lifestyle concepts, experiment with visuals, and start side projects because of the love for the game!
             </p>
           </div>
         </div>
