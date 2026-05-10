@@ -47,11 +47,11 @@ const CaseStudyDetail = () => {
           preload="auto"
         >
           <source 
-            src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/d2fxjq4q_VTR%20recording.mov" 
+            src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ax2ay7g1_VTR%20Recording.mov" 
             type="video/quicktime"
           />
           <source 
-            src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/d2fxjq4q_VTR%20recording.mov" 
+            src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ax2ay7g1_VTR%20Recording.mov" 
             type="video/mp4"
           />
           Your browser does not support the video tag.
