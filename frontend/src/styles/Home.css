@@ -12,13 +12,13 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(245, 241, 232, 0.7);
+  background: rgba(245, 241, 232, 0.5);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(229, 223, 208, 0.5);
+  border-bottom: 1px solid rgba(229, 223, 208, 0.3);
   z-index: 100;
   padding: 1.5rem 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 }
 
 .nav-content {
@@ -95,7 +95,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 15, 16, 0.75);
+  background: rgba(15, 15, 16, 0.55);
   z-index: 1;
 }
 
@@ -356,6 +356,12 @@
   color: #1A1A1A;
 }
 
+.case-study-tag:last-child {
+  background: #E91E8C;
+  color: white;
+  font-weight: 600;
+}
+
 .case-study-impact {
   font-size: 0.9rem;
   color: #4A4A4A;
@@ -422,10 +428,28 @@
   text-decoration: none;
   display: inline-block;
   transition: transform 0.3s ease;
+  margin-right: 1rem;
 }
 
 .contact-email:hover {
   transform: translateY(-4px);
+}
+
+.copy-email-btn {
+  background: #E91E8C;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+
+.copy-email-btn:hover {
+  background: #D11A7A;
+  transform: translateY(-2px);
 }
 
 /* Footer */

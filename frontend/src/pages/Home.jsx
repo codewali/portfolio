@@ -50,7 +50,7 @@ const Home = () => {
       company: 'Personal Project',
       year: '2026',
       description: 'A sketch-based exploration of virtual fashion fitting. Instead of focusing on realism or AI accuracy, this project explores how hand-drawn fashion sketches could be translated into an interactive, minimal digital experience.',
-      tags: ['Fashion Tech', 'UX Design', 'Prototyping'],
+      tags: ['Fashion Tech', 'UX Design', 'Prototyping', 'MVP'],
       impact: 'Proof of concept for sketch-driven apparel interaction',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
       video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/913ls062_Screen%20Recording%202026-04-08%20at%205.53.38%E2%80%AFAM.mov',
@@ -265,6 +265,16 @@ const Home = () => {
           <a href="mailto:pari.sin17@gmail.com" className="contact-email">
             pari.sin17@gmail.com
           </a>
+          <button 
+            onClick={() => {
+              navigator.clipboard.writeText('pari.sin17@gmail.com');
+              alert('Email copied to clipboard!');
+            }}
+            className="copy-email-btn"
+            title="Copy email"
+          >
+            📋
+          </button>
         </div>
       </section>
 
