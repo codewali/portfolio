@@ -296,22 +296,10 @@ const Home = () => {
           <p className="contact-text">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
-          <div className="email-wrapper">
+          <div className="contact-info">
             <a href="mailto:pari.sin17@gmail.com" className="contact-email">
               pari.sin17@gmail.com
             </a>
-            <button 
-              onClick={() => {
-                navigator.clipboard.writeText('pari.sin17@gmail.com');
-                alert('Email copied to clipboard!');
-              }}
-              className="copy-email-icon"
-              title="Copy email"
-            >
-              📋
-            </button>
-          </div>
-          <div className="social-links">
             <a 
               href="https://www.linkedin.com/in/paridhisinha" 
               target="_blank"
