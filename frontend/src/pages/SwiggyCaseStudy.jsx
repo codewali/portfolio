@@ -55,6 +55,7 @@ const SwiggyCaseStudy = () => {
         <div className="content-container">
           
           <h1 className="project-title">🍔 Swiggy Group Ordering</h1>
+          <p className="project-note">Done prior to Swiggy introducing group ordering</p>
           <p className="project-subtitle">Making coordinated food ordering with friends seamless and delightful</p>
 
           {/* Key Cards */}
