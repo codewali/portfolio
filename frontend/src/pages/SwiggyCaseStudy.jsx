@@ -166,10 +166,6 @@ const SwiggyCaseStudy = () => {
             <div className="article-section">
               <h2>Design Decisions</h2>
               
-              <h3>Why real-time updates over refresh?</h3>
-              <p>Early prototypes used pull-to-refresh for cart updates. Testing showed this created anxiety — users constantly refreshed to check if others had ordered.</p>
-              <p><strong>Solution:</strong> Implemented WebSocket-based real-time updates. Cart changes reflect instantly for all participants.</p>
-
               <h3>Why individual payment over group payment?</h3>
               <p>Initial designs had one person pay and others reimburse. This pattern came up repeatedly in research as the biggest friction point.</p>
               <p><strong>Solution:</strong> Built individual payment into the checkout flow. Each person enters their payment info and the order is placed when everyone has paid.</p>
@@ -177,22 +173,6 @@ const SwiggyCaseStudy = () => {
               <h3>Why shareable links over in-app invites?</h3>
               <p>In-app invites would require everyone to have Swiggy installed and be logged in before joining.</p>
               <p><strong>Solution:</strong> Used web-based shareable links. Anyone can join via the link, creating an account only at checkout if needed.</p>
-            </div>
-
-            <div className="article-section">
-              <h2>Challenges & Solutions</h2>
-              
-              <h3>Challenge: Abandoned Carts</h3>
-              <p>What happens if someone joins, adds items, but never pays?</p>
-              <p><strong>Solution:</strong> Added timeouts and host controls. Hosts can remove inactive participants. Cart locks 15 minutes after last activity with notification to all.</p>
-
-              <h3>Challenge: Last-Minute Changes</h3>
-              <p>Someone wants to add items after others have already paid.</p>
-              <p><strong>Solution:</strong> After initial checkout, additional items create a new sub-order with its own delivery. Clear messaging explains this to avoid confusion.</p>
-
-              <h3>Challenge: Privacy</h3>
-              <p>Not everyone wants colleagues to see exactly what they're ordering.</p>
-              <p><strong>Solution:</strong> Added privacy mode that hides item details from others (they just see "3 items, ₹450"). Host and restaurant still see full details.</p>
             </div>
 
             <div className="highlight-box">
