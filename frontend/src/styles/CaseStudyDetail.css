@@ -39,7 +39,7 @@
 }
 
 .back-button:hover {
-  color: #FF5733;
+  color: #E91E8C;
 }
 
 /* Hero Section */
@@ -72,29 +72,26 @@
   object-fit: contain;
 }
 
-.hero-cta-button {
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: #FF5733;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(255, 87, 51, 0.2);
-  z-index: 10;
+/* Behance Link - Small tertiary link */
+.behance-link-wrapper {
+  text-align: right;
+  padding: 1rem 3rem;
+  background: #FFFFFF;
 }
 
-.hero-cta-button:hover {
-  background: #E64A2E;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(255, 87, 51, 0.3);
+.behance-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4A4A4A;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.behance-link:hover {
+  color: #E91E8C;
 }
 
 /* Content */
@@ -161,7 +158,7 @@
 .bento-card h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #FF5733;
+  color: #E91E8C;
   margin-bottom: 0.75rem;
 }
 
@@ -190,7 +187,7 @@
   content: '→';
   position: absolute;
   left: 0;
-  color: #FF5733;
+  color: #E91E8C;
   font-weight: 600;
 }
 
@@ -215,10 +212,42 @@
   grid-row: span 2;
 }
 
+/* Responsive Bento Grid - Mobile First */
+@media (max-width: 768px) {
+  .bento-card.small,
+  .bento-card.medium,
+  .bento-card.large,
+  .bento-card.xlarge {
+    grid-column: span 12 !important;
+  }
+
+  .bento-card.tall {
+    grid-row: span 1;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bento-card.small {
+    grid-column: span 6;
+  }
+
+  .bento-card.medium {
+    grid-column: span 6;
+  }
+
+  .bento-card.large {
+    grid-column: span 12;
+  }
+
+  .bento-card.xlarge {
+    grid-column: span 12;
+  }
+}
+
 /* Highlight Cards */
 .highlight-card {
-  background: #FFF5F0;
-  border-color: #FF5733;
+  background: #FFF0F6;
+  border-color: #E91E8C;
 }
 
 .reflection-card {
@@ -227,7 +256,7 @@
 }
 
 .highlight-text {
-  color: #FF5733;
+  color: #E91E8C;
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -243,7 +272,7 @@
 .exp-item h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #FF5733;
+  color: #E91E8C;
   margin-bottom: 0.5rem;
 }
 
@@ -261,7 +290,7 @@
 }
 
 .future-columns h4 {
-  color: #FF5733;
+  color: #E91E8C;
   font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
@@ -282,14 +311,14 @@
   line-height: 1.7;
   color: #1A1A1A;
   padding: 1.5rem;
-  background: rgba(255, 87, 51, 0.05);
-  border-left: 4px solid #FF5733;
+  background: rgba(233, 30, 140, 0.05);
+  border-left: 4px solid #E91E8C;
   border-radius: 4px;
   margin-top: 1.5rem;
 }
 
 .final-answer strong {
-  color: #FF5733;
+  color: #E91E8C;
   font-weight: 700;
 }
 
@@ -305,7 +334,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #FF5733;
+  background: #E91E8C;
   color: white;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -317,19 +346,12 @@
 }
 
 .back-to-portfolio:hover {
-  background: #E64A2E;
+  background: #D11A7A;
   transform: translateY(-2px);
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .bento-card.small,
-  .bento-card.medium,
-  .bento-card.large,
-  .bento-card.xlarge {
-    grid-column: span 12;
-  }
-
   .project-title {
     font-size: 2.5rem;
   }
@@ -348,6 +370,10 @@
     padding: 1.5rem;
   }
 
+  .bento-grid {
+    gap: 1rem;
+  }
+
   .project-title {
     font-size: 2rem;
   }
@@ -356,10 +382,7 @@
     font-size: 1.05rem;
   }
 
-  .hero-cta-button {
-    bottom: 1.5rem;
-    right: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.85rem;
+  .behance-link-wrapper {
+    padding: 1rem 1.5rem;
   }
 }

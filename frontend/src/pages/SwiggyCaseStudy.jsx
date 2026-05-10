@@ -27,7 +27,7 @@ const SwiggyCaseStudy = () => {
       </header>
 
       {/* Hero Video */}
-      <section className="detail-hero hero-with-button">
+      <section className="detail-hero">
         <video 
           src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c4of3v95_Screen%20Recording%202026-04-30%20at%205.54.19%E2%80%AFPM.mov"
           className="hero-video"
@@ -36,16 +36,19 @@ const SwiggyCaseStudy = () => {
           muted
           playsInline
         />
+      </section>
+
+      {/* Behance Link */}
+      <div className="behance-link-wrapper">
         <a 
           href="https://www.behance.net/gallery/169000483/Swiggy-Group-Ordering-Case-Study" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="hero-cta-button"
+          className="behance-link"
         >
-          View Full Case Study
-          <ExternalLink size={20} />
+          View full case study <ExternalLink size={14} />
         </a>
-      </section>
+      </div>
 
       {/* Content */}
       <section className="detail-content">

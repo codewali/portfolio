@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Home.css';
@@ -26,6 +26,7 @@ const Home = () => {
       tags: ['Fashion Tech', 'UX Design', 'Prototyping'],
       impact: 'Proof of concept for sketch-driven apparel interaction',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
+      video: null,
       slug: 'virtual-fitting-room'
     },
     {
@@ -36,7 +37,8 @@ const Home = () => {
       description: 'An enterprise analytics interface helping business continuity leaders monitor and act on technology and vendor recovery readiness. Transformed passive reporting into an active decision system.',
       tags: ['Enterprise UX', 'Data Visualization', 'B2B SaaS'],
       impact: '24+ hours/month saved, real-time insights vs 2-3 day reporting',
-      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/y191dcei_Screen%20Recording%202026-04-08%20at%206.13.33%E2%80%AFAM.mov',
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/8fwx39b1_1_IfkkNrPr-NGyyHk79thZgw.png',
+      video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/y191dcei_Screen%20Recording%202026-04-08%20at%206.13.33%E2%80%AFAM.mov',
       slug: 'bcdr-executive-dashboard'
     },
     {
@@ -47,7 +49,8 @@ const Home = () => {
       description: 'Redesigning Swiggy\'s group ordering experience to make coordinating meals with friends seamless. Focused on reducing friction, improving transparency, and creating delightful social interactions.',
       tags: ['FoodTech', 'Social Features', 'Mobile UX'],
       impact: 'Streamlined multi-user ordering flow with real-time coordination',
-      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c4of3v95_Screen%20Recording%202026-04-30%20at%205.54.19%E2%80%AFPM.mov',
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/8fwx39b1_1_IfkkNrPr-NGyyHk79thZgw.png',
+      video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c4of3v95_Screen%20Recording%202026-04-30%20at%205.54.19%E2%80%AFPM.mov',
       slug: 'swiggy-group-ordering'
     }
   ];
@@ -88,16 +91,19 @@ const Home = () => {
             <span className="label">Product Designer</span>
             <h1>PORTFOLIO</h1>
             <p className="subtitle">
-              You're a weirdly cool and creative human! Employment New York and London. Barbican fashion. I write a newsletter, a blog feedback. Follow on Insta.
+              Designing, building and testing enterprise SaaS products for the past 7 years, currently somewhere between GRC workflows, AI experiments, and asking "wait, why does this flow work like this?"
             </p>
             <p className="subtitle">
-              Over 6 years of experience in B2B SaaS, creating user-centered experiences for the Governance, Risk, and Compliance space. Expertise in GenAI integration and design systems.
+              I like simplifying complex systems, thinking through edge cases, and building products that feel structured without feeling heavy.
+            </p>
+            <p className="subtitle">
+              Outside work, I build fashion and lifestyle concepts, experiment with visuals, and start side projects because of the love for the game ✨
             </p>
           </div>
           <div className="hero-image">
             <img 
-              src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/pa8y1lfc_pp.jpg" 
-              alt="Paridhi Sinha" 
+              src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c2u618er_Untitled_Artwork%206.JPG" 
+              alt="Artwork" 
             />
           </div>
         </div>
@@ -119,7 +125,7 @@ const Home = () => {
           <div className="about-text">
             <h2>Designing with purpose</h2>
             <p>
-              With over 6 years of experience in B2B SaaS, I specialize in creating user-centered experiences that balance aesthetics with functionality. My expertise lies in the Governance, Risk, and Compliance space, where I navigate complex requirements to deliver intuitive solutions.
+              With over 7 years of experience in B2B SaaS, I specialize in creating user-centered experiences that balance aesthetics with functionality. My expertise lies in the Governance, Risk, and Compliance space, where I navigate complex requirements to deliver intuitive solutions.
             </p>
             <p>
               Currently at Mitratech, I lead cross-product UX strategy across enterprise risk and compliance platforms. I've introduced GenAI-powered workflows, improved UX consistency, and partnered with product and engineering leadership to shape long-term product vision.
@@ -152,12 +158,22 @@ const Home = () => {
                 key={study.id} 
                 className="case-study-card"
                 onClick={() => navigate(`/case-study/${study.slug}`)}
+                onMouseEnter={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) video.play();
+                }}
+                onMouseLeave={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                  }
+                }}
               >
                 <div className="case-study-image">
-                  {study.image.endsWith('.mov') || study.image.endsWith('.mp4') ? (
-                    <video src={study.image} muted loop autoPlay playsInline />
-                  ) : (
-                    <img src={study.image} alt={study.title} />
+                  <img src={study.image} alt={study.title} />
+                  {study.video && (
+                    <video src={study.video} muted loop playsInline />
                   )}
                 </div>
                 <div className="case-study-info">
@@ -193,8 +209,8 @@ const Home = () => {
           <p className="contact-text">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
-          <a href="mailto:paridhisinha97@gmail.com" className="contact-email">
-            paridhisinha97@gmail.com
+          <a href="mailto:pari.sin17@gmail.com" className="contact-email">
+            pari.sin17@gmail.com
           </a>
         </div>
       </section>
