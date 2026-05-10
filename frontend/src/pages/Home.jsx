@@ -170,9 +170,9 @@ const Home = () => {
             <div className="about-skills">
               <div className="skill-tag">UX/UI Design</div>
               <div className="skill-tag">Product Strategy</div>
-              <div className="skill-tag">Design Systems</div>
-              <div className="skill-tag">GenAI Integration</div>
               <div className="skill-tag">User Research</div>
+              <div className="skill-tag">Design Systems</div>
+              <div className="skill-tag">Claude Code</div>
               <div className="skill-tag">Figma</div>
             </div>
           </div>
