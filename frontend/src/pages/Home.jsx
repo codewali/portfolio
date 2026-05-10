@@ -18,18 +18,6 @@ const Home = () => {
 
   const caseStudies = [
     {
-      id: 1,
-      title: 'Virtual Fitting Room',
-      company: 'Personal Project',
-      year: '2026',
-      description: 'A sketch-based exploration of virtual fashion fitting. Instead of focusing on realism or AI accuracy, this project explores how hand-drawn fashion sketches could be translated into an interactive, minimal digital experience.',
-      tags: ['Fashion Tech', 'UX Design', 'Prototyping'],
-      impact: 'Proof of concept for sketch-driven apparel interaction',
-      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
-      video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/913ls062_Screen%20Recording%202026-04-08%20at%205.53.38%E2%80%AFAM.mov',
-      slug: 'virtual-fitting-room'
-    },
-    {
       id: 2,
       title: 'BC/DR Executive Dashboard',
       company: 'Mitratech',
@@ -37,7 +25,7 @@ const Home = () => {
       description: 'An enterprise analytics interface helping business continuity leaders monitor and act on technology and vendor recovery readiness. Transformed passive reporting into an active decision system.',
       tags: ['Enterprise UX', 'Data Visualization', 'B2B SaaS'],
       impact: '24+ hours/month saved, real-time insights vs 2-3 day reporting',
-      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/8fwx39b1_1_IfkkNrPr-NGyyHk79thZgw.png',
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/k2bg2ef5_Screenshot%202026-05-10%20at%209.16.54%E2%80%AFPM.png',
       video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/y191dcei_Screen%20Recording%202026-04-08%20at%206.13.33%E2%80%AFAM.mov',
       slug: 'bcdr-executive-dashboard'
     },
@@ -49,9 +37,24 @@ const Home = () => {
       description: 'Redesigning Swiggy\'s group ordering experience to make coordinating meals with friends seamless. Focused on reducing friction, improving transparency, and creating delightful social interactions.',
       tags: ['FoodTech', 'Social Features', 'Mobile UX'],
       impact: 'Streamlined multi-user ordering flow with real-time coordination',
-      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/8fwx39b1_1_IfkkNrPr-NGyyHk79thZgw.png',
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/qh8a69ip_Screenshot%202026-05-10%20at%209.18.19%E2%80%AFPM.png',
       video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c4of3v95_Screen%20Recording%202026-04-30%20at%205.54.19%E2%80%AFPM.mov',
       slug: 'swiggy-group-ordering'
+    }
+  ];
+
+  const creativeProjects = [
+    {
+      id: 1,
+      title: 'Virtual Fitting Room',
+      company: 'Personal Project',
+      year: '2026',
+      description: 'A sketch-based exploration of virtual fashion fitting. Instead of focusing on realism or AI accuracy, this project explores how hand-drawn fashion sketches could be translated into an interactive, minimal digital experience.',
+      tags: ['Fashion Tech', 'UX Design', 'Prototyping'],
+      impact: 'Proof of concept for sketch-driven apparel interaction',
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
+      video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/913ls062_Screen%20Recording%202026-04-08%20at%205.53.38%E2%80%AFAM.mov',
+      slug: 'virtual-fitting-room'
     }
   ];
 
@@ -67,7 +70,7 @@ const Home = () => {
       {/* Navigation */}
       <nav className="nav">
         <div className="nav-content">
-          <a href="/" className="nav-logo">PS</a>
+          <a href="/" className="nav-logo">Paridhi Sinha</a>
           <div className="nav-links">
             <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
             <button onClick={() => scrollToSection('work')} className="nav-link">Work</button>
@@ -187,6 +190,62 @@ const Home = () => {
                   </div>
                   <div className="case-study-cta">
                     View Case Study <ArrowRight size={16} />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Creative Indulges Section */}
+      <section id="creative" className="creative-section">
+        <div className="work-content">
+          <div className="work-header">
+            <div className="work-label">Creative Indulges</div>
+            <h2 className="work-title">Side Projects</h2>
+          </div>
+          <div className="case-studies-grid">
+            {creativeProjects.map((project) => (
+              <div 
+                key={project.id} 
+                className="case-study-card"
+                onClick={() => navigate(`/case-study/${project.slug}`)}
+                onMouseEnter={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) video.play();
+                }}
+                onMouseLeave={(e) => {
+                  const video = e.currentTarget.querySelector('video');
+                  if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                  }
+                }}
+              >
+                <div className="case-study-image">
+                  <img src={project.image} alt={project.title} />
+                  {project.video && (
+                    <video src={project.video} muted loop playsInline />
+                  )}
+                </div>
+                <div className="case-study-info">
+                  <div className="case-study-meta">
+                    <div className="case-study-company">{project.company}</div>
+                    <div className="case-study-year">{project.year}</div>
+                  </div>
+                  <h3 className="case-study-title">{project.title}</h3>
+                  <p className="case-study-description">{project.description}</p>
+                  <div className="case-study-tags">
+                    {project.tags.map((tag, index) => (
+                      <span key={index} className="case-study-tag">{tag}</span>
+                    ))}
+                  </div>
+                  <div className="case-study-impact">
+                    <strong>Impact:</strong> {project.impact}
+                  </div>
+                  <div className="case-study-cta">
+                    View Project <ArrowRight size={16} />
                   </div>
                 </div>
               </div>

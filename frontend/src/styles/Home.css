@@ -12,11 +12,13 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(245, 241, 232, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #E5DFD0;
+  background: rgba(245, 241, 232, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(229, 223, 208, 0.5);
   z-index: 100;
   padding: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .nav-content {
@@ -29,7 +31,7 @@
 }
 
 .nav-logo {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #1A1A1A;
   text-decoration: none;
@@ -235,6 +237,12 @@
   font-weight: 900;
   color: #1A1A1A;
   letter-spacing: -0.02em;
+}
+
+/* Creative Section */
+.creative-section {
+  padding: 6rem 3rem;
+  background: #FFFFFF;
 }
 
 .case-studies-grid {
