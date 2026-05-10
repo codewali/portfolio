@@ -128,10 +128,10 @@ const Home = () => {
             <span className="label">Senior Product Designer, GRC</span>
             <h1>PORTFOLIO</h1>
             <p className="subtitle">
-              I started out with breaking product flows for a living, ended up suggesting fixes and finding solutions.
+              I started out with finding where the product breaks, ended up suggesting fixes and finding better solutions.
             </p>
             <p className="subtitle">
-              And then, switched to thinking about how to make it easier for the people on the other side of the screen trying to make sense of it all.
+              And finally, switched to thinking about how to make it easier for the people on the other side of the screen trying to make sense of it all.
             </p>
             <p className="subtitle">
               The journey from QA → Product → Design has taught me a lot ✨
