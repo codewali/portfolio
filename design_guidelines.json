@@ -1,0 +1,91 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 3 (Pastel & Soft) / Archetype 1 (Organic & Earthy) Hybrid",
+  "colors": {
+    "background": "#FFFFFF",
+    "background_secondary": "#FFF9E6",
+    "text_primary": "#1A1A1A",
+    "text_secondary": "#4A4A4A",
+    "accent": "#FACC15",
+    "accent_hover": "#EAB308",
+    "border": "#E5E7EB",
+    "hard_border": "#1A1A1A"
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Outfit",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter font-black text-[#1A1A1A]",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-bold text-[#1A1A1A]",
+      "h3": "text-xl sm:text-2xl font-semibold text-[#1A1A1A]",
+      "body": "text-base leading-relaxed text-[#4A4A4A]",
+      "label": "uppercase tracking-[0.2em] text-xs font-semibold text-[#4A4A4A]"
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-7xl mx-auto px-6 sm:px-12",
+    "section_padding": "py-20 sm:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12",
+    "whitespace": "Generous spacing philosophy applied. Use gap-12, p-12 where applicable.",
+    "border_radius": "rounded-3xl"
+  },
+  "components": {
+    "hero_section": {
+      "style": "Minimalist, left-aligned or centered with ample white space. The background should be primarily white (#FFFFFF) with a soft butter yellow (#FFF9E6) gradient blob or shape. Remove dramatic dark elements. Convert any emoji trinkets into clean, pill-shaped UI tags (bg-white border border-[#E5E7EB] text-sm).",
+      "background": "bg-white"
+    },
+    "case_study_cards": {
+      "style": "Clean, rectangular or slightly rounded (rounded-3xl) cards with solid white or butter-yellow (#FFF9E6) background. No heavy dropshadows by default, use a 1px subtle border (border-[#E5E7EB]). Hover effect: slight lift (-translate-y-2), subtle shadow (shadow-xl), and border color darkens slightly.",
+      "image_container": "overflow-hidden rounded-t-3xl max-h-[50vh] object-cover w-full"
+    },
+    "navigation": {
+      "style": "Glassmorphism with optical clarity: backdrop-blur-xl bg-white/80, 1px bottom border (border-[#E5E7EB]). Fixed top, z-50."
+    },
+    "buttons": {
+      "primary": "bg-[#1A1A1A] text-white hover:bg-[#333333] rounded-full px-8 py-4 transition-colors font-medium text-sm",
+      "secondary": "bg-[#FFF9E6] text-[#1A1A1A] hover:bg-[#FACC15] rounded-full px-8 py-4 transition-colors border border-[#FACC15] font-medium text-sm"
+    },
+    "about_me": {
+      "style": "Circular profile picture with a delicate 1px border. Lots of whitespace. Text should be large and airy."
+    }
+  },
+  "motion": {
+    "hover": "transition-all duration-300 ease-out",
+    "page_transition": "Framer motion fade in (opacity 0 to 1) and slight slide up (y: 20 to 0) for route changes."
+  },
+  "media": {
+    "profile_picture": {
+      "url": "https://images.unsplash.com/photo-1603024831285-6c56249e72d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwZ3JhcGhpYyUyMGRlc2lnbmVyJTIwcG9ydHJhaXQlMjBzbWlsZXxlbnwwfHx8fDE3Nzg0MjQ3MDZ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimal graphic designer portrait",
+      "category": "about_me"
+    },
+    "case_studies": [
+      {
+        "title": "Virtual Fitting Room",
+        "url": "https://images.unsplash.com/photo-1761682719858-5046d0cbbaae?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwdmlydHVhbCUyMGZpdHRpbmclMjByb29tJTIwbW9kZXJufGVufDB8fHx8MTc3ODQyNDcwM3ww&ixlib=rb-4.1.0&q=85",
+        "category": "portfolio_thumbnail"
+      },
+      {
+        "title": "BC/DR Dashboard",
+        "url": "https://images.unsplash.com/photo-1558655146-d09347e92766?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkJTIwbWluaW1hbCUyMFVJfGVufDB8fHx8MTc3ODQyNDcwM3ww&ixlib=rb-4.1.0&q=85",
+        "category": "portfolio_thumbnail"
+      },
+      {
+        "title": "Swiggy Group Ordering",
+        "url": "https://images.unsplash.com/photo-1584824388178-1defc3484ce3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxmb29kJTIwZGVsaXZlcnklMjBzbWFydHBob25lJTIwbW9ja3VwfGVufDB8fHx8MTc3ODQyNDcwNnww&ixlib=rb-4.1.0&q=85",
+        "category": "portfolio_thumbnail"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "COMPLETELY REMOVE the dark theme (#0f0f10), neon pink accents (#FF0080), and hand-drawn doodle aesthetics.",
+    "APPLY the new Light theme with Butter Yellow (#FFF9E6) as the primary accent and background secondary color.",
+    "REPLACE 'Inter' or other basic fonts with 'Cabinet Grotesk' for Headings and 'Outfit' for Body text. Use Google Fonts or similar to import them.",
+    "REFRESH the Hero Section: Instead of gamer trinkets, use clean pill-shaped tags or minimalist floating UI elements. Emphasize whitespace.",
+    "UPDATE Case Study Cards: Use light cards with subtle 1px borders, avoiding heavy blocky shadows. Ensure they match a modern Dribbble/Behance portfolio feel.",
+    "MAINTAIN all existing content (Case studies: Virtual Fitting Room, BC/DR Dashboard, Swiggy Group Ordering).",
+    "KEEP functional requirements: 'View Full Case Study' linking to Behance, 'View Resume' linking to Drive, smart scrolling, and page transitions.",
+    "RESTRUCTURE case study details using the Bento Grid protocol (grid-cols-1 md:grid-cols-12 with wide gap-8/12) for content layout.",
+    "ADD 'data-testid' to all interactive elements (buttons, links, cards) for testing purposes."
+  ]
+}
