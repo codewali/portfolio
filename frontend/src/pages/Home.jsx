@@ -129,16 +129,7 @@ const Home = () => {
             <span className="label">Staff Product Designer</span>
             <h1>PORTFOLIO</h1>
             <p className="subtitle">
-              I started out with finding where the product breaks, ended up suggesting fixes and finding better solutions.
-            </p>
-            <p className="subtitle">
-              And finally, switched to thinking about how to make it easier for the people on the other side of the screen trying to make sense of it all.
-            </p>
-            <p className="subtitle">
-              The journey from QA → Product → Design has taught me a lot ✨
-            </p>
-            <p className="subtitle">
-              Outside work, I build fashion and lifestyle concepts, experiment with visuals, and start side projects because of the love for the game!
+              At work, I enjoy the logic of systems, constraints, and figuring things out driven by metrics and user insights. Outside of it, I follow taste, feeling, colour, form, and whatever idea I can't quite let go of. Different rules, same obsession: designing things.
             </p>
           </div>
         </div>
