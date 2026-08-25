@@ -81,7 +81,7 @@ const Home = () => {
             <button onClick={() => scrollToSection('work')} className="nav-link">Work</button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
             <a 
-              href="https://drive.google.com/file/d/1Ed_Wq31OTAiJlj1ewbX57-BLrzKi_fOs/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1R6UNM-bj1GSNSsGVopGDoak__bcBoB_o/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="nav-cta"
@@ -93,7 +93,7 @@ const Home = () => {
           {/* Mobile Nav */}
           <div className="mobile-nav">
             <a 
-              href="https://drive.google.com/file/d/1Ed_Wq31OTAiJlj1ewbX57-BLrzKi_fOs/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1R6UNM-bj1GSNSsGVopGDoak__bcBoB_o/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="nav-cta-mobile"
@@ -126,7 +126,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <span className="label">Senior Product Designer, GRC</span>
+            <span className="label">Staff Product Designer</span>
             <h1>PORTFOLIO</h1>
             <p className="subtitle">
               I started out with finding where the product breaks, ended up suggesting fixes and finding better solutions.
@@ -160,21 +160,21 @@ const Home = () => {
           <div className="about-text">
             <h2>Designing with purpose</h2>
             <p>
-              With over 7 years of experience in B2B SaaS, I specialize in creating user-centered experiences that balance aesthetics with functionality. My expertise lies in the Governance, Risk, and Compliance space, where I navigate complex requirements to deliver intuitive solutions.
+              With over 7 years of experience in B2B SaaS, I specialize in enterprise products, product strategy, and end-to-end UX. I lead cross-product design strategy and collaborate with product and engineering leadership to shape product direction.
             </p>
             <p>
-              Currently at Mitratech, I lead cross-product UX strategy across enterprise risk and compliance platforms. I've introduced GenAI-powered workflows, improved UX consistency, and partnered with product and engineering leadership to shape long-term product vision.
+              Currently at Mitratech as Staff Product Designer, I drive UI unification and scalable UX practices across GRC products. I've introduced GenAI-powered workflows for policy generation, summarization, and version comparison, improving efficiency across key user tasks.
             </p>
             <p>
-              I hold a Bachelor of Technology in Computer Science from PES University and have transitioned from Software Testing to Product Ownership to Product Design, giving me a unique perspective on the entire product lifecycle.
+              My journey from Software Test Engineer → Product Owner → Product Designer has given me a unique perspective on the entire product lifecycle, helping me balance usability, scalability, and compliance requirements in regulated workflows.
             </p>
             <div className="about-skills">
               <div className="skill-tag">UX/UI Design</div>
               <div className="skill-tag">Product Strategy</div>
               <div className="skill-tag">User Research</div>
-              <div className="skill-tag">Design Systems</div>
-              <div className="skill-tag">Claude Code</div>
-              <div className="skill-tag">Figma</div>
+              <div className="skill-tag">Claude & Claude Code</div>
+              <div className="skill-tag">Figma Make & MCP</div>
+              <div className="skill-tag">Emergent</div>
             </div>
           </div>
         </div>
