@@ -129,7 +129,10 @@ const Home = () => {
             <span className="label">Staff Product Designer</span>
             <h1>PORTFOLIO</h1>
             <p className="subtitle">
-              At work, I enjoy the logic of systems, constraints, and figuring things out driven by metrics and user insights. Outside of it, I follow taste, feeling, colour, form, and whatever idea I can't quite let go of. Different rules, same obsession: designing things.
+              At work, I enjoy the logic of systems, constraints, and figuring things out driven by metrics and user insights. Outside of it, I follow taste, feeling, colour, form, and whatever idea I can't quite let go of.
+            </p>
+            <p className="subtitle">
+              Different rules, same obsession: designing things.
             </p>
           </div>
         </div>
