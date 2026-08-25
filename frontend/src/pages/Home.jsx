@@ -145,7 +145,7 @@ const Home = () => {
             <div className="about-label">About Me</div>
             <div className="about-image-wrapper">
               <img 
-                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/pa8y1lfc_pp.jpg" 
+                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/f0dwk5g8_IMG_3164.jpg" 
                 alt="Paridhi Sinha" 
                 className="about-image"
               />
