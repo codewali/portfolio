@@ -62,135 +62,133 @@ const CaseStudyDetail = () => {
       <section className="detail-content">
         <div className="content-container">
           
-          <h1 className="project-title">🧵 Virtual Fitting Room</h1>
-          <p className="project-subtitle">A sketch-based exploration of digital fashion fitting</p>
+          <h1 className="project-title">Virtual Fitting Room</h1>
+          <p className="project-subtitle">A sketch-based interaction experiment exploring how illustrated apparel previews can simplify digital try-on experiences.</p>
 
-          {/* Key Cards */}
-          <div className="key-cards-section">
-            <div className="key-card">
-              <h2>Overview</h2>
-              <p>A simplified, sketch-driven virtual fitting room exploring how hand-drawn fashion sketches translate into interactive digital experiences. This proof of concept tests whether illustrated outfit sketches can feel intuitive, aesthetic, and usable.</p>
-            </div>
-            
-            <div className="key-card">
-              <h2>The Problem</h2>
-              <p>Virtual fitting today prioritizes realism and AI accuracy but loses personality and simplicity. Users are overwhelmed by complex 3D models and AR overlays.</p>
-            </div>
-
-            <div className="key-card">
-              <h2>The Idea</h2>
-              <p><strong>Instead of "how accurate?" → ask "how expressive?"</strong></p>
-              <p>Inspired by hand-drawn photo booths, this project asks: what if trying clothes felt like interacting with sketches instead of hyper-real models?</p>
-            </div>
-          </div>
-
-          {/* Article Content */}
+          {/* Article Content - 9 Step Structure */}
           <div className="article-content">
+            
+            {/* 01 CONTEXT */}
             <div className="article-section">
-              <h2>Design Philosophy</h2>
-              <p>This project deliberately moves away from photorealism and AI-powered body scanning. Instead, it embraces the aesthetic of hand-drawn fashion illustration.</p>
-              <p>The hypothesis: users might prefer a charming, stylized experience over a technically perfect but impersonal one.</p>
+              <span className="step-label">01 — CONTEXT</span>
+              <h2>Exploring alternative UX patterns in apparel tech</h2>
+              <p>This is a personal side project—a proof of concept exploring whether simplified, illustrated apparel previews could offer a viable alternative to complex AR and 3D body-scanning solutions in digital try-on experiences.</p>
+              <p>The experiment was driven by curiosity about interaction design trade-offs: What if we prioritized speed and simplicity over photorealistic accuracy? Could a stylized, sketch-based approach feel more accessible and less intimidating than high-fidelity virtual fitting rooms?</p>
             </div>
 
+            {/* 02 PROBLEM */}
             <div className="article-section">
-              <h2>Design System</h2>
-              <p>The visual language is intentionally minimal and sketch-like:</p>
+              <span className="step-label">02 — PROBLEM</span>
+              <h2>Virtual fitting today is complex and intimidating</h2>
+              <p>Most virtual try-on solutions prioritize realism—3D body scans, AR overlays, AI-powered fit predictions. These approaches are technically impressive but create high barriers:</p>
               <ul>
-                <li><strong>Black & white aesthetic:</strong> Removes color as a variable, focuses on silhouette and form</li>
-                <li><strong>Hand-drawn, slightly imperfect:</strong> Embraces the charm of illustration over sterile precision</li>
-                <li><strong>Minimal UI framing:</strong> The sketches are the hero, interface stays out of the way</li>
-                <li><strong>Focus on silhouette over detail:</strong> Emphasizes shape and fit rather than fabric texture</li>
+                <li><strong>Setup friction:</strong> Requiring body measurements, photos, or camera access</li>
+                <li><strong>Uncanny valley:</strong> Near-realistic renders that feel "off" and break trust</li>
+                <li><strong>Performance issues:</strong> Heavy processing that slows down browsing</li>
+                <li><strong>Accuracy anxiety:</strong> When tools promise "perfect fit," users expect perfection and are disappointed by inevitable errors</li>
               </ul>
+              <p><strong>Question:</strong> What if we removed the pressure of accuracy altogether and focused on quick visual exploration instead?</p>
             </div>
 
+            {/* 03 ROLE */}
             <div className="article-section">
-              <h2>Core Experience</h2>
+              <span className="step-label">03 — ROLE</span>
+              <h2>My contribution</h2>
+              <p>Solo personal project where I handled:</p>
+              <ul>
+                <li>Concept exploration and design philosophy</li>
+                <li>Illustrated apparel asset creation (hand-drawn sketches)</li>
+                <li>Interaction design and layering logic</li>
+                <li>React prototype development with SVG overlays</li>
+                <li>User testing with lightweight prototypes</li>
+              </ul>
+              <p>The goal was to test an idea quickly—validate whether a sketch-based approach could feel intuitive and useful without the overhead of AI or AR.</p>
+            </div>
+
+            {/* 04 INSIGHT */}
+            <div className="highlight-box">
+              <span className="step-label">04 — KEY INSIGHT</span>
+              <p><strong>Sometimes less fidelity creates more engagement.</strong> Users didn't critique the sketches for being inaccurate—they appreciated them for being playful. Removing the expectation of perfection removed the anxiety of judgment.</p>
+            </div>
+
+            {/* 05 APPROACH */}
+            <div className="article-section">
+              <span className="step-label">05 — APPROACH</span>
+              <h2>Design strategy</h2>
               
-              <h3>Body Selection</h3>
+              <h3>Embrace Illustration Over Realism</h3>
+              <p>Instead of pursuing photorealism, lean into hand-drawn aesthetic. This sets a different expectation—users understand it's suggestive, not prescriptive. It's about the general idea of how items work together, not exact fit.</p>
+
+              <h3>Minimize Cognitive Load</h3>
+              <p>Simplified body type selection (Straight, Curvy, Broad) instead of precise measurements. No camera access, no photo uploads, no complex setup. Just tap and see results instantly.</p>
+
+              <h3>Layering System</h3>
+              <p>Built a component-based system where each clothing item is a separate SVG layer. Items composite in real-time as selections change, showing how pieces work together visually.</p>
+
+              <h3>Visual Consistency</h3>
+              <p>Established style rules for line weight, curve style, and detail level. All sketches follow the same grid for proper alignment, maintaining cohesion across different garment combinations.</p>
+            </div>
+
+            {/* 06 DECISIONS */}
+            <div className="article-section">
+              <span className="step-label">06 — KEY DECISIONS</span>
+              <h2>Design choices that defined the experiment</h2>
+              
+              <h3>Why sketches over realistic renders?</h3>
+              <p>Realistic virtual fitting sets expectations for accuracy that's nearly impossible to meet. Users get frustrated when the "perfect" 3D model doesn't match their actual body or when colors look different in real life.</p>
+              <p><strong>Decision:</strong> Sketches set a different expectation. They're charming and suggestive. Users understand it's about visual composition, not precise sizing. This reduces disappointment and makes the experience feel more exploratory.</p>
+
+              <h3>Why limited clothing options?</h3>
+              <p>This is a proof of concept testing the interaction pattern, not a complete product. Adding 100 items wouldn't validate the core idea any better than 5-6 well-designed ones.</p>
+              <p><strong>Decision:</strong> Focused on making a small set of items work beautifully rather than building broad but shallow coverage. Quality over quantity to validate the concept efficiently.</p>
+
+              <h3>Why no measurement input?</h3>
+              <p>Asking users for measurements creates friction and raises accuracy expectations. If I'm asking for exact measurements, users expect exact results.</p>
+              <p><strong>Decision:</strong> Body type selection is intentionally approximate. It's about visual preference and general silhouette, not precise sizing. Keeps the experience fast and low-pressure.</p>
+            </div>
+
+            {/* 07 SOLUTION */}
+            <div className="article-section">
+              <span className="step-label">07 — SOLUTION</span>
+              <h2>What I built</h2>
+              
+              <h3>Simple Body Selection</h3>
               <p>Users start by choosing from three body types: Straight, Curvy, or Broad. This simplified categorization acknowledges different body shapes without requiring measurements or photos.</p>
 
               <h3>Apparel Layering</h3>
-              <p>Toggle through tops (Shirt, Crop Top, T-shirt) and bottoms (Mini Skirt, Jeans) to build outfits. Each item is a separate sketch layer that composites in real-time.</p>
+              <p>Toggle through tops (Shirt, Crop Top, T-shirt) and bottoms (Mini Skirt, Jeans) to build outfits. Each item is a separate sketch layer that composites in real-time on the canvas.</p>
 
-              <h3>Live Preview</h3>
-              <p>The central canvas updates immediately as selections change. Sketches overlay smoothly, showing how items work together.</p>
+              <h3>Instant Visual Preview</h3>
+              <p>The central canvas updates immediately as selections change. Sketches overlay smoothly, showing how items work together compositionally. No loading, no processing—just instant feedback.</p>
 
-              <h3>Simplicity First</h3>
-              <p>No AI processing, no camera access, no complex setup. Just tap, layer, see result.</p>
+              <h3>Technical Implementation</h3>
+              <p>Built as a React prototype with SVG-based sketch overlays for clean scaling, component state management for instant updates, and minimal dependencies to keep it lightweight and fast.</p>
             </div>
 
+            {/* 08 IMPACT */}
             <div className="article-section">
-              <h2>Technical Approach</h2>
-              <p>Built as a React prototype with:</p>
+              <span className="step-label">08 — IMPACT</span>
+              <h2>What this validated</h2>
               <ul>
-                <li>SVG-based sketch overlays for clean scaling</li>
-                <li>Component state management for instant updates</li>
-                <li>Minimal dependencies to keep it lightweight</li>
+                <li><strong>Stylized > Realistic:</strong> Users preferred the charming sketch aesthetic over "almost real" renders that felt uncanny</li>
+                <li><strong>Speed matters:</strong> Instant visual feedback created a playful, exploratory feel rather than a utilitarian transaction</li>
+                <li><strong>Low barriers work:</strong> No setup friction meant users engaged immediately without hesitation</li>
+                <li><strong>Different use case:</strong> This isn't for "buying with confidence"—it's for quick visual exploration and inspiration</li>
               </ul>
-              <p>Each clothing item and body type is a separate SVG layer. The canvas composites them based on selection, maintaining consistency in line weight and style.</p>
+              <p><strong>Note:</strong> As a concept project, these are qualitative findings from informal user testing, not quantitative metrics from production deployment.</p>
             </div>
 
+            {/* 09 REFLECTION */}
             <div className="article-section">
-              <h2>Design Decisions</h2>
-              
-              <h3>Why sketches over realistic renders?</h3>
-              <p>Realistic virtual fitting sets expectations for accuracy that's nearly impossible to meet. Users get frustrated when the "perfect" 3D model doesn't match their actual body.</p>
-              <p><strong>Solution:</strong> Sketches set a different expectation. They're suggestive, not prescriptive. Users understand it's about the general idea, not exact fit.</p>
-
-              <h3>Why limited clothing options?</h3>
-              <p>This is a proof of concept testing the interaction pattern, not a complete wardrobe.</p>
-              <p><strong>Decision:</strong> Focused on making 2-3 items work beautifully rather than 100 items work poorly. Quality over quantity to validate the concept.</p>
-
-              <h3>Why no measurement input?</h3>
-              <p>Asking users for measurements creates friction and raises accuracy expectations.</p>
-              <p><strong>Solution:</strong> Body type selection is intentionally approximate. It's about visual preference, not precise sizing.</p>
+              <span className="step-label">09 — REFLECTION</span>
+              <h2>What I learned</h2>
+              <p>This project taught me that <strong>the most technically impressive solution isn't always the most enjoyable to use.</strong> Sometimes simplicity and charm beat accuracy and complexity.</p>
+              <p>It also reinforced that <strong>constraints breed creativity.</strong> Limiting to black-and-white sketches forced focus on form and silhouette, which might be more valuable than color when evaluating how pieces work together.</p>
+              <p><strong>Biggest insight:</strong> Apparel tech doesn't have to chase photorealism to be useful. There's space for experiences that are delightful, fast, and "good enough" for quick exploration.</p>
+              <p>If I were to expand this concept, I'd explore user-uploaded sketches (let people draw their own clothes), social sharing of outfit combinations, and integration with actual e-commerce for seamless purchase after visual exploration.</p>
+              <p>Most importantly, this reminded me that <strong>design is about choices.</strong> Choosing to embrace constraints (sketches, limited options) rather than fight them can lead to surprisingly compelling experiences that carve out their own niche.</p>
             </div>
 
-            <div className="article-section">
-              <h2>Challenges</h2>
-              
-              <h3>Maintaining Visual Consistency</h3>
-              <p>Each sketch needs to feel like it's from the same artist's hand, even when layered.</p>
-              <p><strong>Approach:</strong> Established style rules for line weight, curve style, and level of detail. All sketches follow the same grid for proper alignment.</p>
-
-              <h3>Layering Logic</h3>
-              <p>Clothes need to layer in the right order (shirt over body, jacket over shirt) without manual z-index management.</p>
-              <p><strong>Solution:</strong> Predefined layer hierarchy. Each garment type has an assigned level that determines rendering order.</p>
-
-              <h3>Conveying Non-Realism</h3>
-              <p>Users might expect this to show how clothes "actually look" on them.</p>
-              <p><strong>Approach:</strong> Clear messaging that this is a "sketch exploration" not a "virtual fitting." Sets appropriate expectations from the start.</p>
-            </div>
-
-            <div className="article-section">
-              <h2>What I Learned</h2>
-              <p>This project taught me that sometimes <strong>less fidelity can create more engagement</strong>. Users didn't critique the sketches for being inaccurate — they appreciated them for being playful.</p>
-              <p>It also reinforced that <strong>constraints breed creativity</strong>. Limiting to black-and-white sketches forced focus on form and silhouette, which might be more valuable than color when evaluating fit.</p>
-              <p>The biggest insight: <strong>fashion tech doesn't have to chase photorealism to be useful</strong>. There's space for experiences that are delightful, fast, and "good enough."</p>
-            </div>
-
-            <div className="article-section">
-              <h2>Future Directions</h2>
-              <p>If expanded, this concept could include:</p>
-              <ul>
-                <li>More body types and poses</li>
-                <li>Expanded wardrobe with seasonal collections</li>
-                <li>User-uploaded sketches (let people draw their own clothes)</li>
-                <li>Social sharing of outfit combinations</li>
-                <li>Integration with e-commerce for actual purchase</li>
-              </ul>
-            </div>
-
-            <div className="highlight-box">
-              <p><strong>Core Insight:</strong> The most technically impressive solution isn't always the most enjoyable to use. Sometimes simplicity and charm beat accuracy and complexity.</p>
-            </div>
-
-            <div className="article-section">
-              <h2>Reflection</h2>
-              <p>This proof of concept was an experiment in questioning assumptions. Fashion tech defaults to photorealism and AI, but does it have to?</p>
-              <p>The sketch approach won't replace traditional e-commerce or AR try-ons. But it might carve out its own space for users who want something quick, low-pressure, and visually interesting.</p>
-              <p>Most importantly, it reminded me that design is about choices. Choosing to embrace constraints (sketches, limited options) rather than fight them can lead to surprisingly compelling experiences.</p>
-            </div>
           </div>
 
         </div>

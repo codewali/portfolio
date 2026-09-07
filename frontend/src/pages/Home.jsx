@@ -77,17 +77,17 @@ const Home = () => {
           
           {/* Desktop Nav Links */}
           <div className="nav-links desktop-nav">
-            <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
             <button onClick={() => scrollToSection('work')} className="nav-link">Work</button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
+            <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
             <a 
               href="https://drive.google.com/file/d/1R6UNM-bj1GSNSsGVopGDoak__bcBoB_o/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-cta"
+              className="nav-link"
             >
-              View Resume
+              Resume
             </a>
+            <button onClick={() => scrollToSection('contact')} className="nav-cta">Let's talk</button>
           </div>
 
           {/* Mobile Nav */}
@@ -115,9 +115,17 @@ const Home = () => {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="mobile-menu">
-            <button onClick={() => scrollToSection('about')} className="mobile-menu-link">About</button>
             <button onClick={() => scrollToSection('work')} className="mobile-menu-link">Work</button>
-            <button onClick={() => scrollToSection('contact')} className="mobile-menu-link">Contact</button>
+            <button onClick={() => scrollToSection('about')} className="mobile-menu-link">About</button>
+            <a 
+              href="https://drive.google.com/file/d/1R6UNM-bj1GSNSsGVopGDoak__bcBoB_o/view?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-menu-link"
+            >
+              Resume
+            </a>
+            <button onClick={() => scrollToSection('contact')} className="mobile-menu-link">Let's talk</button>
           </div>
         )}
       </nav>
@@ -126,13 +134,10 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <span className="label">Staff Product Designer</span>
-            <h1>PORTFOLIO</h1>
-            <p className="subtitle">
-              At work, I enjoy the logic of systems, constraints, and figuring things out driven by metrics and user insights. Outside of it, I follow taste, feeling, colour, form, and whatever idea I can't quite let go of.
-            </p>
-            <p className="subtitle">
-              Different rules, same obsession: designing things.
+            <span className="hero-label">STAFF PRODUCT DESIGNER</span>
+            <h1 className="hero-title">I design complex products into experiences people can actually use</h1>
+            <p className="hero-subtitle">
+              7+ years building enterprise systems, AI products, and B2B SaaS platforms. Currently leading design strategy at Mitratech, focusing on scalable UX practices and GenAI-powered workflows.
             </p>
           </div>
         </div>
@@ -142,7 +147,7 @@ const Home = () => {
       <section id="about" className="about">
         <div className="about-content">
           <div>
-            <div className="about-label">About Me</div>
+            <div className="about-label">ABOUT</div>
             <div className="about-image-wrapper">
               <img 
                 src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/f0dwk5g8_IMG_3164.jpg" 
@@ -152,23 +157,24 @@ const Home = () => {
             </div>
           </div>
           <div className="about-text">
-            <h2>Designing with purpose</h2>
+            <h2>Designing complex products for the people who use them</h2>
             <p>
-              With over 7 years of experience in B2B SaaS, I specialize in enterprise products, product strategy, and end-to-end UX. I lead cross-product design strategy and collaborate with product and engineering leadership to shape product direction.
+              With 7+ years in B2B SaaS and enterprise products, I specialize in AI-powered systems, product strategy, and end-to-end UX. I lead cross-product design strategy and collaborate with product and engineering leadership to shape product direction.
             </p>
             <p>
-              Currently at Mitratech as Staff Product Designer, I drive UI unification and scalable UX practices across GRC products. I've introduced GenAI-powered workflows for policy generation, summarization, and version comparison, improving efficiency across key user tasks.
+              Currently at Mitratech as Staff Product Designer, I drive UI unification and scalable UX practices across GRC products. I've introduced GenAI-powered workflows for policy generation, summarization, and version comparison—improving efficiency across regulated, high-stakes user workflows.
             </p>
             <p>
-              My journey from Software Test Engineer → Product Owner → Product Designer has given me a unique perspective on the entire product lifecycle, helping me balance usability, scalability, and compliance requirements in regulated workflows.
+              My background spans Software Test Engineer → Product Owner → Product Designer. This journey gives me a systems-thinking lens on the entire product lifecycle, helping me balance usability, scalability, and compliance in complex enterprise environments.
             </p>
-            <div className="about-skills">
-              <div className="skill-tag">UX/UI Design</div>
-              <div className="skill-tag">Product Strategy</div>
-              <div className="skill-tag">User Research</div>
-              <div className="skill-tag">Claude & Claude Code</div>
-              <div className="skill-tag">Figma Make & MCP</div>
-              <div className="skill-tag">Emergent</div>
+            <div className="about-focus">
+              <div className="focus-label">FOCUS AREAS</div>
+              <div className="focus-tags">
+                <div className="focus-tag">Enterprise UX</div>
+                <div className="focus-tag">AI Products</div>
+                <div className="focus-tag">B2B SaaS</div>
+                <div className="focus-tag">Systems Thinking</div>
+              </div>
             </div>
           </div>
         </div>
@@ -231,12 +237,12 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Creative Indulges Section */}
-      <section id="creative" className="creative-section">
+      {/* Side Projects Section */}
+      <section id="side-projects" className="work">
         <div className="work-content">
           <div className="work-header">
-            <div className="work-label">Creative Indulges</div>
-            <h2 className="work-title">Side Projects</h2>
+            <div className="work-label">SIDE PROJECTS</div>
+            <p className="work-subtitle">Personal explorations and experiments</p>
           </div>
           <div className="case-studies-grid">
             {creativeProjects.map((project) => (
