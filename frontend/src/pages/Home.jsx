@@ -162,13 +162,13 @@ const Home = () => {
               I'm drawn to messy, overwhelming, and complex flows, and I comb through the weeds by making sense of the patterns that can help not only solve the current issue but also support the scalability of features.
             </p>
             <p>
-              At Mitratech, I help do this for Preparis (a continuity planning & disaster recovery platform) and PolicyHub (policy management app) as a part of the GRC portfolio of products.
+              At Mitratech, I help do this for Preparis (a continuity planning & disaster recovery platform) and PolicyHub (a policy management application) as a part of the GRC portfolio of products.
             </p>
           </div>
           <div className="about-image-wrapper">
             <img 
               id="about-portrait"
-              src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/57927033f46270f8c58a32054853df19b3d8e3cacdd6502266c447739057db65.jpeg" 
+              src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/pudlqwor_potrait.png" 
               alt="Paridhi Sinha" 
               className="about-image-portrait"
             />
