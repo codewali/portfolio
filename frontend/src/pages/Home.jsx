@@ -135,10 +135,8 @@ const Home = () => {
         <div className="hero-content">
           <div className="hero-text">
             <span className="hero-label">STAFF PRODUCT DESIGNER</span>
-            <h1 className="hero-title">I design complex products into experiences people can actually use</h1>
-            <p className="hero-subtitle">
-              7+ years building enterprise systems, AI products, and B2B SaaS platforms. Currently leading design strategy at Mitratech, focusing on scalable UX practices and GenAI-powered workflows.
-            </p>
+            <h1 className="hero-title">I help large-scale enterprise customers use our products for Governance, Risk & Compliance management, efficiently and easily, to address their needs and meet their business goals.</h1>
+            <p className="hero-subtitle">7+ years building enterprise systems, AI products, and B2B SaaS platforms. Currently leading design strategy at Mitratech, focusing on scalable UX practices and GenAI-powered workflows.</p>
           </div>
         </div>
       </section>
@@ -146,36 +144,25 @@ const Home = () => {
       {/* About Section */}
       <section id="about" className="about">
         <div className="about-content">
-          <div>
-            <div className="about-label">ABOUT</div>
-            <div className="about-image-wrapper">
-              <img 
-                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/f0dwk5g8_IMG_3164.jpg" 
-                alt="Paridhi Sinha" 
-                className="about-image"
-              />
-            </div>
-          </div>
           <div className="about-text">
-            <h2>Designing complex products for the people who use them</h2>
-            <p>
-              With 7+ years in B2B SaaS and enterprise products, I specialize in AI-powered systems, product strategy, and end-to-end UX. I lead cross-product design strategy and collaborate with product and engineering leadership to shape product direction.
+            <div className="about-label">ABOUT</div>
+            <p className="about-lead">
+              Good design helps speed up task completion while increasing trust by providing enough information.
             </p>
             <p>
-              Currently at Mitratech as Staff Product Designer, I drive UI unification and scalable UX practices across GRC products. I've introduced GenAI-powered workflows for policy generation, summarization, and version comparison—improving efficiency across regulated, high-stakes user workflows.
+              I'm drawn to messy, overwhelming, and complex flows, and I comb through the weeds by making sense of the patterns that can help not only solve the current issue but also support the scalability of features.
             </p>
             <p>
-              My background spans Software Test Engineer → Product Owner → Product Designer. This journey gives me a systems-thinking lens on the entire product lifecycle, helping me balance usability, scalability, and compliance in complex enterprise environments.
+              At Mitratech, I help do this for Preparis (a continuity planning & disaster recovery platform) and PolicyHub (policy management app) as a part of the GRC portfolio of products.
             </p>
-            <div className="about-focus">
-              <div className="focus-label">FOCUS AREAS</div>
-              <div className="focus-tags">
-                <div className="focus-tag">Enterprise UX</div>
-                <div className="focus-tag">AI Products</div>
-                <div className="focus-tag">B2B SaaS</div>
-                <div className="focus-tag">Systems Thinking</div>
-              </div>
-            </div>
+          </div>
+          <div className="about-image-wrapper">
+            <img 
+              id="about-portrait"
+              src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/57927033f46270f8c58a32054853df19b3d8e3cacdd6502266c447739057db65.jpeg" 
+              alt="Paridhi Sinha" 
+              className="about-image-portrait"
+            />
           </div>
         </div>
       </section>
@@ -238,57 +225,30 @@ const Home = () => {
       </section>
 
       {/* Side Projects Section */}
-      <section id="side-projects" className="work">
-        <div className="work-content">
-          <div className="work-header">
-            <div className="work-label">SIDE PROJECTS</div>
-            <p className="work-subtitle">Personal explorations and experiments</p>
+      <section id="side-projects" className="side-projects-banner">
+        <div className="side-projects-content">
+          <div className="side-projects-header">
+            <div className="side-projects-label">SIDE PROJECTS</div>
+            <h3 className="side-projects-title">A few experiments on the side</h3>
+            <p className="side-projects-subtitle">Exploring ideas, trying things out, and learning along the way.</p>
           </div>
-          <div className="case-studies-grid">
-            {creativeProjects.map((project) => (
-              <div 
-                key={project.id} 
-                className="case-study-card"
-                onClick={() => navigate(`/case-study/${project.slug}`)}
-                onMouseEnter={(e) => {
-                  const video = e.currentTarget.querySelector('video');
-                  if (video) video.play();
-                }}
-                onMouseLeave={(e) => {
-                  const video = e.currentTarget.querySelector('video');
-                  if (video) {
-                    video.pause();
-                    video.currentTime = 0;
-                  }
-                }}
+          <div className="side-project-item">
+            <div className="side-project-visual">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png" 
+                alt="Virtual Trial Room"
+              />
+            </div>
+            <div className="side-project-info">
+              <h4 className="side-project-name">Virtual Trial Room</h4>
+              <p className="side-project-description">A sketch-based exploration of virtual fashion fitting.</p>
+              <button 
+                onClick={() => navigate('/case-study/virtual-fitting-room')}
+                className="side-project-cta"
               >
-                <div className="case-study-image">
-                  <img src={project.image} alt={project.title} />
-                  {project.video && (
-                    <video src={project.video} muted loop playsInline />
-                  )}
-                </div>
-                <div className="case-study-info">
-                  <div className="case-study-meta">
-                    <div className="case-study-company">{project.company}</div>
-                    <div className="case-study-year">{project.year}</div>
-                  </div>
-                  <h3 className="case-study-title">{project.title}</h3>
-                  <p className="case-study-description">{project.description}</p>
-                  <div className="case-study-tags">
-                    {project.tags.map((tag, index) => (
-                      <span key={index} className="case-study-tag">{tag}</span>
-                    ))}
-                  </div>
-                  <div className="case-study-impact">
-                    <strong>Impact:</strong> {project.impact}
-                  </div>
-                  <div className="case-study-cta">
-                    View Project <ArrowRight size={16} />
-                  </div>
-                </div>
-              </div>
-            ))}
+                View Virtual Trial Room <ArrowRight size={16} />
+              </button>
+            </div>
           </div>
         </div>
       </section>

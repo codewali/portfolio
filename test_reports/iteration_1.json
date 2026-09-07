@@ -1,0 +1,30 @@
+{
+  "summary": "Frontend UI refinement testing on portfolio. Verified hero copy, About section, side projects banner, case study 6-section structure, and em-dash removal across Home + 3 case study pages, plus mobile responsiveness. All refinements landed EXCEPT case study tag pill styling which is completely absent.",
+  "tested_scope": ["frontend"],
+  "passed": [
+    "Hero has 'Governance, Risk & Compliance' main copy",
+    "Hero has '7+ years' subtitle beneath main copy",
+    "About section shows updated copy ('Good design helps speed up task completion...')",
+    "About section shows B&W portrait image in asymmetric layout",
+    "Side Projects rendered as compact banner with only Virtual Trial Room + one CTA ('View Virtual Trial Room')",
+    "BCDR case study page: 6/6 expected sections present (Context & Problem Discovery, My Role, Design Approach & Key Decisions, Solution, Impact, What I Learnt)",
+    "Swiggy case study page: 6/6 expected sections present",
+    "Virtual Trial Room case study page: 6/6 expected sections present",
+    "No em dashes (—) found on Home, BCDR, Swiggy, or VTR pages",
+    "Mobile viewport (390px): no horizontal overflow, layout renders correctly"
+  ],
+  "failed": [
+    {
+      "area": "Landing page — Case Study cards",
+      "issue": "Case study tags (.case-study-tag) have NO styling applied — border-radius: 0px, background: transparent, border: 0px, padding: 0px. They render as concatenated plain text (e.g. 'Enterprise UXData VisualizationB2B SaaS') instead of rounded pills.",
+      "evidence": "computed styles on all 6 .case-study-tag elements show br=0px, bg=rgba(0,0,0,0), border=0px, pad=0px. grep confirms no CSS rule defines .case-study-tag anywhere in /app/frontend/src/. Home.css referenced in files_of_reference does not exist at /app/frontend/src/pages/Home.css.",
+      "priority": "HIGH"
+    }
+  ],
+  "action_items": [
+    "Add CSS rules for .case-study-tag and .case-study-tags — the requirement was proper rounded pills with border/background. The stylesheet update appears to be missing. Verify where Home.jsx styles live (there is no Home.css at /app/frontend/src/pages/Home.css despite it being listed in files_of_reference) and add pill styling: border-radius, padding, background, border, and inline-flex with gap on .case-study-tags container."
+  ],
+  "success_rate": {"backend": "N/A (skipped per request)", "frontend": "91% (10/11 checks)"},
+  "retest_needed": true,
+  "full_testing_deferred": true
+}

@@ -236,6 +236,68 @@
   font-weight: 600;
 }
 
+/* Article Content - Compact Version */
+.article-content-compact {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cs-section {
+  margin-bottom: 3.5rem;
+  padding-top: 0;
+}
+
+.cs-section-last {
+  margin-bottom: 0;
+}
+
+.cs-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.cs-section p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.cs-section p:last-child {
+  margin-bottom: 0;
+}
+
+.cs-section strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.cs-list-compact {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.cs-list-compact li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.cs-list-compact li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
 /* Article Content */
 .article-content {
   max-width: 1100px;
