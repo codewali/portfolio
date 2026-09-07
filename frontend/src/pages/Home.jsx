@@ -135,8 +135,17 @@ const Home = () => {
         <div className="hero-content">
           <div className="hero-text">
             <span className="hero-label">STAFF PRODUCT DESIGNER</span>
-            <h1 className="hero-title">I help large-scale enterprise customers use our products for Governance, Risk & Compliance management, efficiently and easily, to address their needs and meet their business goals.</h1>
+            <h1 className="hero-title">I help enterprise customers use our Governance, Risk & Compliance products with ease, designing solutions that address their needs and support their business goals.</h1>
             <p className="hero-subtitle">7+ years building enterprise systems, AI products, and B2B SaaS platforms. Currently leading design strategy at Mitratech, focusing on scalable UX practices and GenAI-powered workflows.</p>
+          </div>
+          <div className="hero-visual">
+            <div className="hero-visual-container">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/k2bg2ef5_Screenshot%202026-05-10%20at%209.16.54%E2%80%AFPM.png"
+                alt="BC/DR Executive Dashboard"
+                className="hero-visual-image"
+              />
+            </div>
           </div>
         </div>
       </section>
