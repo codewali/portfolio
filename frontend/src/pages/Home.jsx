@@ -159,7 +159,7 @@ const Home = () => {
               Good design helps speed up task completion while increasing trust by providing adequate information.
             </p>
             <p>
-              Hi! I'm Paridhi and I'm a Staff Product Designer based in Bengaluru, Karnataka.
+              Hi! I'm Paridhi, a Staff Product Designer based in Bengaluru, Karnataka.
             </p>
             <p>
               I'm drawn to messy, overwhelming, and complex flows, and I comb through the weeds by making sense of the patterns that can help not only solve the current issue but also support the scalability of features.
@@ -171,7 +171,7 @@ const Home = () => {
           <div className="about-image-wrapper">
             <img 
               id="about-portrait"
-              src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/pudlqwor_potrait.png" 
+              src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/izdvj77h_portrait.png" 
               alt="Paridhi Sinha" 
               className="about-image-portrait"
             />
