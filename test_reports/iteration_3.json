@@ -1,0 +1,19 @@
+{
+  "summary": "Frontend UI test for restructured Side Projects section. Verified single horizontal banner with left/right grid on desktop and vertical stacking on mobile. All requirements met.",
+  "tested_scope": ["frontend"],
+  "passed": [
+    "Single .side-projects-card structure present (no separate header/card, no legacy .side-projects-header or .side-project-item)",
+    "Left side contains label 'SIDE PROJECTS', heading 'A few experiments on the side', and description text",
+    "Right side contains Virtual Trial Room image (617x426, contained) and 'View Virtual Trial Room' CTA",
+    "Desktop (1920px): grid layout with two columns (619px each), side-by-side confirmed",
+    "Card styling: dark background rgb(19,24,33), border 1px rgba(255,255,255,0.08), padding 48px — compact/editorial feel",
+    "CTA positioned below image on the right side",
+    "Mobile (390px): banner stacks vertically — left (y=208) then right (y=404)",
+    "Other sections intact: #about, #work, #contact all present"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
