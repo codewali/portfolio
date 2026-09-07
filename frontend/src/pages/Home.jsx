@@ -156,13 +156,16 @@ const Home = () => {
           <div className="about-text">
             <div className="about-label">ABOUT</div>
             <p className="about-lead">
-              Good design helps speed up task completion while increasing trust by providing enough information.
+              Good design helps speed up task completion while increasing trust by providing adequate information.
+            </p>
+            <p>
+              Hi! I'm Paridhi and I'm a Staff Product Designer based in Bengaluru, Karnataka.
             </p>
             <p>
               I'm drawn to messy, overwhelming, and complex flows, and I comb through the weeds by making sense of the patterns that can help not only solve the current issue but also support the scalability of features.
             </p>
             <p>
-              At Mitratech, I help do this for Preparis (a continuity planning & disaster recovery platform) and PolicyHub (a policy management application) as a part of the GRC portfolio of products.
+              At Mitratech, I help do this for Preparis (a continuity planning & disaster recovery platform) and PolicyHub (a policy management application) as a part of the GRC portfolio of products. Been at it for 2 years now.
             </p>
           </div>
           <div className="about-image-wrapper">
