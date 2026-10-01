@@ -216,14 +216,14 @@ const Home = () => {
           
           {/* 3D Floating Tool Icons */}
           <div className="floating-icons">
-            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/60fb30e0006657b5b451e19ddd11d35e63ee2e8a3ba5f2eca032d8b54e792ed2.jpeg" alt="Claude" className="floating-icon icon-1" />
-            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/5b4eba781b58f6068d3610f85595ab16a8ceabe7788b09acfd4b734cc5eafd56.jpeg" alt="Figma" className="floating-icon icon-2" />
-            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/5fece3b6facf0e69de74f67e3a191190ac6bd5a3452923158cbc3686dbf905f4.jpeg" alt="Adobe" className="floating-icon icon-3" />
-            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/7181b2e462528d6142b87ed3e14add766444a2b417fb5d31cdc1a960c04487fa.jpeg" alt="Emergent" className="floating-icon icon-4" />
-            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/2ffa88987c6cb604c626824569586fb47ab6d6dcb89afde380fc040e8e61019b.jpeg" alt="Pendo" className="floating-icon icon-5" />
-            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/f4b67e5520178d13135d0e6be7732d1348ba9450e915a7b906aa3a7bfa86efbd.jpeg" alt="GPT" className="floating-icon icon-6" />
-            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/82ef594b7a30c61f0e2f00517089e731a3e73de865ec19dcb768afaad88df9a9.jpeg" alt="Gemini" className="floating-icon icon-7" />
-            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/9181d045172f424db793522b620fe6e2c52f012a1405aee8009c5846080c27cb.jpeg" alt="Mobbin" className="floating-icon icon-8" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/d24d23cebe1cbc16880afbd7975ea261bad88e30c613c97c8c4aecf0284a4a7a.jpeg" alt="Claude" className="floating-icon icon-1" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/3bd574c8672bf3e6f2831d812df9e39aeb9c344956f76c280c97d7e6689b2187.jpeg" alt="Figma" className="floating-icon icon-2" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/d2bad29344adb7968b5751cfeac1d8b1521c366451a8ed534b428870cc30a214.jpeg" alt="Adobe" className="floating-icon icon-3" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/e62c2d34c30506d949821d20cf616786ad50cd8b1035e65b848b9ea0819e8819.jpeg" alt="Emergent" className="floating-icon icon-4" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/c2574b093bc50c2b89dbe5f2912a97d200232acdebbbe482d28b92beb3a81eb4.jpeg" alt="Pendo" className="floating-icon icon-5" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/0072d70b1d54af8f9dc59009b5f3723a4448047e3c215f9b82bcb5e98f32f172.jpeg" alt="GPT" className="floating-icon icon-6" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/26262d0798911a20921eb1a6a24f44c2bce2f2fa733963cef34384da1504f953.jpeg" alt="Gemini" className="floating-icon icon-7" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/0d90cde8c640483bfc5ed273e82fe6a4facaf5bd62adc54011b42ca00243fe20.jpeg" alt="Mobbin" className="floating-icon icon-8" />
           </div>
         </div>
         <div className="hero-scroll-indicator">

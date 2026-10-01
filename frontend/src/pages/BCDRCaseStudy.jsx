@@ -64,7 +64,7 @@ const BCDRCaseStudy = () => {
           {/* Article Content - Two Column Grid */}
           <div className="article-content-compact content-two-column">
             
-            {/* 01 Context & Problem Discovery */}
+            {/* 01 The Problem */}
             <div className="cs-section">
               <h2 className="cs-section-title">THE PROBLEM</h2>
               
@@ -94,30 +94,34 @@ const BCDRCaseStudy = () => {
             <div className="cs-section">
               <h2 className="cs-section-title">DESIGN APPROACH</h2>
               
-              <p><strong>Three-tier information hierarchy</strong><br/>
-              Mapped the decision-making flow to create: at-a-glance health indicators, filterable views on-demand, and deep-dive detailed reports.</p>
+              <h3 className="cs-subsection-headline">Three-tier information hierarchy</h3>
+              <p>Mapped the decision-making flow to create: at-a-glance health indicators, filterable views on-demand, and deep-dive detailed reports.</p>
 
-              <p><strong>Trends over raw numbers</strong><br/>
-              Stakeholder feedback revealed absolute numbers didn't tell the story. A system with 10 high-risk items today might be improving (was 20 last month) or deteriorating (was 5 last month). Added trend indicators and comparison views to show direction of change.</p>
+              <h3 className="cs-subsection-headline">Trends over raw numbers</h3>
+              <p>Stakeholder feedback revealed absolute numbers didn't tell the story. A system with 10 high-risk items today might be improving (was 20 last month) or deteriorating (was 5 last month). Added trend indicators and comparison views to show direction of change.</p>
 
-              <p><strong>Progressive disclosure, not information overload</strong><br/>
-              Early prototypes tried to surface all available data upfront. User testing showed this created cognitive overload and actually slowed decision-making. Defaulted to summary view with clear pathways to details. Let users choose their depth of exploration.</p>
+              <h3 className="cs-subsection-headline">Progressive disclosure, not information overload</h3>
+              <p>Early prototypes tried to surface all available data upfront. User testing showed this created cognitive overload and actually slowed decision-making. Defaulted to summary view with clear pathways to details. Let users choose their depth of exploration.</p>
 
-              <p><strong>Make vendor dependencies visible</strong><br/>
-              Research revealed vendor-related incidents were a growing concern (third-party outages, security breaches), but existing tools didn't make these relationships visible. Created a dedicated vendor exposure view showing which vendors, if disrupted, would impact the most critical systems.</p>
+              <h3 className="cs-subsection-headline">Make vendor dependencies visible</h3>
+              <p>Research revealed vendor-related incidents were a growing concern (third-party outages, security breaches), but existing tools didn't make these relationships visible. Created a dedicated vendor exposure view showing which vendors, if disrupted, would impact the most critical systems.</p>
             </div>
 
             {/* 04 Solution */}
             <div className="cs-section">
               <h2 className="cs-section-title">SOLUTION</h2>
               
-              <p><strong>Risk heat map:</strong> Visual matrix showing recovery time objectives vs. actual recovery capability across all critical systems. Instantly highlights which systems are at risk.</p>
+              <h3 className="cs-subsection-headline">Risk heat map</h3>
+              <p>Visual matrix showing recovery time objectives vs. actual recovery capability across all critical systems. Instantly highlights which systems are at risk.</p>
 
-              <p><strong>Vendor exposure view:</strong> Shows dependency on third-party vendors with integrated risk assessment. Helps executives understand concentration risk and single points of failure.</p>
+              <h3 className="cs-subsection-headline">Vendor exposure view</h3>
+              <p>Shows dependency on third-party vendors with integrated risk assessment. Helps executives understand concentration risk and single points of failure.</p>
 
-              <p><strong>Plan coverage analysis:</strong> Tracks which technologies have documented, tested recovery plans and which don't. Surfaces gaps before they become problems during an incident.</p>
+              <h3 className="cs-subsection-headline">Plan coverage analysis</h3>
+              <p>Tracks which technologies have documented, tested recovery plans and which don't. Surfaces gaps before they become problems during an incident.</p>
 
-              <p><strong>Real-time updates:</strong> Dashboard refreshes automatically with latest data from integrated systems. No more waiting for weekly or monthly static reports.</p>
+              <h3 className="cs-subsection-headline">Real-time updates</h3>
+              <p>Dashboard refreshes automatically with latest data from integrated systems. No more waiting for weekly or monthly static reports.</p>
             </div>
 
             {/* 05 Impact */}

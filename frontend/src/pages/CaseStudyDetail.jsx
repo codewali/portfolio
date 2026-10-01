@@ -68,18 +68,19 @@ const CaseStudyDetail = () => {
             
             {/* 01 Context & Problem Discovery */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Context & Problem Discovery</h2>
+              <h2 className="cs-section-title">CONTEXT & PROBLEM DISCOVERY</h2>
               
               <p>Personal side project exploring whether simplified, illustrated apparel previews could offer a viable alternative to complex AR and 3D body-scanning solutions.</p>
 
-              <p><strong>The problem:</strong> Most virtual try-on solutions prioritize realism (3D body scans, AR overlays, AI-powered fit predictions). These are technically impressive but create high barriers: setup friction, uncanny valley, performance issues, accuracy anxiety.</p>
+              <h3 className="cs-subsection-headline">The problem</h3>
+              <p>Most virtual try-on solutions prioritize realism (3D body scans, AR overlays, AI-powered fit predictions). These are technically impressive but create high barriers: setup friction, uncanny valley, performance issues, accuracy anxiety.</p>
 
               <p>What if we removed the pressure of accuracy altogether and focused on quick visual exploration instead?</p>
             </div>
 
             {/* 02 My Role */}
             <div className="cs-section">
-              <h2 className="cs-section-title">My Role</h2>
+              <h2 className="cs-section-title">MY ROLE</h2>
               
               <p>Solo project handling:</p>
               
@@ -94,40 +95,43 @@ const CaseStudyDetail = () => {
 
             {/* 03 Design Approach & Key Decisions */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Design Approach & Key Decisions</h2>
+              <h2 className="cs-section-title">DESIGN APPROACH & KEY DECISIONS</h2>
               
-              <p><strong>Embrace illustration over realism</strong><br/>
-              Lean into hand-drawn aesthetic. This sets different expectations (suggestive, not prescriptive). It's about general silhouette, not exact fit.</p>
+              <h3 className="cs-subsection-headline">Embrace illustration over realism</h3>
+              <p>Lean into hand-drawn aesthetic. This sets different expectations (suggestive, not prescriptive). It's about general silhouette, not exact fit.</p>
 
-              <p><strong>Minimize cognitive load</strong><br/>
-              Simplified body type selection (Straight, Curvy, Broad) instead of precise measurements. No camera access, no photo uploads, no complex setup. Tap and see results instantly.</p>
+              <h3 className="cs-subsection-headline">Minimize cognitive load</h3>
+              <p>Simplified body type selection (Straight, Curvy, Broad) instead of precise measurements. No camera access, no photo uploads, no complex setup. Tap and see results instantly.</p>
 
-              <p><strong>Why sketches over realistic renders?</strong><br/>
-              Realistic virtual fitting sets expectations for accuracy that's nearly impossible to meet. Users get frustrated when the "perfect" 3D model doesn't match their body. Sketches are charming and suggestive. Users understand it's about visual composition, not precise sizing.</p>
+              <h3 className="cs-subsection-headline">Why sketches over realistic renders?</h3>
+              <p>Realistic virtual fitting sets expectations for accuracy that's nearly impossible to meet. Users get frustrated when the "perfect" 3D model doesn't match their body. Sketches are charming and suggestive. Users understand it's about visual composition, not precise sizing.</p>
 
-              <p><strong>Why limited clothing options?</strong><br/>
-              This is proof of concept testing the interaction pattern. Focused on making a small set work beautifully rather than building broad but shallow coverage.</p>
+              <h3 className="cs-subsection-headline">Why limited clothing options?</h3>
+              <p>This is proof of concept testing the interaction pattern. Focused on making a small set work beautifully rather than building broad but shallow coverage.</p>
 
-              <p><strong>Why no measurement input?</strong><br/>
-              Asking for measurements creates friction and raises accuracy expectations. Body type selection is intentionally approximate. Keeps the experience fast and low-pressure.</p>
+              <h3 className="cs-subsection-headline">Why no measurement input?</h3>
+              <p>Asking for measurements creates friction and raises accuracy expectations. Body type selection is intentionally approximate. Keeps the experience fast and low-pressure.</p>
             </div>
 
             {/* 04 Solution */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Solution</h2>
+              <h2 className="cs-section-title">SOLUTION</h2>
               
-              <p><strong>Simple body selection:</strong> Choose from three body types without requiring measurements or photos.</p>
+              <h3 className="cs-subsection-headline">Simple body selection</h3>
+              <p>Choose from three body types without requiring measurements or photos.</p>
 
-              <p><strong>Apparel layering:</strong> Toggle through tops and bottoms to build outfits. Each item is a separate sketch layer that composites in real-time.</p>
+              <h3 className="cs-subsection-headline">Apparel layering</h3>
+              <p>Toggle through tops and bottoms to build outfits. Each item is a separate sketch layer that composites in real-time.</p>
 
-              <p><strong>Instant visual preview:</strong> Canvas updates immediately as selections change. No loading, no processing.</p>
+              <h3 className="cs-subsection-headline">Instant visual preview</h3>
+              <p>Canvas updates immediately as selections change. No loading, no processing.</p>
 
               <p>Built as React prototype with SVG-based sketch overlays for clean scaling and minimal dependencies.</p>
             </div>
 
             {/* 05 Impact */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Impact</h2>
+              <h2 className="cs-section-title">IMPACT</h2>
               
               <p>Qualitative findings from informal user testing:</p>
               
@@ -141,7 +145,7 @@ const CaseStudyDetail = () => {
 
             {/* 06 What I Learnt */}
             <div className="cs-section cs-section-last">
-              <h2 className="cs-section-title">What I Learnt</h2>
+              <h2 className="cs-section-title">WHAT I LEARNT</h2>
               
               <p>The most technically impressive solution isn't always the most enjoyable to use. Sometimes simplicity and charm beat accuracy and complexity.</p>
 

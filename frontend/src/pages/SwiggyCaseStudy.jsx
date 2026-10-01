@@ -67,7 +67,8 @@ const SwiggyCaseStudy = () => {
               
               <p>Personal project exploring how food delivery apps could better serve group ordering scenarios: office lunches, friend gatherings, family dinners. These situations happen frequently but existing ordering flows treat them as edge cases.</p>
 
-              <p><strong>The problem:</strong> Ordering food as a group feels like project management.</p>
+              <h3 className="cs-subsection-headline">The problem</h3>
+              <p>Ordering food as a group feels like project management.</p>
 
               <p>Through interviews and observation, I identified recurring pain points:</p>
               
@@ -99,32 +100,37 @@ const SwiggyCaseStudy = () => {
             <div className="cs-section">
               <h2 className="cs-section-title">DESIGN APPROACH & KEY DECISIONS</h2>
               
-              <p><strong>Map the natural flow</strong><br/>
-              Designed the experience to mirror how groups actually decide what to eat: initiation (one person suggests), browsing (everyone explores independently), selection (add items with clear ownership), review (see totals), checkout (each pays individually).</p>
+              <h3 className="cs-subsection-headline">Map the natural flow</h3>
+              <p>Designed the experience to mirror how groups actually decide what to eat: initiation (one person suggests), browsing (everyone explores independently), selection (add items with clear ownership), review (see totals), checkout (each pays individually).</p>
 
-              <p><strong>Individual payment, not group payment</strong><br/>
-              Initial designs had one person pay upfront and others reimburse later. This came up repeatedly in research as the biggest friction point. Built individual payment directly into checkout. Order is placed when everyone has paid. Eliminates post-delivery money collection entirely.</p>
+              <h3 className="cs-subsection-headline">Individual payment, not group payment</h3>
+              <p>Initial designs had one person pay upfront and others reimburse later. This came up repeatedly in research as the biggest friction point. Built individual payment directly into checkout. Order is placed when everyone has paid. Eliminates post-delivery money collection entirely.</p>
 
-              <p><strong>Shareable links over in-app invites</strong><br/>
-              In-app invites would require everyone to have Swiggy installed and be logged in before joining. Web-based shareable links let anyone join, creating an account only at checkout if needed. Lower barrier to entry.</p>
+              <h3 className="cs-subsection-headline">Shareable links over in-app invites</h3>
+              <p>In-app invites would require everyone to have Swiggy installed and be logged in before joining. Web-based shareable links let anyone join, creating an account only at checkout if needed. Lower barrier to entry.</p>
 
-              <p><strong>Individual item ownership</strong><br/>
-              Early concepts had a single shared cart where anyone could edit anything. User testing revealed this created anxiety ("What if someone accidentally deletes my order?"). Each person owns their items and can only edit their own. Clear visual attribution (color-coded names) shows who ordered what.</p>
+              <h3 className="cs-subsection-headline">Individual item ownership</h3>
+              <p>Early concepts had a single shared cart where anyone could edit anything. User testing revealed this created anxiety ("What if someone accidentally deletes my order?"). Each person owns their items and can only edit their own. Clear visual attribution (color-coded names) shows who ordered what.</p>
             </div>
 
             {/* 04 Solution */}
             <div className="cs-section">
               <h2 className="cs-section-title">SOLUTION</h2>
               
-              <p><strong>Create or join group orders:</strong> Host selects restaurant and creates group order. Generates shareable link friends can join instantly.</p>
+              <h3 className="cs-subsection-headline">Create or join group orders</h3>
+              <p>Host selects restaurant and creates group order. Generates shareable link friends can join instantly.</p>
 
-              <p><strong>Real-time cart visibility:</strong> All participants see shared cart updating in real-time. Clear attribution shows who ordered what. Status badges indicate who's browsing, who's ready, who's paid.</p>
+              <h3 className="cs-subsection-headline">Real-time cart visibility</h3>
+              <p>All participants see shared cart updating in real-time. Clear attribution shows who ordered what. Status badges indicate who's browsing, who's ready, who's paid.</p>
 
-              <p><strong>Individual item ownership:</strong> Each person owns and controls only their items. No one can accidentally delete someone else's order.</p>
+              <h3 className="cs-subsection-headline">Individual item ownership</h3>
+              <p>Each person owns and controls only their items. No one can accidentally delete someone else's order.</p>
 
-              <p><strong>Automatic payment splitting:</strong> At checkout, each person pays only for their items through integrated UPI or card. No manual calculations, no post-delivery collection.</p>
+              <h3 className="cs-subsection-headline">Automatic payment splitting</h3>
+              <p>At checkout, each person pays only for their items through integrated UPI or card. No manual calculations, no post-delivery collection.</p>
 
-              <p><strong>Group order tracking:</strong> Everyone gets real-time updates on order status. No more "where's the food?" messages flooding the organizer.</p>
+              <h3 className="cs-subsection-headline">Group order tracking</h3>
+              <p>Everyone gets real-time updates on order status. No more "where's the food?" messages flooding the organizer.</p>
             </div>
 
             {/* 05 Impact */}
