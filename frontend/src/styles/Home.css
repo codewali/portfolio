@@ -711,19 +711,19 @@
 /* Pixelated fashion - small and centered with gutter */
 .bento-small:first-of-type img {
   object-fit: contain;
-  padding: 3rem;
-  max-width: 60%;
-  max-height: 60%;
+  padding: 4rem;
+  max-width: 45%;
+  max-height: 45%;
   margin: auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* Branding exercise - zoomed to show only logo boxes */
+/* Branding exercise - zoomed to show logo boxes and SOVEREIGN name */
 .bento-small:last-of-type img {
   object-fit: cover;
-  object-position: center 65%;
+  object-position: center 58%;
   transform: scale(2.2);
   padding: 0;
 }
