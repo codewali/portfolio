@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Sun, Moon, X } from 'lucide-react';
+import { ArrowRight, Sun, Moon, X, Maximize2 } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Home.css';
 
@@ -343,6 +343,12 @@ const Home = () => {
                 src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/awf1mfbc_Frame%2033.png" 
                 alt="Fashion WIP 1"
               />
+              <div className="bento-overlay bento-overlay-small">
+                <div className="bento-overlay-content">
+                  <span className="bento-overlay-text">wardrobe app assets</span>
+                  <Maximize2 size={20} />
+                </div>
+              </div>
             </div>
             
             {/* WIP 2 - Opens Modal */}
@@ -351,6 +357,12 @@ const Home = () => {
                 src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/zzul94a3_problem-statement-section.png" 
                 alt="Branding Exercise"
               />
+              <div className="bento-overlay bento-overlay-small">
+                <div className="bento-overlay-content">
+                  <span className="bento-overlay-text">Art to brand exercise</span>
+                  <Maximize2 size={20} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
