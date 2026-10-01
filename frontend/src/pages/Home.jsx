@@ -338,17 +338,17 @@ const Home = () => {
             </div>
             
             {/* WIP 1 - Opens Modal */}
-            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/kxqc1h8s_Pixelated%20fashion%20design%20patterns.png')}>
+            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/awf1mfbc_Frame%2033.png')}>
               <img 
-                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/kxqc1h8s_Pixelated%20fashion%20design%20patterns.png" 
+                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/awf1mfbc_Frame%2033.png" 
                 alt="Fashion WIP 1"
               />
             </div>
             
             {/* WIP 2 - Opens Modal */}
-            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/33yjkxiv_Sovereign%20intention.png')}>
+            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c2u618er_Untitled_Artwork%206.JPG')}>
               <img 
-                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/33yjkxiv_Sovereign%20intention.png" 
+                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c2u618er_Untitled_Artwork%206.JPG" 
                 alt="Fashion WIP 2"
               />
             </div>

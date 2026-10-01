@@ -634,9 +634,13 @@
 /* Side Projects - Bento Layout with Red Background */
 .side-projects-banner {
   padding: var(--space-xl) 4rem;
-  background: #C73E3A;
+  background: #C73E3A !important;
   position: relative;
   overflow: hidden;
+}
+
+[data-theme="dark"] .side-projects-banner {
+  background: #C73E3A !important;
 }
 
 .side-projects-content {
