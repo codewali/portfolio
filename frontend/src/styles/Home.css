@@ -276,7 +276,7 @@
 
 /* Work Section - Kinfolk Editorial with Sage Green */
 .work {
-  padding: var(--space-xxl) 0;
+  padding: var(--space-xxl) 0 var(--space-lg) 0;
   background: #DFE7DC;
   position: relative;
   overflow: hidden;
@@ -447,12 +447,8 @@
   font-size: 0.75rem;
   font-weight: 300;
   letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-}
-
-.case-study-tag:hover {
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
+  pointer-events: none;
+  cursor: default;
 }
 
 .case-study-impact {
@@ -490,7 +486,7 @@
 
 /* Side Projects - Editorial Banner with Dusty Blue */
 .side-projects-banner {
-  padding: var(--space-xl) 4rem;
+  padding: var(--space-lg) 4rem var(--space-xl) 4rem;
   background: #D5D9DD;
   position: relative;
   overflow: hidden;
@@ -633,29 +629,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .contact-email {
   display: inline-flex;
   align-items: center;
+  gap: 0.75rem;
   padding: 1rem 2rem;
-  background: var(--accent-primary);
-  color: white;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   font-family: var(--font-body);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   transition: all 0.4s ease;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .contact-email:hover {
-  background: #B13F32;
+  border-color: var(--text-primary);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(201, 74, 60, 0.2);
-  color: white;
+  color: var(--text-primary);
 }
 
 .linkedin-link {
@@ -671,8 +669,8 @@
 }
 
 .linkedin-link:hover {
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
+  border-color: var(--text-primary);
+  color: var(--text-primary);
   transform: translateY(-2px);
 }
 

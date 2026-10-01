@@ -98,14 +98,10 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (location.state?.scrollTo) {
-      const section = document.getElementById(location.state.scrollTo);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
+  const copyEmail = () => {
+    navigator.clipboard.writeText('pari.sin17@gmail.com');
+    // Could add a toast notification here if desired
+  };
 
   const caseStudies = [
     {
@@ -122,7 +118,7 @@ const Home = () => {
     },
     {
       id: 3,
-      title: 'Coordinated Group Ordering',
+      title: 'Swiggy Group Ordering',
       company: 'Swiggy — Personal Project',
       year: '2023',
       note: 'Concept created before Swiggy launched this feature',
@@ -256,26 +252,21 @@ const Home = () => {
           
           <div className="about-intro">
             <h2 className="about-intro-title progressive-reveal">
-              I HELP TEAMS USE COMPLEX GOVERNANCE, RISK & COMPLIANCE PRODUCTS WITH EASE, DESIGNING SOLUTIONS THAT ADDRESS THEIR NEEDS AND SUPPORT THEIR GOALS.
+              I DESIGN FOR SYSTEMS, NOT JUST SCREENS.
             </h2>
             <p className="about-intro-text">
-              7+ years building enterprise systems, AI products, and B2B SaaS platforms. Currently leading design strategy at Mitratech, focusing on scalable UX practices and GenAI-powered workflows.
+              I'm Paridhi, a Staff Product Designer based in Bengaluru. I've spent 7+ years working across enterprise software, B2B SaaS, and AI-powered products, with a particular interest in products where the complexity runs deeper than the interface.
+            </p>
+            <p className="about-intro-text">
+              I enjoy understanding how things connect—the users, workflows, business rules, edge cases, and patterns that sit underneath a feature. My work often starts in the weeds and ends with a clearer system: one that solves the immediate problem while making what's next easier to build.
+            </p>
+            <p className="about-intro-text">
+              At Mitratech, I bring that approach to Preparis and PolicyHub, working across product strategy, scalable UX practices, and emerging AI workflows in GRC.
             </p>
           </div>
 
-          <div className="about-grid">
-            <p className="about-lead">
-              Good design helps speed up task completion while increasing trust by providing adequate information.
-            </p>
-            <p className="about-text">
-              Hi! I'm Paridhi, a Staff Product Designer based in Bengaluru, Karnataka.
-            </p>
-            <p className="about-text">
-              I'm drawn to messy, overwhelming, and complex flows, and I comb through the weeds by making sense of the patterns that can help not only solve the current issue but also support the scalability of features.
-            </p>
-            <p className="about-text">
-              At Mitratech, I help do this for Preparis (a continuity planning & disaster recovery platform) and PolicyHub (a policy management application) as a part of the GRC portfolio of products. Been at it for 2 years now.
-            </p>
+          <div className="about-grid" style={{ display: 'none' }}>
+            {/* Old content hidden */}
           </div>
         </div>
       </section>
@@ -371,9 +362,13 @@ const Home = () => {
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
           <div className="contact-info">
-            <a href="mailto:pari.sin17@gmail.com" className="contact-email">
+            <button onClick={copyEmail} className="contact-email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
               pari.sin17@gmail.com
-            </a>
+            </button>
             <a 
               href="https://www.linkedin.com/in/paridhisinha" 
               target="_blank"
@@ -381,7 +376,7 @@ const Home = () => {
               className="linkedin-link"
               title="LinkedIn"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z" fill="currentColor"/>
               </svg>
             </a>

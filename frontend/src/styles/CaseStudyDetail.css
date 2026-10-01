@@ -216,11 +216,12 @@
 }
 
 .detail-list li::before {
-  content: '—';
+  content: '•';
   position: absolute;
-  left: -1.5rem;
+  left: -1.25rem;
   color: var(--text-muted);
   font-weight: 300;
+  font-size: 0.875rem;
 }
 
 /* Bullet List with proper spacing */
@@ -502,11 +503,12 @@
 }
 
 .learnings-list li::before {
-  content: '—';
+  content: '•';
   position: absolute;
-  left: -1.5rem;
+  left: -1.25rem;
   color: var(--text-muted);
   font-weight: 300;
+  font-size: 0.875rem;
 }
 
 /* Next Case Study - Minimal */
@@ -596,11 +598,12 @@
 }
 
 .article-content-compact .cs-list-compact li::before {
-  content: '—';
+  content: '•';
   position: absolute;
-  left: -1.5rem;
+  left: -1.25rem;
   color: var(--text-muted);
   font-weight: 300;
+  font-size: 0.875rem;
 }
 
 /* Responsive - Maintain Reading Experience */
