@@ -633,27 +633,16 @@
 
 .article-content-compact .cs-subsection-headline {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
   color: var(--text-primary);
-  line-height: 1.4;
+  line-height: 1.3;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .article-content-compact .cs-subsection-headline:first-of-type {
   margin-top: 0;
-}
-
-.article-content-compact h3,
-.article-content-compact strong {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--text-primary);
-  line-height: 1.5;
-  display: block;
-  margin-bottom: 1rem;
 }
 
 .article-content-compact .cs-list-compact {
