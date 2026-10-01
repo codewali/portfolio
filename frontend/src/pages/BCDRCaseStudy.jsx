@@ -46,7 +46,7 @@ const BCDRCaseStudy = () => {
         <div className="detail-header-content">
           <button onClick={handleBackToPortfolio} className="back-button">
             <ArrowLeft size={20} />
-            <span>Back to Case Studies</span>
+            <span>Go back</span>
           </button>
         </div>
       </header>
@@ -168,7 +168,7 @@ const BCDRCaseStudy = () => {
       <footer className="detail-footer">
         <button onClick={handleBackToPortfolio} className="back-to-portfolio">
           <ArrowLeft size={18} />
-          Back to Portfolio
+          Go back
         </button>
       </footer>
     </div>
