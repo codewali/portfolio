@@ -771,4 +771,37 @@
   .learnings-list li::before {
     left: -1rem;
   }
+
+  .back-button {
+    font-size: 0.8125rem;
+  }
+
+  .project-header {
+    padding: 8rem 2rem 4rem;
+  }
+
+  .article-content,
+  .article-content-compact {
+    padding: 3rem 2rem;
+  }
+
+  /* Single column layout for mobile */
+  .content-two-column {
+    grid-template-columns: 1fr !important;
+    gap: 3rem;
+  }
+
+  .cs-section {
+    margin-bottom: 3rem;
+  }
+
+  .metrics-compact {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .project-footer {
+    padding: 3rem 2rem;
+  }
 }
