@@ -26,6 +26,8 @@ const Home = () => {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
       }
+      // Clear the state after scrolling to prevent it from triggering on reload
+      window.history.replaceState({}, document.title);
     }
   }, [location]);
 
