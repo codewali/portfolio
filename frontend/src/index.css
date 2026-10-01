@@ -49,6 +49,23 @@
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Dark mode section colors */
+[data-theme="dark"] .about {
+  background: #252321;
+}
+
+[data-theme="dark"] .work {
+  background: #212622;
+}
+
+[data-theme="dark"] .side-projects-banner {
+  background: #232628;
+}
+
+[data-theme="dark"] .contact {
+  background: #282521;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -46,6 +46,58 @@ const Home = () => {
     };
   }, []);
 
+  // Kinfolk-style parallax scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset;
+      
+      // Parallax sections
+      const sections = document.querySelectorAll('.parallax-section');
+      sections.forEach((section, index) => {
+        const speed = 0.3;
+        const yPos = -(scrolled * speed);
+        section.style.transform = `translateY(${yPos}px)`;
+      });
+
+      // Progressive text reveal for about title
+      const aboutTitle = document.querySelector('.about-intro-title');
+      if (aboutTitle) {
+        const rect = aboutTitle.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const progress = 1 - (rect.top / windowHeight);
+          const scale = 0.8 + (progress * 0.2);
+          const opacity = Math.min(progress * 2, 1);
+          aboutTitle.style.transform = `scale(${scale})`;
+          aboutTitle.style.opacity = opacity;
+        }
+      }
+
+      // Progressive text reveal for work title
+      const workTitle = document.querySelector('.work-title');
+      if (workTitle) {
+        const rect = workTitle.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const progress = 1 - (rect.top / windowHeight);
+          const translateY = 100 - (progress * 100);
+          const opacity = Math.min(progress * 2, 1);
+          workTitle.style.transform = `translateY(${translateY}px)`;
+          workTitle.style.opacity = opacity;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     if (location.state?.scrollTo) {
       const section = document.getElementById(location.state.scrollTo);
@@ -198,12 +250,12 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="about animate-on-scroll">
+      <section id="about" className="about animate-on-scroll parallax-section">
         <div className="about-content">
           <div className="about-label">ABOUT</div>
           
           <div className="about-intro">
-            <h2 className="about-intro-title">
+            <h2 className="about-intro-title progressive-reveal">
               I HELP TEAMS USE COMPLEX GOVERNANCE, RISK & COMPLIANCE PRODUCTS WITH EASE, DESIGNING SOLUTIONS THAT ADDRESS THEIR NEEDS AND SUPPORT THEIR GOALS.
             </h2>
             <p className="about-intro-text">
@@ -229,11 +281,11 @@ const Home = () => {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="work animate-on-scroll">
+      <section id="work" className="work animate-on-scroll parallax-section">
         <div className="work-content">
           <div className="work-header">
             <div className="work-label">Featured Work</div>
-            <h2 className="work-title">Case Studies</h2>
+            <h2 className="work-title progressive-reveal">Case Studies</h2>
           </div>
           <div className="case-studies-grid">
             {caseStudies.map((study) => (
