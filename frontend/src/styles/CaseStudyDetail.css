@@ -785,20 +785,53 @@
     padding: 3rem 2rem;
   }
 
-  /* Single column layout for mobile */
+  /* Force single column layout for mobile */
+  .article-content-compact.content-two-column,
   .content-two-column {
-    grid-template-columns: 1fr !important;
-    gap: 3rem;
+    display: block !important;
+    grid-template-columns: none !important;
   }
 
   .cs-section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    width: 100%;
   }
 
+  /* Adjust font hierarchy for mobile */
+  .project-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .cs-section-title {
+    font-size: 0.625rem;
+    margin-bottom: 2rem;
+  }
+
+  .cs-subsection-headline {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-content-compact p,
+  .cs-section p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .metrics-section,
   .metrics-compact {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem 0;
+    margin: 2rem 0 4rem;
+  }
+
+  .metric-value-compact {
+    font-size: 0.8125rem;
   }
 
   .project-footer {
