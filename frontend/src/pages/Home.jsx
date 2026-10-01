@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sun, Moon } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Home.css';
 
@@ -7,6 +7,18 @@ const Home = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
+  };
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -77,6 +89,9 @@ const Home = () => {
           
           {/* Desktop Nav Links */}
           <div className="nav-links desktop-nav">
+            <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <button onClick={() => scrollToSection('work')} className="nav-link">Work</button>
             <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
             <a 
@@ -92,6 +107,9 @@ const Home = () => {
 
           {/* Mobile Nav */}
           <div className="mobile-nav">
+            <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <a 
               href="https://drive.google.com/file/d/1R6UNM-bj1GSNSsGVopGDoak__bcBoB_o/view?usp=sharing" 
               target="_blank"
