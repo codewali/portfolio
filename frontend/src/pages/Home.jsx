@@ -8,6 +8,7 @@ const Home = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
+  const isInitialMount = useRef(true);
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'light';
   });
@@ -19,6 +20,14 @@ const Home = () => {
 
   // Handle scroll to section when returning from case study
   useEffect(() => {
+    // Check if this is a fresh page load (not a back navigation)
+    const isPageLoad = !sessionStorage.getItem('navigated');
+    
+    if (isPageLoad) {
+      sessionStorage.setItem('navigated', 'true');
+      return; // Don't scroll on fresh page load
+    }
+    
     if (location.state?.scrollTo) {
       const element = document.getElementById(location.state.scrollTo);
       if (element) {
@@ -26,10 +35,8 @@ const Home = () => {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
       }
-      // Clear the state after scrolling to prevent it from triggering on reload
-      window.history.replaceState({}, document.title);
     }
-  }, [location]);
+  }, [location.state]);
 
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
