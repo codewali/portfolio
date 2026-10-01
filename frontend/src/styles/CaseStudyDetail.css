@@ -67,32 +67,23 @@
   object-fit: cover;
 }
 
-/* Content - Two-Panel Balanced Layout */
+/* Content - Two-Panel Balanced Layout with Proper Gutters */
 .detail-content {
   padding: var(--space-lg) 0;
   background: var(--bg-primary);
 }
 
 .content-container {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4rem; /* Match homepage gutters */
 }
 
-/* Full width elements */
-.project-title,
-.project-note,
-.project-subtitle,
-.metrics-section,
-.step-label {
-  grid-column: 1 / -1;
-}
-
-/* Two column grid for sections */
+/* Two column grid for sections with more gap */
 .content-two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 6rem; /* Increased from 4rem */
   align-items: start;
 }
 
@@ -100,12 +91,12 @@
 .article-content-compact {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 6rem; /* Increased from 4rem */
   align-items: start;
 }
 
 .article-content-compact .cs-section {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem; /* More space between sections */
 }
 
 /* Alternate sections between columns */

@@ -46,57 +46,21 @@ const Home = () => {
     };
   }, []);
 
-  // Kinfolk-style parallax scroll effect
+  // Kinfolk-style parallax scroll effect - REMOVED FOR PERFORMANCE
+  /*
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      
-      // Parallax sections
-      const sections = document.querySelectorAll('.parallax-section');
-      sections.forEach((section, index) => {
-        const speed = 0.3;
-        const yPos = -(scrolled * speed);
-        section.style.transform = `translateY(${yPos}px)`;
-      });
-
-      // Progressive text reveal for about title
-      const aboutTitle = document.querySelector('.about-intro-title');
-      if (aboutTitle) {
-        const rect = aboutTitle.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          const progress = 1 - (rect.top / windowHeight);
-          const scale = 0.8 + (progress * 0.2);
-          const opacity = Math.min(progress * 2, 1);
-          aboutTitle.style.transform = `scale(${scale})`;
-          aboutTitle.style.opacity = opacity;
-        }
-      }
-
-      // Progressive text reveal for work title
-      const workTitle = document.querySelector('.work-title');
-      if (workTitle) {
-        const rect = workTitle.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          const progress = 1 - (rect.top / windowHeight);
-          const translateY = 100 - (progress * 100);
-          const opacity = Math.min(progress * 2, 1);
-          workTitle.style.transform = `translateY(${translateY}px)`;
-          workTitle.style.opacity = opacity;
-        }
-      }
+      // Parallax and progressive reveal code removed
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  */
 
   const [copied, setCopied] = useState(false);
 
@@ -236,36 +200,19 @@ const Home = () => {
         )}
       </nav>
 
-      {/* Hero Section - Portfolio with 3D Tool Icons */}
+      {/* Hero Section - Portfolio with Image */}
       <section className="hero">
         <div className="hero-content-portfolio">
-          <h1 className="portfolio-title">Portfolio</h1>
-          <div className="floating-tools">
-            <div className="tool-icon tool-claude" title="Claude AI">
-              <img src="https://asset.brandfetch.io/idZvYGVDMY/idBbbL2fk4.svg" alt="Claude" />
-            </div>
-            <div className="tool-icon tool-figma" title="Figma">
-              <img src="https://cdn.worldvectorlogo.com/logos/figma-icon.svg" alt="Figma" />
-            </div>
-            <div className="tool-icon tool-adobe" title="Adobe">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/200px-Adobe_Corporate_logo.svg.png" alt="Adobe" />
-            </div>
-            <div className="tool-icon tool-gpt" title="ChatGPT">
-              <img src="https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg" alt="ChatGPT" />
-            </div>
-            <div className="tool-icon tool-gemini" title="Google Gemini">
-              <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" alt="Gemini" />
-            </div>
-            <div className="tool-icon tool-emergent" title="Emergent">
-              <img src="https://asset.brandfetch.io/idNXE2fk6B/idWRxMqH1g.png" alt="Emergent" />
-            </div>
-            <div className="tool-icon tool-pendo" title="Pendo">
-              <img src="https://asset.brandfetch.io/idw9zZu-7c/idMQgjSQkS.svg" alt="Pendo" />
-            </div>
-            <div className="tool-icon tool-mobbin" title="Mobbin">
-              <img src="https://asset.brandfetch.io/idGMYL7T3q/idO-3LgUiA.png" alt="Mobbin" />
-            </div>
-          </div>
+          <img 
+            src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/2fkz8bms_lightthemeportfolio.png"
+            alt="Portfolio"
+            className="portfolio-image portfolio-light"
+          />
+          <img 
+            src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/cfimy79u_darkthemeportfolio.png"
+            alt="Portfolio"
+            className="portfolio-image portfolio-dark"
+          />
         </div>
         <div className="hero-scroll-indicator">
           <span>Scroll</span>
