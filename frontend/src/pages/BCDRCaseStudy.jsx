@@ -100,16 +100,16 @@ const BCDRCaseStudy = () => {
               <p className="section-content"><strong>Trends over raw numbers</strong><br/>
               Stakeholder feedback revealed absolute numbers didn't tell the story. A system with 10 high-risk items today might be improving (was 20 last month) or deteriorating (was 5 last month). Added trend indicators and comparison views to show direction of change.</p>
 
-              <p><strong>Progressive disclosure, not information overload</strong><br/>
+              <p className="section-content"><strong>Progressive disclosure, not information overload</strong><br/>
               Early prototypes tried to surface all available data upfront. User testing showed this created cognitive overload and actually slowed decision-making. Defaulted to summary view with clear pathways to details. Let users choose their depth of exploration.</p>
 
-              <p><strong>Make vendor dependencies visible</strong><br/>
+              <p className="section-content"><strong>Make vendor dependencies visible</strong><br/>
               Research revealed vendor-related incidents were a growing concern (third-party outages, security breaches), but existing tools didn't make these relationships visible. Created a dedicated vendor exposure view showing which vendors, if disrupted, would impact the most critical systems.</p>
             </div>
 
             {/* 04 Solution */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Solution</h2>
+              <h2 className="cs-section-title">SOLUTION</h2>
               
               <p><strong>Risk heat map:</strong> Visual matrix showing recovery time objectives vs. actual recovery capability across all critical systems. Instantly highlights which systems are at risk.</p>
 

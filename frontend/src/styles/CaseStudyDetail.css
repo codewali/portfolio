@@ -567,6 +567,18 @@
 }
 
 /* Article Content Compact - For Q&A Format */
+.article-content-compact {
+  font-family: var(--font-serif);
+}
+
+.article-content-compact p {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
 .article-content-compact .cs-section {
   margin-bottom: 6rem;
 }
@@ -579,6 +591,17 @@
   color: var(--text-muted);
   font-weight: 400;
   margin-bottom: 3rem;
+}
+
+.article-content-compact h3,
+.article-content-compact strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.5;
+  display: block;
+  margin-bottom: 1rem;
 }
 
 .article-content-compact .cs-list-compact {
