@@ -17,7 +17,12 @@
   border-bottom: 1px solid var(--border-color);
   z-index: 100;
   padding: 2rem 0;
-  transition: all 0.4s ease;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.detail-header.hidden {
+  transform: translateY(-100%);
 }
 
 [data-theme="dark"] .detail-header {

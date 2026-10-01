@@ -21,6 +21,31 @@ const CaseStudyDetail = () => {
     }
   }, []);
 
+  // Hide header on scroll down, show on scroll up
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const header = document.querySelector('.detail-header');
+      
+      if (!header) return;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & past threshold
+        header.classList.add('hidden');
+      } else {
+        // Scrolling up
+        header.classList.remove('hidden');
+      }
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="case-study-detail">
       {/* Header */}
