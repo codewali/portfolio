@@ -72,7 +72,7 @@ const BCDRCaseStudy = () => {
 
               <p className="highlight-text">The question they couldn't answer: "What's our biggest risk right now?" Manual reports took 2-3 days. By the time insights arrived, conditions had changed.</p>
 
-              <p>This wasn't a data problem—it was a decision-making problem. Information existed, but not in a form that supported fast, confident action.</p>
+              <p>This wasn't a data problem. It was a decision-making problem. Information existed, but not in a form that supported fast, confident action.</p>
             </div>
 
             {/* 02 My Role */}

@@ -123,7 +123,7 @@ const Home = () => {
       title: 'Real-Time Decision Dashboard',
       company: 'Mitratech',
       year: '2026',
-      description: 'Transforming passive reporting into an actionable decision system. Users went from waiting days for static reports to monitoring live data and taking immediate action—cutting response time from 48 hours to real-time.',
+      description: 'Transforming passive reporting into an actionable decision system. Users went from waiting days for static reports to monitoring live data and taking immediate action, cutting response time from 48 hours to real-time.',
       tags: ['Data Visualization', 'System Design', 'UX Strategy'],
       impact: '24+ hours saved per month, instant insights vs multi-day delays',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/k2bg2ef5_Screenshot%202026-05-10%20at%209.16.54%E2%80%AFPM.png',
@@ -133,7 +133,7 @@ const Home = () => {
     {
       id: 3,
       title: 'Swiggy Group Ordering',
-      company: 'Swiggy — Personal Project',
+      company: 'Swiggy / Personal Project',
       year: '2023',
       note: 'Concept created before Swiggy launched this feature',
       description: 'Making group decisions effortless. When multiple people want to order together, coordination breaks down fast. This redesign focused on transparency, real-time updates, and removing the friction of split payments and conflicting preferences.',
@@ -151,7 +151,7 @@ const Home = () => {
       title: 'Virtual Fitting Room',
       company: 'Personal Project',
       year: '2026',
-      description: 'Exploring how fashion becomes interactive. This experiment translates hand-drawn sketches into a digital fitting experience—focusing on interaction design over photorealism, and playfulness over precision.',
+      description: 'Exploring how fashion becomes interactive. This experiment translates hand-drawn sketches into a digital fitting experience, focusing on interaction design over photorealism, and playfulness over precision.',
       tags: ['Concept Design', 'Prototyping', 'Visual Exploration'],
       impact: 'Proof of concept for sketch-driven fashion interaction',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
@@ -261,14 +261,14 @@ const Home = () => {
             <h2 className="about-name">Paridhi Sinha</h2>
             
             <h3 className="about-intro-title progressive-reveal">
-              I design for systems, not just screens—building experiences that solve the immediate problem while making what comes next easier.
+              I design for systems, not just screens. Building experiences that solve the immediate problem while making what comes next easier.
             </h3>
             
             <p className="about-intro-text">
               I'm Paridhi, a Staff Product Designer based in Bengaluru. I've spent 7+ years working across enterprise software, B2B SaaS, and AI-powered products, with a particular interest in products where the complexity runs deeper than the interface.
             </p>
             <p className="about-intro-text">
-              I enjoy understanding how things connect—the users, workflows, business rules, edge cases, and patterns that sit underneath a feature. My work often starts in the weeds and ends with a clearer system: one that solves the immediate problem while making what's next easier to build.
+              I enjoy understanding how things connect: the users, workflows, business rules, edge cases, and patterns that sit underneath a feature. My work often starts in the weeds and ends with a clearer system: one that solves the immediate problem while making what's next easier to build.
             </p>
             <p className="about-intro-text">
               At Mitratech, I bring that approach to Preparis and PolicyHub, working across product strategy, scalable UX practices, and emerging AI workflows in GRC.
