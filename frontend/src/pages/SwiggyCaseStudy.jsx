@@ -63,7 +63,7 @@ const SwiggyCaseStudy = () => {
             
             {/* 01 Context & Problem Discovery */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Context & Problem Discovery</h2>
+              <h2 className="cs-section-title">CONTEXT & PROBLEM DISCOVERY</h2>
               
               <p>Personal project exploring how food delivery apps could better serve group ordering scenarios: office lunches, friend gatherings, family dinners. These situations happen frequently but existing ordering flows treat them as edge cases.</p>
 
@@ -82,7 +82,7 @@ const SwiggyCaseStudy = () => {
 
             {/* 02 My Role */}
             <div className="cs-section">
-              <h2 className="cs-section-title">My Role</h2>
+              <h2 className="cs-section-title">MY ROLE</h2>
               
               <p>Solo personal project handling all aspects:</p>
               
@@ -97,7 +97,7 @@ const SwiggyCaseStudy = () => {
 
             {/* 03 Design Approach & Key Decisions */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Design Approach & Key Decisions</h2>
+              <h2 className="cs-section-title">DESIGN APPROACH & KEY DECISIONS</h2>
               
               <p><strong>Map the natural flow</strong><br/>
               Designed the experience to mirror how groups actually decide what to eat: initiation (one person suggests), browsing (everyone explores independently), selection (add items with clear ownership), review (see totals), checkout (each pays individually).</p>
@@ -114,7 +114,7 @@ const SwiggyCaseStudy = () => {
 
             {/* 04 Solution */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Solution</h2>
+              <h2 className="cs-section-title">SOLUTION</h2>
               
               <p><strong>Create or join group orders:</strong> Host selects restaurant and creates group order. Generates shareable link friends can join instantly.</p>
 
@@ -129,7 +129,7 @@ const SwiggyCaseStudy = () => {
 
             {/* 05 Impact */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Impact</h2>
+              <h2 className="cs-section-title">IMPACT</h2>
               
               <p>As a concept project, these are expected outcomes based on research and usability testing:</p>
               
@@ -145,7 +145,7 @@ const SwiggyCaseStudy = () => {
 
             {/* 06 What I Learnt */}
             <div className="cs-section cs-section-last">
-              <h2 className="cs-section-title">What I Learnt</h2>
+              <h2 className="cs-section-title">WHAT I LEARNT</h2>
               
               <p>Group ordering isn't just about food. It's about coordination, trust, and shared experiences.</p>
 

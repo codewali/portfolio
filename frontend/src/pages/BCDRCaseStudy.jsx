@@ -81,7 +81,7 @@ const BCDRCaseStudy = () => {
               
               <p>Lead product designer, end-to-end:</p>
               
-              <ul className="detail-list">
+              <ul className="cs-list-compact">
                 <li>Stakeholder interviews with executives and analysts</li>
                 <li>Information architecture and data hierarchy design</li>
                 <li>Interaction patterns for progressive disclosure</li>
@@ -94,16 +94,16 @@ const BCDRCaseStudy = () => {
             <div className="cs-section">
               <h2 className="cs-section-title">DESIGN APPROACH</h2>
               
-              <p className="section-content"><strong>Three-tier information hierarchy</strong><br/>
+              <p><strong>Three-tier information hierarchy</strong><br/>
               Mapped the decision-making flow to create: at-a-glance health indicators, filterable views on-demand, and deep-dive detailed reports.</p>
 
-              <p className="section-content"><strong>Trends over raw numbers</strong><br/>
+              <p><strong>Trends over raw numbers</strong><br/>
               Stakeholder feedback revealed absolute numbers didn't tell the story. A system with 10 high-risk items today might be improving (was 20 last month) or deteriorating (was 5 last month). Added trend indicators and comparison views to show direction of change.</p>
 
-              <p className="section-content"><strong>Progressive disclosure, not information overload</strong><br/>
+              <p><strong>Progressive disclosure, not information overload</strong><br/>
               Early prototypes tried to surface all available data upfront. User testing showed this created cognitive overload and actually slowed decision-making. Defaulted to summary view with clear pathways to details. Let users choose their depth of exploration.</p>
 
-              <p className="section-content"><strong>Make vendor dependencies visible</strong><br/>
+              <p><strong>Make vendor dependencies visible</strong><br/>
               Research revealed vendor-related incidents were a growing concern (third-party outages, security breaches), but existing tools didn't make these relationships visible. Created a dedicated vendor exposure view showing which vendors, if disrupted, would impact the most critical systems.</p>
             </div>
 
@@ -122,7 +122,7 @@ const BCDRCaseStudy = () => {
 
             {/* 05 Impact */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Impact</h2>
+              <h2 className="cs-section-title">IMPACT</h2>
               
               <ul className="cs-list-compact">
                 <li>24+ hours/month saved in manual report generation across the BC/DR team</li>
@@ -134,7 +134,7 @@ const BCDRCaseStudy = () => {
 
             {/* 06 What I Learnt */}
             <div className="cs-section cs-section-last">
-              <h2 className="cs-section-title">What I Learnt</h2>
+              <h2 className="cs-section-title">WHAT I LEARNT</h2>
               
               <p>Enterprise UX isn't about aesthetics. It's about understanding the actual job to be done and eliminating friction in high-stakes workflows.</p>
 

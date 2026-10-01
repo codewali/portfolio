@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 
 /* Kinfolk-Inspired Editorial Portfolio - Design System */
 
@@ -27,6 +27,7 @@
   --font-serif: 'Crimson Text', serif;
   --font-display: 'Libre Baskerville', serif;
   --font-body: 'Inter', sans-serif;
+  --font-headers: 'Pixelify Sans', cursive;
   
   /* Editorial Spacing - Generous Whitespace (Kinfolk style) */
   --space-xs: 0.75rem;

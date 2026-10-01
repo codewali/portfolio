@@ -213,6 +213,18 @@ const Home = () => {
             alt="Portfolio"
             className="portfolio-image portfolio-dark"
           />
+          
+          {/* 3D Floating Tool Icons */}
+          <div className="floating-icons">
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/60fb30e0006657b5b451e19ddd11d35e63ee2e8a3ba5f2eca032d8b54e792ed2.jpeg" alt="Claude" className="floating-icon icon-1" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/5b4eba781b58f6068d3610f85595ab16a8ceabe7788b09acfd4b734cc5eafd56.jpeg" alt="Figma" className="floating-icon icon-2" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/5fece3b6facf0e69de74f67e3a191190ac6bd5a3452923158cbc3686dbf905f4.jpeg" alt="Adobe" className="floating-icon icon-3" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/7181b2e462528d6142b87ed3e14add766444a2b417fb5d31cdc1a960c04487fa.jpeg" alt="Emergent" className="floating-icon icon-4" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/2ffa88987c6cb604c626824569586fb47ab6d6dcb89afde380fc040e8e61019b.jpeg" alt="Pendo" className="floating-icon icon-5" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/f4b67e5520178d13135d0e6be7732d1348ba9450e915a7b906aa3a7bfa86efbd.jpeg" alt="GPT" className="floating-icon icon-6" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/82ef594b7a30c61f0e2f00517089e731a3e73de865ec19dcb768afaad88df9a9.jpeg" alt="Gemini" className="floating-icon icon-7" />
+            <img src="https://static.prod-images.emergentagent.com/jobs/6863b872-bace-4a4f-a9bf-433ce3354bf5/images/9181d045172f424db793522b620fe6e2c52f012a1405aee8009c5846080c27cb.jpeg" alt="Mobbin" className="floating-icon icon-8" />
+          </div>
         </div>
         <div className="hero-scroll-indicator">
           <span>Scroll</span>
@@ -226,10 +238,8 @@ const Home = () => {
           <div className="about-left">
             <div className="about-label">ABOUT</div>
             
-            <h2 className="about-name" style={{ display: 'none' }}>Paridhi Sinha</h2>
-            
             <h3 className="about-intro-title progressive-reveal">
-              I design for systems, not just screens. Building experiences that solve the immediate problem while making what comes next easier.
+              I design for systems, not just screens.
             </h3>
             
             <p className="about-intro-text">
@@ -253,7 +263,7 @@ const Home = () => {
             </div>
             <div className="about-profile-info">
               <h2 className="about-profile-name">Paridhi Sinha</h2>
-              <p className="about-profile-title">STAFF PRODUCT DESIGNER</p>
+              <p className="about-profile-title">Staff Product Designer, Mitratech</p>
             </div>
           </div>
         </div>
