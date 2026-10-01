@@ -723,6 +723,7 @@
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
+    font-size: 0.875rem; /* 14px base */
   }
 
   * {
@@ -737,60 +738,30 @@
   .detail-header-content {
     padding: 0 2rem;
   }
-  
-  .content-container {
-    max-width: 100%;
-    padding: 0 2rem;
-  }
-  
-  .project-title {
-    font-size: 2rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-  }
-  
-  .highlight-text {
-    font-size: 1.25rem;
-    margin: 4rem 0;
-  }
-  
-  .image-section {
-    margin: 4rem -2rem;
-  }
-  
-  .image-grid-2col {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .image-caption {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  
-  .impact-section,
-  .next-case-study {
-    padding: 4rem 2rem;
-    margin: 4rem -2rem;
-  }
-  
-  .metrics-section {
-    gap: 3rem;
-  }
-  
-  .detail-list li::before,
-  .learnings-list li::before {
-    left: -1rem;
-  }
 
   .back-button {
-    font-size: 0.8125rem;
+    font-size: 0.75rem; /* 12px - increased from smaller */
+  }
+
+  .back-button span {
+    font-size: 0.75rem; /* 12px */
   }
 
   .project-header {
     padding: 8rem 2rem 4rem;
+  }
+
+  .project-title {
+    font-size: 1.75rem; /* 28px */
+    line-height: 1.2;
+  }
+
+  .project-meta {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .project-description {
+    font-size: 0.9375rem; /* 15px */
   }
 
   .article-content,
@@ -823,31 +794,34 @@
     max-width: 100% !important;
   }
 
-  /* Adjust font hierarchy for mobile */
-  .project-title {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
+  /* Section labels - minimum 8px */
   .cs-section-title {
-    font-size: 0.625rem;
+    font-size: 0.5rem; /* 8px - minimum readable */
     margin-bottom: 2rem;
+    letter-spacing: 0.15em;
   }
 
+  /* Subsection headlines */
   .cs-subsection-headline {
-    font-size: 1.25rem;
+    font-size: 1.125rem; /* 18px */
     line-height: 1.3;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
   }
 
+  /* Body text */
   .article-content-compact p,
   .cs-section p {
-    font-size: 0.9375rem;
+    font-size: 0.875rem; /* 14px */
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
 
+  .cs-list-compact li {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  /* Metrics */
   .metrics-section,
   .metrics-compact {
     display: flex !important;
@@ -859,10 +833,55 @@
   }
 
   .metric-value-compact {
-    font-size: 0.8125rem;
+    font-size: 0.75rem; /* 12px */
+  }
+
+  /* Image captions */
+  .image-caption {
+    font-size: 0.75rem; /* 12px */
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .project-footer {
     padding: 3rem 2rem;
+  }
+
+  .content-container {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .highlight-text {
+    font-size: 1.125rem; /* 18px */
+    margin: 4rem 0;
+  }
+
+  .image-section {
+    margin: 4rem -2rem;
+  }
+
+  .image-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .impact-section,
+  .next-case-study {
+    padding: 4rem 2rem;
+    margin: 4rem -2rem;
+  }
+
+  .metrics-section {
+    gap: 3rem;
+  }
+
+  .detail-list li::before,
+  .learnings-list li::before {
+    left: -1rem;
   }
 }

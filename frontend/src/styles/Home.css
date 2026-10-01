@@ -1003,6 +1003,7 @@
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
+    font-size: 0.875rem; /* 14px - ensure base is readable */
   }
 
   * {
@@ -1016,6 +1017,11 @@
 
   .nav-content {
     padding: 1.5rem 2rem;
+  }
+
+  .nav-name {
+    font-size: 0.75rem; /* 12px */
+    letter-spacing: 0.15em;
   }
 
   .desktop-nav {
@@ -1055,12 +1061,86 @@
 
   .hero-scroll-indicator {
     left: 2rem;
+    font-size: 0.625rem; /* 10px - minimum readable */
   }
 
-  /* Adjust floating icons for mobile */
-  .floating-icon {
-    width: 50px;
-    height: 50px;
+  .hero-scroll-indicator span {
+    font-size: 0.625rem; /* 10px */
+  }
+
+  /* Work Section */
+  .work-title,
+  .about-name,
+  .side-projects-title,
+  .contact-title {
+    font-size: clamp(1.5rem, 5vw, 2rem); /* 24px min */
+  }
+
+  .work-label,
+  .about-label,
+  .side-projects-label {
+    font-size: 0.625rem; /* 10px - minimum for labels */
+    letter-spacing: 0.15em;
+  }
+
+  .case-study-meta,
+  .case-study-tags {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .case-study-title {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .case-study-description {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  /* About Section */
+  .about-intro-title {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .about-text {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.7;
+  }
+
+  .about-profile-name {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .about-profile-title {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  /* Side Projects */
+  .side-projects-subtitle {
+    font-size: 0.9375rem; /* 15px */
+  }
+
+  .bento-overlay-text,
+  .bento-cta {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  /* Contact */
+  .contact-info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-link {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem;
+  }
+
+  .footer-content {
+    font-size: 0.75rem; /* 12px */
   }
 
   .work,
@@ -1081,15 +1161,6 @@
 
   .side-projects-card {
     gap: 3rem;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .footer {
-    padding: 2rem;
   }
 
   .about-content-grid {
