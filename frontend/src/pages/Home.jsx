@@ -346,10 +346,10 @@ const Home = () => {
             </div>
             
             {/* WIP 2 - Opens Modal */}
-            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c2u618er_Untitled_Artwork%206.JPG')}>
+            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/zzul94a3_problem-statement-section.png')}>
               <img 
-                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c2u618er_Untitled_Artwork%206.JPG" 
-                alt="Fashion WIP 2"
+                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/zzul94a3_problem-statement-section.png" 
+                alt="Branding Exercise"
               />
             </div>
           </div>
