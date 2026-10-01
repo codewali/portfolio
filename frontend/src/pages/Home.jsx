@@ -17,6 +17,18 @@ const Home = () => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  // Handle scroll to section when returning from case study
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
   };
@@ -359,7 +371,7 @@ const Home = () => {
               />
               <div className="bento-overlay bento-overlay-small">
                 <div className="bento-overlay-content">
-                  <span className="bento-overlay-text">Art to brand exercise</span>
+                  <span className="bento-overlay-text">art to brand exercise</span>
                   <Maximize2 size={20} />
                 </div>
               </div>

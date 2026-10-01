@@ -8,7 +8,7 @@ const CaseStudyDetail = () => {
   const videoRef = useRef(null);
 
   const handleBackToPortfolio = () => {
-    navigate('/', { state: { scrollTo: 'work' } });
+    navigate('/', { state: { scrollTo: 'side-projects' } });
   };
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const CaseStudyDetail = () => {
         <div className="detail-header-content">
           <button onClick={handleBackToPortfolio} className="back-button">
             <ArrowLeft size={20} />
-            <span>Back to Case Studies</span>
+            <span>Back to Side Projects</span>
           </button>
         </div>
       </header>
