@@ -1,32 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-/* Modern Art Portfolio - Design System */
+/* MoMA-Inspired Modern Art Portfolio - Design System */
 
 :root {
-  /* Colors - MoMA Inspired Eclectic Palette */
-  --cream: #FAF7F2;
-  --charcoal: #2A2A2A;
+  /* Eclectic Contemporary Color Palette - Red Primary */
+  --cream: #F5F3EE;
+  --charcoal: #1A1A1A;
+  --red: #E63946;
+  --coral: #FF6B6B;
   --terracotta: #D4745E;
-  --sage: #8A9B68;
-  --dusty-pink: #E5A8A8;
-  --warm-ochre: #E8B84F;
-  --light-gray: #E8E8E8;
-  --mid-gray: #9A9A9A;
+  --deep-blue: #264653;
+  --warm-beige: #E9DBCD;
+  --burnt-sienna: #A44A3F;
+  --soft-gray: #C8C8C8;
+  --accent-green: #6A994E;
+  --light-gray: #F0F0F0;
+  --mid-gray: #808080;
   
   /* Light Mode (Default) */
-  --bg-primary: var(--cream);
-  --bg-secondary: #FFFFFF;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: var(--cream);
+  --bg-accent: #FFF5F5;
   --text-primary: var(--charcoal);
-  --text-secondary: #4A4A4A;
-  --accent-1: var(--terracotta);
-  --accent-2: var(--sage);
-  --accent-3: var(--dusty-pink);
-  --accent-highlight: var(--warm-ochre);
+  --text-secondary: #505050;
+  --accent-primary: var(--red);
+  --accent-2: var(--coral);
+  --accent-3: var(--terracotta);
+  --accent-4: var(--deep-blue);
+  --accent-5: var(--warm-beige);
+  --accent-6: var(--accent-green);
   
-  /* Typography */
-  --font-display: 'Playfair Display', serif;
-  --font-script: 'Caveat', cursive;
-  --font-body: 'Inter', sans-serif;
+  /* Contemporary MoMA Typography - Museum-grade */
+  --font-display: 'Work Sans', sans-serif;
+  --font-heading: 'DM Sans', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
   
   /* Spacing */
   --space-xs: 0.5rem;
@@ -39,14 +46,17 @@
 
 /* Dark Mode */
 [data-theme="dark"] {
-  --bg-primary: #1A1A1A;
-  --bg-secondary: #2A2A2A;
-  --text-primary: #FAF7F2;
+  --bg-primary: #0F0F0F;
+  --bg-secondary: #1A1A1A;
+  --bg-accent: #2A1A1A;
+  --text-primary: #F5F3EE;
   --text-secondary: #C8C8C8;
-  --accent-1: #E87A5D;
-  --accent-2: #9DB080;
-  --accent-3: #F0B8B8;
-  --accent-highlight: #F0C766;
+  --accent-primary: #FF4D5A;
+  --accent-2: #FF8A8A;
+  --accent-3: #E58A7E;
+  --accent-4: #3A6D7E;
+  --accent-5: #F0E5D8;
+  --accent-6: #8AB36E;
 }
 
 * {
@@ -146,7 +156,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: var(--accent-1);
+  background: var(--accent-primary);
   color: white;
 }
 
@@ -160,7 +170,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-1);
+  background: var(--accent-primary);
   border-radius: 10px;
 }
 

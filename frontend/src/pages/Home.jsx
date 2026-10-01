@@ -8,7 +8,7 @@ const Home = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'dark';
+    return localStorage.getItem('theme') || 'light';
   });
 
   useEffect(() => {
@@ -148,22 +148,18 @@ const Home = () => {
         )}
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - MoMA Inspired */}
       <section className="hero">
         <div className="hero-content">
-          <div className="hero-text">
-            <span className="hero-label">STAFF PRODUCT DESIGNER</span>
-            <h1 className="hero-title">I help enterprise customers use our Governance, Risk & Compliance products with ease, designing solutions that address their needs and support their business goals.</h1>
-            <p className="hero-subtitle">7+ years building enterprise systems, AI products, and B2B SaaS platforms. Currently leading design strategy at Mitratech, focusing on scalable UX practices and GenAI-powered workflows.</p>
-          </div>
-          <div className="hero-visual">
-            <div className="hero-visual-container">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/k2bg2ef5_Screenshot%202026-05-10%20at%209.16.54%E2%80%AFPM.png"
-                alt="BC/DR Executive Dashboard"
-                className="hero-visual-image"
-              />
-            </div>
+          <h1 className="hero-name">PARIDHI SINHA</h1>
+          <img 
+            src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/giz020su_pp.png"
+            alt="Paridhi Sinha"
+            className="hero-profile-image"
+          />
+          <div className="hero-scroll-indicator">
+            <span>Scroll</span>
+            <ArrowRight size={16} style={{ transform: 'rotate(90deg)' }} />
           </div>
         </div>
       </section>
@@ -171,28 +167,30 @@ const Home = () => {
       {/* About Section */}
       <section id="about" className="about">
         <div className="about-content">
-          <div className="about-text">
-            <div className="about-label">ABOUT</div>
+          <div className="about-label">ABOUT</div>
+          
+          <div className="about-intro">
+            <h2 className="about-intro-title">
+              I HELP TEAMS USE COMPLEX GOVERNANCE, RISK & COMPLIANCE PRODUCTS WITH EASE, DESIGNING SOLUTIONS THAT ADDRESS THEIR NEEDS AND SUPPORT THEIR GOALS.
+            </h2>
+            <p className="about-intro-text">
+              7+ years building enterprise systems, AI products, and B2B SaaS platforms. Currently leading design strategy at Mitratech, focusing on scalable UX practices and GenAI-powered workflows.
+            </p>
+          </div>
+
+          <div className="about-grid">
             <p className="about-lead">
               Good design helps speed up task completion while increasing trust by providing adequate information.
             </p>
-            <p>
+            <p className="about-text">
               Hi! I'm Paridhi, a Staff Product Designer based in Bengaluru, Karnataka.
             </p>
-            <p>
+            <p className="about-text">
               I'm drawn to messy, overwhelming, and complex flows, and I comb through the weeds by making sense of the patterns that can help not only solve the current issue but also support the scalability of features.
             </p>
-            <p>
+            <p className="about-text">
               At Mitratech, I help do this for Preparis (a continuity planning & disaster recovery platform) and PolicyHub (a policy management application) as a part of the GRC portfolio of products. Been at it for 2 years now.
             </p>
-          </div>
-          <div className="about-image-wrapper">
-            <img 
-              id="about-portrait"
-              src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/izdvj77h_portrait.png" 
-              alt="Paridhi Sinha" 
-              className="about-image-portrait"
-            />
           </div>
         </div>
       </section>

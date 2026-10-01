@@ -1,23 +1,25 @@
 /* Modern Art Portfolio - Home Page Styles */
 
-/* Navigation */
+/* Navigation - Contemporary MoMA Style */
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(250, 247, 242, 0.95);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 [data-theme="dark"] .nav {
-  background: rgba(26, 26, 26, 0.95);
+  background: rgba(15, 15, 15, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-content {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 1.5rem 3rem;
   display: flex;
@@ -26,15 +28,17 @@
 }
 
 .nav-logo {
-  font-family: var(--font-script);
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--text-primary);
   transition: color 0.3s ease;
 }
 
 .nav-logo:hover {
-  color: var(--accent-1);
+  color: var(--accent-primary);
 }
 
 .nav-links {
@@ -56,7 +60,7 @@
 }
 
 .theme-toggle:hover {
-  background: var(--accent-1);
+  background: var(--accent-primary);
   color: white;
   transform: rotate(20deg);
 }
@@ -83,7 +87,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent-1);
+  background: var(--accent-primary);
   transition: width 0.3s ease;
 }
 
@@ -92,7 +96,7 @@
 }
 
 .nav-cta {
-  background: var(--accent-1);
+  background: var(--accent-primary);
   color: white;
   border: none;
   padding: 0.75rem 1.75rem;
@@ -105,7 +109,7 @@
 .nav-cta:hover {
   background: var(--accent-2);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(212, 116, 94, 0.3);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
 }
 
 /* Mobile Nav */
@@ -113,93 +117,145 @@
   display: none;
 }
 
-/* Hero Section */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-menu-link {
+  color: var(--text-secondary);
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.mobile-menu-link:hover {
+  background: var(--bg-accent);
+  color: var(--text-primary);
+}
+
+/* Hero Section - MoMA-Inspired Edge-to-Edge */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 10rem 3rem 6rem;
+  justify-content: center;
   position: relative;
   overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--accent-3) 0%, transparent 70%);
-  opacity: 0.1;
-  z-index: 0;
+  background: var(--bg-primary);
+  padding: 0;
+  margin: 0;
 }
 
 .hero-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
   width: 100%;
-}
-
-.hero-label {
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--accent-2);
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  margin-bottom: 2rem;
-  max-width: 900px;
-}
-
-.hero-title .accent {
-  font-family: var(--font-script);
-  color: var(--accent-1);
-  font-size: 1.2em;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  max-width: 700px;
-  margin-bottom: 3rem;
-}
-
-.hero-cta {
-  display: inline-flex;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: 0.75rem;
-  background: var(--accent-1);
-  color: white;
-  padding: 1.25rem 2.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1.05rem;
-  border: none;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 20px rgba(212, 116, 94, 0.2);
+  justify-items: center;
 }
 
-.hero-cta:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 30px rgba(212, 116, 94, 0.3);
+/* Prominent Name - Contemporary Art Typography */
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 12vw, 14rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin: 0;
 }
 
-/* About Section */
+.hero-name::after {
+  content: 'PARIDHI SINHA';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--accent-primary);
+  opacity: 0.15;
+  transform: translate(6px, 6px);
+  z-index: -1;
+}
+
+/* Profile Image - Overlapping Typography Artistic Style */
+.hero-profile-image {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(230, 57, 70, 0.3);
+  border: 6px solid var(--accent-primary);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-profile-image:hover {
+  transform: translateY(-50%) scale(1.08) rotate(3deg);
+  box-shadow: 0 30px 80px rgba(230, 57, 70, 0.5);
+}
+
+/* Red accent element */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  background: var(--accent-primary);
+  opacity: 0.1;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  animation: bounce 2s infinite;
+  z-index: 3;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* About Section - Contemporary Layout */
 .about {
   padding: var(--space-xxl) 3rem;
   background: var(--bg-secondary);
@@ -207,33 +263,47 @@
 }
 
 .about-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 6rem;
-  align-items: center;
-}
-
-.about-text-wrapper {
-  position: relative;
 }
 
 .about-label {
-  font-family: var(--font-script);
-  font-size: 2rem;
-  color: var(--accent-1);
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--accent-primary);
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
-.about-title {
+/* Intro section - moved from hero */
+.about-intro {
+  max-width: 900px;
+  margin-bottom: 5rem;
+}
+
+.about-intro-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 2rem;
   color: var(--text-primary);
+}
+
+.about-intro-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* About grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
 }
 
 .about-text {
@@ -243,49 +313,43 @@
   margin-bottom: 1.5rem;
 }
 
-.about-image-wrapper {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  transition: transform 0.6s ease;
+.about-lead {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  max-width: 800px;
 }
 
-.about-image-wrapper:hover {
-  transform: scale(1.05) rotate(2deg);
-}
-
-.about-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Work Section */
+/* Work Section - MoMA Contemporary */
 .work {
-  padding: var(--space-xxl) 3rem;
+  padding: var(--space-xxl) 0;
   background: var(--bg-primary);
 }
 
 .work-header {
   max-width: 1400px;
   margin: 0 auto 5rem;
+  padding: 0 3rem;
 }
 
 .work-label {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: 0.875rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--accent-2);
-  font-weight: 600;
-  margin-bottom: 1rem;
+  letter-spacing: 0.25em;
+  color: var(--accent-primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .work-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 800;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
@@ -294,86 +358,122 @@
   font-size: 1.25rem;
   color: var(--text-secondary);
   max-width: 700px;
+  line-height: 1.6;
 }
 
-/* Case Study Grid */
+/* Case Study Grid - Contemporary Art Gallery Style */
 .case-studies-grid {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 0;
 }
 
 .case-study-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
   align-items: center;
+  gap: 4rem;
   position: relative;
+  padding: 6rem 3rem;
+  transition: background 0.3s ease;
+  cursor: pointer;
 }
 
-.case-study-card:nth-child(even) {
+.case-study-card:nth-child(1) {
+  background: var(--bg-primary);
+}
+
+.case-study-card:nth-child(2) {
+  background: var(--bg-secondary);
   grid-template-columns: 1fr 1fr;
   direction: rtl;
+}
+
+.case-study-card:nth-child(3) {
+  background: var(--accent-5);
 }
 
 .case-study-card:nth-child(even) > * {
   direction: ltr;
 }
 
-.case-study-visual {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-  transition: all 0.6s ease;
-}
-
-.case-study-visual:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
-}
-
 .case-study-image {
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.case-study-card:hover .case-study-image {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 40px 100px rgba(230, 57, 70, 0.25);
+}
+
+.case-study-image img {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.6s ease;
 }
 
-.case-study-visual:hover .case-study-image {
+.case-study-image video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.case-study-card:hover .case-study-image video {
+  opacity: 1;
+}
+
+.case-study-card:hover .case-study-image img {
   transform: scale(1.05);
 }
 
 .case-study-info {
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .case-study-meta {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
   margin-bottom: 1rem;
   font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--text-secondary);
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.case-study-number {
-  font-family: var(--font-script);
-  font-size: 1.5rem;
-  color: var(--accent-1);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.case-study-company,
+.case-study-year {
+  color: var(--text-secondary);
 }
 
 .case-study-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
   color: var(--text-primary);
+}
+
+.case-study-note {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
 }
 
 .case-study-description {
@@ -387,92 +487,117 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .case-study-tag {
   padding: 0.5rem 1.25rem;
-  background: var(--accent-3);
-  color: var(--text-primary);
-  border-radius: 50px;
+  background: transparent;
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+  border-radius: 0;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
 }
 
-.case-study-link {
+.case-study-tag:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.case-study-impact {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.case-study-impact strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.case-study-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  color: var(--accent-1);
-  font-weight: 600;
+  color: var(--accent-primary);
+  font-weight: 700;
   font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   transition: gap 0.3s ease;
 }
 
-.case-study-link:hover {
+.case-study-card:hover .case-study-cta {
   gap: 1.25rem;
 }
 
-/* Side Projects */
-.side-projects {
+/* Side Projects - Horizontal Banner Contemporary */
+.side-projects-banner {
   padding: var(--space-xl) 3rem;
-  background: var(--accent-highlight);
-  color: var(--charcoal);
+  background: var(--accent-4);
+  color: white;
 }
 
-.side-projects-content {
+.side-projects-card {
   max-width: 1400px;
   margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.side-projects-left {
+  padding-right: 2rem;
 }
 
 .side-projects-label {
-  font-family: var(--font-script);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--charcoal);
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  opacity: 0.9;
 }
 
 .side-projects-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
 }
 
 .side-projects-subtitle {
   font-size: 1.125rem;
-  margin-bottom: 3rem;
-  opacity: 0.8;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
-.side-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-  margin-top: 4rem;
-}
-
-.side-project-card {
-  background: white;
-  border-radius: 20px;
-  padding: 2rem;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.side-project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+.side-projects-right {
+  position: relative;
 }
 
 .side-project-visual {
   width: 100%;
   aspect-ratio: 16 / 10;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   margin-bottom: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s ease;
+}
+
+.side-project-visual:hover {
+  transform: scale(1.03);
 }
 
 .side-project-visual img {
@@ -482,38 +607,33 @@
   transition: transform 0.6s ease;
 }
 
-.side-project-card:hover .side-project-visual img {
+.side-project-visual:hover img {
   transform: scale(1.1);
 }
 
-.side-project-title {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--charcoal);
-}
-
-.side-project-description {
-  color: #4A4A4A;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.side-project-link {
+.side-project-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: var(--accent-1);
-  font-weight: 600;
-  transition: gap 0.3s ease;
+  gap: 0.75rem;
+  background: white;
+  color: var(--accent-4);
+  padding: 1rem 2rem;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
-.side-project-link:hover {
-  gap: 1rem;
+.side-project-cta:hover {
+  gap: 1.25rem;
+  background: var(--accent-primary);
+  color: white;
 }
 
-/* Contact Section */
+/* Contact Section - Contemporary */
 .contact {
   padding: var(--space-xxl) 3rem;
   background: var(--bg-primary);
@@ -526,50 +646,96 @@
 }
 
 .contact-label {
-  font-family: var(--font-script);
-  font-size: 2rem;
-  color: var(--accent-1);
-  margin-bottom: 1rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--accent-primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .contact-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 800;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
   margin-bottom: 1.5rem;
 }
 
-.contact-subtitle {
+.contact-text {
   font-size: 1.25rem;
   color: var(--text-secondary);
   margin-bottom: 3rem;
+  line-height: 1.6;
 }
 
-.contact-methods {
+.contact-info {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
-.contact-method {
+.contact-email {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
   padding: 1.25rem 2.5rem;
-  background: var(--accent-1);
+  background: var(--accent-primary);
   color: white;
-  border-radius: 50px;
-  font-weight: 600;
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   font-size: 1.05rem;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 20px rgba(212, 116, 94, 0.2);
+  box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);
+  text-decoration: none;
 }
 
-.contact-method:hover {
+.contact-email:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(212, 116, 94, 0.3);
+  box-shadow: 0 8px 30px rgba(230, 57, 70, 0.5);
+  background: var(--accent-2);
+  color: white;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--text-primary);
+  color: white;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.linkedin-link:hover {
+  background: var(--accent-primary);
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 3rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
 }
 
 /* Responsive */
@@ -578,11 +744,27 @@
   .case-study-card:nth-child(even) {
     grid-template-columns: 1fr;
     direction: ltr;
+    gap: 3rem;
   }
 
   .about-content {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+  
+  .hero-profile-image {
+    width: 220px;
+    height: 220px;
+    right: 5%;
+  }
+  
+  .side-projects-card {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .side-projects-left {
+    padding-right: 0;
   }
 }
 
@@ -597,28 +779,86 @@
 
   .mobile-nav {
     display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .hamburger-btn span {
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
   }
 
   .hero {
-    padding: 8rem 1.5rem 4rem;
+    min-height: 90vh;
   }
 
-  .hero-title {
-    font-size: 2.5rem;
+  .hero-content {
+    height: 90vh;
+    padding: 0 1.5rem;
+  }
+
+  .hero-name {
+    font-size: 3.5rem;
+  }
+  
+  .hero-profile-image {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    bottom: 25%;
+    right: 5%;
+    top: auto;
+    transform: translateY(0);
+  }
+  
+  .hero-profile-image:hover {
+    transform: scale(1.08) rotate(3deg);
   }
 
   .work,
   .about,
-  .side-projects,
+  .side-projects-banner,
   .contact {
     padding: 4rem 1.5rem;
   }
 
-  .case-studies-grid {
-    gap: 5rem;
+  .case-study-card {
+    padding: 4rem 1.5rem;
   }
 
   .case-study-info {
     padding: 1rem 0;
+  }
+  
+  .work-title,
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  
+  .case-study-title,
+  .side-projects-title {
+    font-size: 1.75rem;
+  }
+  
+  .side-projects-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
