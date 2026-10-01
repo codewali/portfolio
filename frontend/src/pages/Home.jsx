@@ -180,6 +180,8 @@ const Home = () => {
       setModalImage(wip.fullImage);
     }
   };
+
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
