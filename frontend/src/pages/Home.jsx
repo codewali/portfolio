@@ -71,9 +71,9 @@ const Home = () => {
     {
       id: 3,
       title: 'Coordinated Group Ordering',
-      company: 'Personal Project',
+      company: 'Swiggy — Personal Project',
       year: '2023',
-      note: 'Concept created before platform launched this feature',
+      note: 'Concept created before Swiggy launched this feature',
       description: 'Making group decisions effortless. When multiple people want to order together, coordination breaks down fast. This redesign focused on transparency, real-time updates, and removing the friction of split payments and conflicting preferences.',
       tags: ['Social UX', 'Mobile Design', 'Interaction Design'],
       impact: 'Seamless multi-user flow with live order tracking',
@@ -174,19 +174,26 @@ const Home = () => {
         )}
       </nav>
 
-      {/* Hero Section - MoMA Inspired */}
+      {/* Hero Section - Kinfolk Editorial Style */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-name">PARIDHI SINHA</h1>
-          <img 
-            src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/giz020su_pp.png"
-            alt="Paridhi Sinha"
-            className="hero-profile-image"
-          />
-          <div className="hero-scroll-indicator">
-            <span>Scroll</span>
-            <ArrowRight size={16} style={{ transform: 'rotate(90deg)' }} />
+          <div className="hero-text">
+            <h1 className="hero-name">Paridhi Sinha</h1>
+            <p className="hero-subtitle">
+              A product designer helping teams navigate complex problems with clarity—transforming overwhelming systems into experiences that feel intuitive and trustworthy.
+            </p>
           </div>
+          <div className="hero-profile-wrapper">
+            <img 
+              src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/giz020su_pp.png"
+              alt="Paridhi Sinha"
+              className="hero-profile-image"
+            />
+          </div>
+        </div>
+        <div className="hero-scroll-indicator">
+          <span>Scroll</span>
+          <ArrowRight size={12} style={{ transform: 'rotate(90deg)' }} />
         </div>
       </section>
 

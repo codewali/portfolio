@@ -1,62 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
 
-/* MoMA-Inspired Modern Art Portfolio - Design System */
+/* Kinfolk-Inspired Editorial Portfolio - Design System */
 
 :root {
-  /* Eclectic Contemporary Color Palette - Red Primary */
-  --cream: #F5F3EE;
-  --charcoal: #1A1A1A;
-  --red: #E63946;
-  --coral: #FF6B6B;
-  --terracotta: #D4745E;
-  --deep-blue: #264653;
-  --warm-beige: #E9DBCD;
-  --burnt-sienna: #A44A3F;
-  --soft-gray: #C8C8C8;
-  --accent-green: #6A994E;
-  --light-gray: #F0F0F0;
-  --mid-gray: #808080;
+  /* Sophisticated Editorial Palette - Monochromatic with subtle red accent */
+  --cream: #FAF9F7;
+  --warm-white: #FEFEFE;
+  --soft-beige: #F5F3F0;
+  --light-gray: #E8E6E3;
+  --mid-gray: #C4C2BE;
+  --charcoal: #2B2B2B;
+  --dark-gray: #4A4A4A;
+  --red-accent: #C94A3C;
   
-  /* Light Mode (Default) */
-  --bg-primary: #FFFFFF;
+  /* Light Mode (Default) - Editorial White */
+  --bg-primary: var(--warm-white);
   --bg-secondary: var(--cream);
-  --bg-accent: #FFF5F5;
+  --bg-accent: var(--soft-beige);
   --text-primary: var(--charcoal);
-  --text-secondary: #505050;
-  --accent-primary: var(--red);
-  --accent-2: var(--coral);
-  --accent-3: var(--terracotta);
-  --accent-4: var(--deep-blue);
-  --accent-5: var(--warm-beige);
-  --accent-6: var(--accent-green);
+  --text-secondary: #6B6B6B;
+  --text-muted: #9A9A9A;
+  --accent-primary: var(--red-accent);
+  --border-color: #E8E6E3;
   
-  /* Contemporary MoMA Typography - Museum-grade */
-  --font-display: 'Work Sans', sans-serif;
-  --font-heading: 'DM Sans', sans-serif;
-  --font-body: 'Space Grotesk', sans-serif;
+  /* Elegant Editorial Typography - Kinfolk Style */
+  --font-serif: 'Crimson Text', serif;
+  --font-display: 'Libre Baskerville', serif;
+  --font-body: 'Inter', sans-serif;
   
-  /* Spacing */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 4rem;
-  --space-xl: 6rem;
-  --space-xxl: 10rem;
+  /* Editorial Spacing - Generous Whitespace (Kinfolk style) */
+  --space-xs: 0.75rem;
+  --space-sm: 1.5rem;
+  --space-md: 3rem;
+  --space-lg: 6rem;
+  --space-xl: 9rem;
+  --space-xxl: 12rem;
 }
 
-/* Dark Mode */
+/* Dark Mode - Elegant Editorial */
 [data-theme="dark"] {
-  --bg-primary: #0F0F0F;
-  --bg-secondary: #1A1A1A;
-  --bg-accent: #2A1A1A;
-  --text-primary: #F5F3EE;
-  --text-secondary: #C8C8C8;
-  --accent-primary: #FF4D5A;
-  --accent-2: #FF8A8A;
-  --accent-3: #E58A7E;
-  --accent-4: #3A6D7E;
-  --accent-5: #F0E5D8;
-  --accent-6: #8AB36E;
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #232323;
+  --bg-accent: #2A2A2A;
+  --text-primary: #F5F3F0;
+  --text-secondary: #C4C2BE;
+  --text-muted: #8A8A8A;
+  --accent-primary: #D8766A;
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -73,19 +63,21 @@ html {
 body {
   margin: 0;
   font-family: var(--font-body);
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Smooth Animations */
+/* Kinfolk-style Smooth Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(60px);
   }
   to {
     opacity: 1;
