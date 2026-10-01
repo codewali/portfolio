@@ -68,32 +68,14 @@ const SwiggyCaseStudy = () => {
               <p>Personal project exploring how food delivery apps could better serve group ordering scenarios: office lunches, friend gatherings, family dinners. These situations happen frequently but existing ordering flows treat them as edge cases.</p>
 
               <h3 className="cs-subsection-headline">The problem</h3>
-              <p>Ordering food as a group feels like project management.</p>
-
-              <p>Through interviews and observation, I identified recurring pain points:</p>
-              
-              <ul className="cs-list-compact">
-                <li>Screenshot sharing chaos across WhatsApp, Slack, text threads</li>
-                <li>Coordination confusion: not knowing who ordered what or if the cart is final</li>
-                <li>Payment hassle: chasing people for money after delivery</li>
-                <li>Timing mismatches: some people ready immediately, others still browsing 30 minutes later</li>
-                <li>No shared cart visibility</li>
-              </ul>
+              <p>Ordering food as a group feels like project management. Through interviews and observation, I identified recurring pain points: screenshot sharing chaos across WhatsApp, Slack, text threads; coordination confusion with no clarity on who ordered what or if the cart is final; payment hassle of chasing people for money after delivery; timing mismatches where some people are ready immediately while others are still browsing 30 minutes later; and complete lack of shared cart visibility.</p>
             </div>
 
             {/* 02 My Role */}
             <div className="cs-section">
               <h2 className="cs-section-title">MY ROLE</h2>
               
-              <p>Solo personal project handling all aspects:</p>
-              
-              <ul className="cs-list-compact">
-                <li>User research through interviews and observational studies</li>
-                <li>Competitive analysis of existing group ordering features</li>
-                <li>Information architecture and user flow design</li>
-                <li>Interaction design and prototyping</li>
-                <li>Visual design maintaining Swiggy's brand system</li>
-              </ul>
+              <p>Solo personal project handling all aspects: user research through interviews and observational studies, competitive analysis of existing group ordering features, information architecture and user flow design, interaction design and prototyping, and visual design maintaining Swiggy's brand system.</p>
             </div>
 
             {/* 03 Design Approach & Key Decisions */}

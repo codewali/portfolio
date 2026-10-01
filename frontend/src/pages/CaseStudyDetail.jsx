@@ -82,15 +82,7 @@ const CaseStudyDetail = () => {
             <div className="cs-section">
               <h2 className="cs-section-title">MY ROLE</h2>
               
-              <p>Solo project handling:</p>
-              
-              <ul className="cs-list-compact">
-                <li>Concept exploration and design philosophy</li>
-                <li>Illustrated apparel asset creation</li>
-                <li>Interaction design and layering logic</li>
-                <li>React prototype development with SVG overlays</li>
-                <li>User testing with lightweight prototypes</li>
-              </ul>
+              <p>Solo project handling: concept exploration and design philosophy, illustrated apparel asset creation, interaction design and layering logic, React prototype development with SVG overlays, and user testing with lightweight prototypes.</p>
             </div>
 
             {/* 03 Design Approach & Key Decisions */}

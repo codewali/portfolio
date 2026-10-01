@@ -79,15 +79,7 @@ const BCDRCaseStudy = () => {
             <div className="cs-section">
               <h2 className="cs-section-title">MY ROLE</h2>
               
-              <p>Lead product designer, end-to-end:</p>
-              
-              <ul className="cs-list-compact">
-                <li>Stakeholder interviews with executives and analysts</li>
-                <li>Information architecture and data hierarchy design</li>
-                <li>Interaction patterns for progressive disclosure</li>
-                <li>Visual system for risk communication</li>
-                <li>Real-time data integration with engineering</li>
-              </ul>
+              <p>Lead product designer, end-to-end: stakeholder interviews with executives and analysts, information architecture and data hierarchy design, interaction patterns for progressive disclosure, visual system for risk communication, and real-time data integration with engineering.</p>
             </div>
 
             {/* 03 Design Approach & Key Decisions */}
