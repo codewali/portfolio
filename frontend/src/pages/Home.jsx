@@ -236,21 +236,14 @@ const Home = () => {
         )}
       </nav>
 
-      {/* Hero Section - Kinfolk Editorial Style */}
+      {/* Hero Section - Portfolio with Graphics */}
       <section className="hero">
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1 className="hero-name">Paridhi Sinha</h1>
-            <p className="hero-subtitle">
-              A product designer helping teams navigate complex problems with clarity—transforming overwhelming systems into experiences that feel intuitive and trustworthy.
-            </p>
-          </div>
-          <div className="hero-profile-wrapper">
-            <img 
-              src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/giz020su_pp.png"
-              alt="Paridhi Sinha"
-              className="hero-profile-image"
-            />
+        <div className="hero-content-portfolio">
+          <h1 className="portfolio-title">Portfolio</h1>
+          <div className="hero-decorative-elements">
+            <div className="decorative-circle"></div>
+            <div className="decorative-line"></div>
+            <div className="decorative-square"></div>
           </div>
         </div>
         <div className="hero-scroll-indicator">
@@ -261,13 +254,16 @@ const Home = () => {
 
       {/* About Section */}
       <section id="about" className="about animate-on-scroll parallax-section">
-        <div className="about-content">
-          <div className="about-label">ABOUT</div>
-          
-          <div className="about-intro">
-            <h2 className="about-intro-title progressive-reveal">
-              I DESIGN FOR SYSTEMS, NOT JUST SCREENS.
-            </h2>
+        <div className="about-content-grid">
+          <div className="about-left">
+            <div className="about-label">ABOUT</div>
+            
+            <h2 className="about-name">Paridhi Sinha</h2>
+            
+            <h3 className="about-intro-title progressive-reveal">
+              I design for systems, not just screens—building experiences that solve the immediate problem while making what comes next easier.
+            </h3>
+            
             <p className="about-intro-text">
               I'm Paridhi, a Staff Product Designer based in Bengaluru. I've spent 7+ years working across enterprise software, B2B SaaS, and AI-powered products, with a particular interest in products where the complexity runs deeper than the interface.
             </p>
@@ -278,9 +274,15 @@ const Home = () => {
               At Mitratech, I bring that approach to Preparis and PolicyHub, working across product strategy, scalable UX practices, and emerging AI workflows in GRC.
             </p>
           </div>
-
-          <div className="about-grid" style={{ display: 'none' }}>
-            {/* Old content hidden */}
+          
+          <div className="about-right">
+            <div className="about-profile-wrapper">
+              <img 
+                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/giz020su_pp.png"
+                alt="Paridhi Sinha"
+                className="about-profile-image"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -378,7 +380,7 @@ const Home = () => {
           <div className="contact-info">
             <button onClick={copyEmail} className="contact-email">
               {copied ? (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00D26A" strokeWidth="2.5">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               ) : (
