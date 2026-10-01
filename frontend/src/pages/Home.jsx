@@ -8,10 +8,32 @@ const Home = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const hasNavigated = useRef(false);
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'light';
   });
+
+  const wips = [
+    {
+      image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
+      label: 'View virtual room case study',
+      action: 'navigate',
+      path: '/case-study/virtual-fitting-room'
+    },
+    {
+      image: 'https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/awf1mfbc_Frame%2033.png',
+      label: 'wardrobe app assets',
+      action: 'modal',
+      fullImage: 'https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/awf1mfbc_Frame%2033.png'
+    },
+    {
+      image: 'https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/zzul94a3_problem-statement-section.png',
+      label: 'art to brand exercise',
+      action: 'modal',
+      fullImage: 'https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/zzul94a3_problem-statement-section.png'
+    }
+  ];
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -142,7 +164,22 @@ const Home = () => {
     }
   ];
 
-  const scrollToSection = (id) => {
+  // Auto-play carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % wips.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [wips.length]);
+
+  const handleSlideClick = (wip) => {
+    if (wip.action === 'navigate') {
+      navigate(wip.path);
+    } else if (wip.action === 'modal') {
+      setModalImage(wip.fullImage);
+    }
+  };
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -333,7 +370,7 @@ const Home = () => {
       </section>
 
       {/* Side Projects Section */}
-      {/* Side Projects - Bento Layout */}
+      {/* Side Projects - Carousel */}
       <section id="side-projects" className="side-projects-banner">
         <div className="side-projects-content">
           <div className="side-projects-header">
@@ -342,44 +379,34 @@ const Home = () => {
             <p className="side-projects-subtitle">Recently obsessed with Fashion Tech. Exploring ideas and learning along the way.</p>
           </div>
           
-          <div className="side-projects-bento">
-            {/* Virtual Trial Room - Main Card */}
-            <div className="bento-item bento-large" onClick={() => navigate('/case-study/virtual-fitting-room')}>
-              <img 
-                src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png" 
-                alt="Virtual Trial Room"
-              />
-              <div className="bento-overlay">
-                <span className="bento-cta">View virtual room case study <ArrowRight size={16} /></span>
-              </div>
+          <div className="wip-carousel">
+            <div className="carousel-track" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+              {wips.map((wip, index) => (
+                <div 
+                  key={index}
+                  className={`carousel-slide ${index === 0 ? 'slide-vfr' : index === 1 ? 'slide-wardrobe' : 'slide-branding'}`}
+                  onClick={() => handleSlideClick(wip)}
+                >
+                  <img src={wip.image} alt={wip.label} />
+                  <div className="carousel-overlay">
+                    <div className="carousel-overlay-content">
+                      <span className="carousel-overlay-text">{wip.label}</span>
+                      <Maximize2 size={20} />
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
             
-            {/* WIP 1 - Opens Modal */}
-            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/awf1mfbc_Frame%2033.png')}>
-              <img 
-                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/awf1mfbc_Frame%2033.png" 
-                alt="Fashion WIP 1"
-              />
-              <div className="bento-overlay bento-overlay-small">
-                <div className="bento-overlay-content">
-                  <span className="bento-overlay-text">wardrobe app assets</span>
-                  <Maximize2 size={20} />
-                </div>
-              </div>
-            </div>
-            
-            {/* WIP 2 - Opens Modal */}
-            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/zzul94a3_problem-statement-section.png')}>
-              <img 
-                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/zzul94a3_problem-statement-section.png" 
-                alt="Branding Exercise"
-              />
-              <div className="bento-overlay bento-overlay-small">
-                <div className="bento-overlay-content">
-                  <span className="bento-overlay-text">art to brand exercise</span>
-                  <Maximize2 size={20} />
-                </div>
-              </div>
+            <div className="carousel-dots">
+              {wips.map((_, index) => (
+                <button
+                  key={index}
+                  className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
