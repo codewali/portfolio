@@ -186,6 +186,29 @@
   font-weight: 400;
 }
 
+/* Compact Metrics */
+.metrics-compact {
+  display: flex;
+  gap: 2rem;
+  margin: 3rem 0 5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  grid-column: 1 / -1;
+}
+
+.metric-card-compact {
+  flex: 1;
+}
+
+.metric-value-compact {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  display: block;
+}
+
 /* Section Styling - Two Column */
 .section {
   margin-bottom: 4rem;

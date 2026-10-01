@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Sun, Moon } from 'lucide-react';
+import { ArrowRight, Sun, Moon, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Home.css';
 
@@ -7,6 +7,7 @@ const Home = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'light';
   });
@@ -315,29 +316,57 @@ const Home = () => {
       </section>
 
       {/* Side Projects Section */}
+      {/* Side Projects - Bento Layout */}
       <section id="side-projects" className="side-projects-banner">
-        <div className="side-projects-card">
-          <div className="side-projects-left">
+        <div className="side-projects-content">
+          <div className="side-projects-header">
             <div className="side-projects-label">SIDE PROJECTS</div>
-            <h3 className="side-projects-title">A few experiments on the side</h3>
+            <h3 className="side-projects-title">A few fashion WIPs on the side</h3>
             <p className="side-projects-subtitle">Exploring ideas, trying things out, and learning along the way.</p>
           </div>
-          <div className="side-projects-right">
-            <div className="side-project-visual">
+          
+          <div className="side-projects-bento">
+            {/* Virtual Trial Room - Main Card */}
+            <div className="bento-item bento-large" onClick={() => navigate('/case-study/virtual-fitting-room')}>
               <img 
                 src="https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png" 
                 alt="Virtual Trial Room"
               />
+              <div className="bento-overlay">
+                <span className="bento-cta">View virtual room case study <ArrowRight size={16} /></span>
+              </div>
             </div>
-            <button 
-              onClick={() => navigate('/case-study/virtual-fitting-room')}
-              className="side-project-cta"
-            >
-              View Virtual Trial Room <ArrowRight size={16} />
-            </button>
+            
+            {/* WIP 1 - Opens Modal */}
+            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/kxqc1h8s_Pixelated%20fashion%20design%20patterns.png')}>
+              <img 
+                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/kxqc1h8s_Pixelated%20fashion%20design%20patterns.png" 
+                alt="Fashion WIP 1"
+              />
+            </div>
+            
+            {/* WIP 2 - Opens Modal */}
+            <div className="bento-item bento-small" onClick={() => setModalImage('https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/33yjkxiv_Sovereign%20intention.png')}>
+              <img 
+                src="https://customer-assets-4nw71qhi.emergentagent.net/job_portfolio-resume-28/artifacts/33yjkxiv_Sovereign%20intention.png" 
+                alt="Fashion WIP 2"
+              />
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Modal for WIP Images */}
+      {modalImage && (
+        <div className="modal-overlay" onClick={() => setModalImage(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setModalImage(null)}>
+              <X size={24} />
+            </button>
+            <img src={modalImage} alt="Work in Progress" className="modal-image" />
+          </div>
+        </div>
+      )}
 
       {/* Contact Section */}
       <section id="contact" className="contact">

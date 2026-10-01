@@ -631,25 +631,22 @@
 }
 
 /* Side Projects - Editorial Banner with Dusty Blue */
+/* Side Projects - Bento Layout with Red Background */
 .side-projects-banner {
-  padding: var(--space-lg) 4rem var(--space-xl) 4rem;
-  background: #D5D9DD;
+  padding: var(--space-xl) 4rem;
+  background: #C73E3A;
   position: relative;
   overflow: hidden;
-  will-change: transform;
 }
 
-.side-projects-card {
+.side-projects-content {
   max-width: 1400px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6rem;
-  align-items: center;
 }
 
-.side-projects-left {
-  max-width: 500px;
+.side-projects-header {
+  max-width: 600px;
+  margin-bottom: 4rem;
 }
 
 .side-projects-label {
@@ -657,7 +654,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   margin-bottom: 2rem;
 }
@@ -669,64 +666,135 @@
   letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
   line-height: 1.3;
-  color: var(--text-primary);
+  color: #FFFFFF;
 }
 
 .side-projects-subtitle {
   font-family: var(--font-serif);
   font-size: 1.0625rem;
   line-height: 1.75;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.85);
 }
 
-.side-projects-right {
+/* Bento Grid Layout */
+.side-projects-bento {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+  height: 600px;
+}
+
+.bento-item {
   position: relative;
-}
-
-.side-project-visual {
-  width: 100%;
-  aspect-ratio: 4/3;
   overflow: hidden;
-  margin-bottom: 2rem;
-  transition: transform 0.6s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.side-project-visual:hover {
+.bento-item:hover {
   transform: scale(1.02);
 }
 
-.side-project-visual img {
+.bento-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  display: block;
 }
 
-.side-project-visual:hover img {
-  transform: scale(1.05);
+.bento-large {
+  grid-row: 1 / 3;
+  position: relative;
 }
 
-.side-project-cta {
+.bento-small {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Overlay for Virtual Trial Room */
+.bento-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bento-large:hover .bento-overlay {
+  opacity: 1;
+}
+
+.bento-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--text-primary);
-  color: var(--text-primary);
+  color: #FFFFFF;
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
-  padding: 0 0 4px 0;
-  transition: all 0.4s ease;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.bento-cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
   cursor: pointer;
 }
 
-.side-project-cta:hover {
-  gap: 1rem;
-  border-bottom-color: var(--accent-primary);
-  color: var(--accent-primary);
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: default;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 90vh;
+}
+
+.modal-close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.modal-close:hover {
+  opacity: 0.7;
 }
 
 /* Contact Section - Editorial Minimal Warm Cream */

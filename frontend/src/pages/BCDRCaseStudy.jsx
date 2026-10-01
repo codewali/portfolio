@@ -21,7 +21,7 @@ const BCDRCaseStudy = () => {
         <div className="detail-header-content">
           <button onClick={handleBackToPortfolio} className="back-button">
             <ArrowLeft size={20} />
-            <span>Back to Portfolio</span>
+            <span>Back to Case Studies</span>
           </button>
         </div>
       </header>
@@ -46,18 +46,15 @@ const BCDRCaseStudy = () => {
           <p className="project-subtitle">Turning passive reports into an active decision system. Leaders went from waiting days for static snapshots to monitoring live data and taking immediate action.</p>
 
           {/* Metrics */}
-          <div className="metrics-section">
-            <div className="metric-card">
-              <div className="metric-value">24+</div>
-              <div className="metric-label">Hours saved monthly</div>
+          <div className="metrics-section metrics-compact">
+            <div className="metric-card-compact">
+              <span className="metric-value-compact">24+ hours saved monthly</span>
             </div>
-            <div className="metric-card">
-              <div className="metric-value">Real-time</div>
-              <div className="metric-label">vs 2-3 day delays</div>
+            <div className="metric-card-compact">
+              <span className="metric-value-compact">Real-time vs 2-3 day delays</span>
             </div>
-            <div className="metric-card">
-              <div className="metric-value">100%</div>
-              <div className="metric-label">Unified data view</div>
+            <div className="metric-card-compact">
+              <span className="metric-value-compact">100% unified data view</span>
             </div>
           </div>
 
@@ -68,11 +65,7 @@ const BCDRCaseStudy = () => {
             <div className="cs-section">
               <h2 className="cs-section-title">THE PROBLEM</h2>
               
-              <p>Leaders needed to assess organizational readiness quickly and report with confidence. But critical data existed scattered across spreadsheets, PDFs, and disconnected tools.</p>
-
-              <p className="highlight-text">The question they couldn't answer: "What's our biggest risk right now?" Manual reports took 2-3 days. By the time insights arrived, conditions had changed.</p>
-
-              <p>This wasn't a data problem. It was a decision-making problem. Information existed, but not in a form that supported fast, confident action.</p>
+              <p>Leaders needed to assess organizational readiness quickly and report with confidence. But critical data existed scattered across spreadsheets, PDFs, and disconnected tools. The question they couldn't answer: "What's our biggest risk right now?" Manual reports took 2-3 days. By the time insights arrived, conditions had changed. This wasn't a data problem. It was a decision-making problem. Information existed, but not in a form that supported fast, confident action.</p>
             </div>
 
             {/* 02 My Role */}

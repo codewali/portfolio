@@ -28,7 +28,7 @@ const CaseStudyDetail = () => {
         <div className="detail-header-content">
           <button onClick={handleBackToPortfolio} className="back-button">
             <ArrowLeft size={20} />
-            <span>Back to Portfolio</span>
+            <span>Back to Case Studies</span>
           </button>
         </div>
       </header>
