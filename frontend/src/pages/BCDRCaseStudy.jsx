@@ -42,18 +42,18 @@ const BCDRCaseStudy = () => {
       <section className="detail-content">
         <div className="content-container">
           
-          <h1 className="project-title">BC/DR Executive Dashboard</h1>
-          <p className="project-subtitle">Helping business continuity leaders monitor and act on technology and vendor recovery readiness in real time.</p>
+          <h1 className="project-title">Real-Time Decision Dashboard</h1>
+          <p className="project-subtitle">Turning passive reports into an active decision system. Leaders went from waiting days for static snapshots to monitoring live data and taking immediate action.</p>
 
           {/* Metrics */}
           <div className="metrics-section">
             <div className="metric-card">
               <div className="metric-value">24+</div>
-              <div className="metric-label">Hours/month saved</div>
+              <div className="metric-label">Hours saved monthly</div>
             </div>
             <div className="metric-card">
               <div className="metric-value">Real-time</div>
-              <div className="metric-label">vs 2-3 day reporting lag</div>
+              <div className="metric-label">vs 2-3 day delays</div>
             </div>
             <div className="metric-card">
               <div className="metric-value">100%</div>
@@ -66,38 +66,38 @@ const BCDRCaseStudy = () => {
             
             {/* 01 Context & Problem Discovery */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Context & Problem Discovery</h2>
+              <h2 className="cs-section-title">THE PROBLEM</h2>
               
-              <p>BC/DR executives at large enterprises need to assess organizational recovery readiness quickly. They're responsible for resilience during disruptions (outages, cyberattacks, disasters) and report to boards with confidence.</p>
+              <p>Leaders needed to assess organizational readiness quickly and report with confidence. But critical data existed scattered across spreadsheets, PDFs, and disconnected tools.</p>
 
-              <p>The problem: Critical data existed but not in a way that supported fast decision-making. Recovery plans, vendor assessments, and system dependencies lived across spreadsheets, static PDFs, and disconnected tools.</p>
+              <p className="highlight-text">The question they couldn't answer: "What's our biggest risk right now?" Manual reports took 2-3 days. By the time insights arrived, conditions had changed.</p>
 
-              <p><strong>Leaders couldn't quickly answer fundamental questions</strong> like "Which systems are our biggest risk?" or "Do we have plans for everything critical?" Manual report generation took 2-3 days. By the time executives received insights, conditions had changed.</p>
+              <p>This wasn't a data problem—it was a decision-making problem. Information existed, but not in a form that supported fast, confident action.</p>
             </div>
 
             {/* 02 My Role */}
             <div className="cs-section">
-              <h2 className="cs-section-title">My Role</h2>
+              <h2 className="cs-section-title">MY ROLE</h2>
               
-              <p>Lead product designer owning end-to-end UX:</p>
+              <p>Lead product designer, end-to-end:</p>
               
-              <ul className="cs-list-compact">
-                <li>Stakeholder interviews with BC/DR executives and analysts</li>
+              <ul className="detail-list">
+                <li>Stakeholder interviews with executives and analysts</li>
                 <li>Information architecture and data hierarchy design</li>
                 <li>Interaction patterns for progressive disclosure</li>
-                <li>Visual design system for risk communication</li>
-                <li>Collaboration with engineering on real-time data integration</li>
+                <li>Visual system for risk communication</li>
+                <li>Real-time data integration with engineering</li>
               </ul>
             </div>
 
             {/* 03 Design Approach & Key Decisions */}
             <div className="cs-section">
-              <h2 className="cs-section-title">Design Approach & Key Decisions</h2>
+              <h2 className="cs-section-title">DESIGN APPROACH</h2>
               
-              <p><strong>Information hierarchy</strong><br/>
-              Mapped the decision-making flow of BC/DR executives to create a three-tier hierarchy: at-a-glance health indicators, on-demand filterable views, and deep-dive detailed reports.</p>
+              <p className="section-content"><strong>Three-tier information hierarchy</strong><br/>
+              Mapped the decision-making flow to create: at-a-glance health indicators, filterable views on-demand, and deep-dive detailed reports.</p>
 
-              <p><strong>Prioritize trends over raw numbers</strong><br/>
+              <p className="section-content"><strong>Trends over raw numbers</strong><br/>
               Stakeholder feedback revealed absolute numbers didn't tell the story. A system with 10 high-risk items today might be improving (was 20 last month) or deteriorating (was 5 last month). Added trend indicators and comparison views to show direction of change.</p>
 
               <p><strong>Progressive disclosure, not information overload</strong><br/>

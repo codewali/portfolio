@@ -20,6 +20,32 @@ const Home = () => {
     setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
   };
 
+  // Scroll animations with Intersection Observer
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => observer.observe(el));
+
+    return () => {
+      animatedElements.forEach(el => observer.unobserve(el));
+    };
+  }, []);
+
   useEffect(() => {
     if (location.state?.scrollTo) {
       const section = document.getElementById(location.state.scrollTo);
@@ -32,25 +58,25 @@ const Home = () => {
   const caseStudies = [
     {
       id: 2,
-      title: 'BC/DR Executive Dashboard',
+      title: 'Real-Time Decision Dashboard',
       company: 'Mitratech',
       year: '2026',
-      description: 'An enterprise analytics interface helping business continuity leaders monitor and act on technology and vendor recovery readiness. Transformed passive reporting into an active decision system.',
-      tags: ['Enterprise UX', 'Data Visualization', 'B2B SaaS'],
-      impact: '24+ hours/month saved, real-time insights vs 2-3 day reporting',
+      description: 'Transforming passive reporting into an actionable decision system. Users went from waiting days for static reports to monitoring live data and taking immediate action—cutting response time from 48 hours to real-time.',
+      tags: ['Data Visualization', 'System Design', 'UX Strategy'],
+      impact: '24+ hours saved per month, instant insights vs multi-day delays',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/k2bg2ef5_Screenshot%202026-05-10%20at%209.16.54%E2%80%AFPM.png',
       video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/y191dcei_Screen%20Recording%202026-04-08%20at%206.13.33%E2%80%AFAM.mov',
       slug: 'bcdr-executive-dashboard'
     },
     {
       id: 3,
-      title: 'Swiggy Group Ordering',
+      title: 'Coordinated Group Ordering',
       company: 'Personal Project',
       year: '2023',
-      note: 'Done prior to Swiggy introducing group ordering',
-      description: 'Redesigning Swiggy\'s group ordering experience to make coordinating meals with friends seamless. Focused on reducing friction, improving transparency, and creating delightful social interactions.',
-      tags: ['FoodTech', 'Social Features', 'Mobile UX'],
-      impact: 'Streamlined multi-user ordering flow with real-time coordination',
+      note: 'Concept created before platform launched this feature',
+      description: 'Making group decisions effortless. When multiple people want to order together, coordination breaks down fast. This redesign focused on transparency, real-time updates, and removing the friction of split payments and conflicting preferences.',
+      tags: ['Social UX', 'Mobile Design', 'Interaction Design'],
+      impact: 'Seamless multi-user flow with live order tracking',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/qh8a69ip_Screenshot%202026-05-10%20at%209.18.19%E2%80%AFPM.png',
       video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/c4of3v95_Screen%20Recording%202026-04-30%20at%205.54.19%E2%80%AFPM.mov',
       slug: 'swiggy-group-ordering'
@@ -63,9 +89,9 @@ const Home = () => {
       title: 'Virtual Fitting Room',
       company: 'Personal Project',
       year: '2026',
-      description: 'A sketch-based exploration of virtual fashion fitting. Instead of focusing on realism or AI accuracy, this project explores how hand-drawn fashion sketches could be translated into an interactive, minimal digital experience.',
-      tags: ['Fashion Tech', 'UX Design', 'Prototyping', 'MVP'],
-      impact: 'Proof of concept for sketch-driven apparel interaction',
+      description: 'Exploring how fashion becomes interactive. This experiment translates hand-drawn sketches into a digital fitting experience—focusing on interaction design over photorealism, and playfulness over precision.',
+      tags: ['Concept Design', 'Prototyping', 'Visual Exploration'],
+      impact: 'Proof of concept for sketch-driven fashion interaction',
       image: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/ntm2ri4r_Screenshot%202026-04-08%20at%205.31.54%E2%80%AFAM.png',
       video: 'https://customer-assets.emergentagent.com/job_portfolio-resume-28/artifacts/913ls062_Screen%20Recording%202026-04-08%20at%205.53.38%E2%80%AFAM.mov',
       slug: 'virtual-fitting-room'
@@ -165,7 +191,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="about">
+      <section id="about" className="about animate-on-scroll">
         <div className="about-content">
           <div className="about-label">ABOUT</div>
           
@@ -196,7 +222,7 @@ const Home = () => {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="work">
+      <section id="work" className="work animate-on-scroll">
         <div className="work-content">
           <div className="work-header">
             <div className="work-label">Featured Work</div>

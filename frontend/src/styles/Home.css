@@ -379,6 +379,7 @@
   padding: 6rem 3rem;
   transition: background 0.3s ease;
   cursor: pointer;
+  perspective: 1000px;
 }
 
 .case-study-card:nth-child(1) {
@@ -405,10 +406,11 @@
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
   transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-style: preserve-3d;
 }
 
 .case-study-card:hover .case-study-image {
-  transform: translateY(-15px) scale(1.02);
+  transform: translateY(-15px) scale(1.02) rotateX(2deg) rotateY(-2deg);
   box-shadow: 0 40px 100px rgba(230, 57, 70, 0.25);
 }
 
@@ -440,6 +442,15 @@
 
 .case-study-info {
   padding: 2rem 0;
+  transition: transform 0.6s ease;
+}
+
+.case-study-card:hover .case-study-info {
+  transform: translateX(10px);
+}
+
+.case-study-card:nth-child(even):hover .case-study-info {
+  transform: translateX(-10px);
 }
 
 .case-study-meta {
@@ -451,11 +462,16 @@
   letter-spacing: 0.1em;
   color: var(--text-secondary);
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.case-study-card:hover .case-study-meta {
+  color: var(--accent-primary);
 }
 
 .case-study-company,
 .case-study-year {
-  color: var(--text-secondary);
+  color: inherit;
 }
 
 .case-study-title {
@@ -467,6 +483,11 @@
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
   color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.case-study-card:hover .case-study-title {
+  color: var(--accent-primary);
 }
 
 .case-study-note {
@@ -529,7 +550,7 @@
   font-size: 1.05rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: gap 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .case-study-card:hover .case-study-cta {
