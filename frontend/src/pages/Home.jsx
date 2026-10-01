@@ -343,7 +343,7 @@ const Home = () => {
           <div className="side-projects-header">
             <div className="side-projects-label">SIDE PROJECTS</div>
             <h3 className="side-projects-title">A few fashion WIPs on the side</h3>
-            <p className="side-projects-subtitle">Exploring ideas, trying things out, and learning along the way.</p>
+            <p className="side-projects-subtitle">Recently obsessed with Fashion Tech. Exploring ideas and learning along the way.</p>
           </div>
           
           <div className="side-projects-bento">
