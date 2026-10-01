@@ -67,7 +67,7 @@
   object-fit: cover;
 }
 
-/* Content - Two-Panel Layout */
+/* Content - Two-Panel Balanced Layout */
 .detail-content {
   padding: var(--space-lg) 0;
   background: var(--bg-primary);
@@ -77,10 +77,44 @@
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+/* Full width elements */
+.project-title,
+.project-note,
+.project-subtitle,
+.metrics-section,
+.step-label {
+  grid-column: 1 / -1;
+}
+
+/* Two column grid for sections */
+.content-two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: start;
+}
+
+/* Article content uses both columns */
+.article-content-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.article-content-compact .cs-section {
+  margin-bottom: 4rem;
+}
+
+/* Alternate sections between columns */
+.article-content-compact .cs-section:nth-child(odd) {
+  grid-column: 1;
+}
+
+.article-content-compact .cs-section:nth-child(even) {
+  grid-column: 2;
 }
 
 /* Typography - Kinfolk Editorial */

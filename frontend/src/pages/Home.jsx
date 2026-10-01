@@ -236,14 +236,35 @@ const Home = () => {
         )}
       </nav>
 
-      {/* Hero Section - Portfolio with Graphics */}
+      {/* Hero Section - Portfolio with 3D Tool Icons */}
       <section className="hero">
         <div className="hero-content-portfolio">
           <h1 className="portfolio-title">Portfolio</h1>
-          <div className="hero-decorative-elements">
-            <div className="decorative-circle"></div>
-            <div className="decorative-line"></div>
-            <div className="decorative-square"></div>
+          <div className="floating-tools">
+            <div className="tool-icon tool-claude" title="Claude AI">
+              <img src="https://asset.brandfetch.io/idZvYGVDMY/idBbbL2fk4.svg" alt="Claude" />
+            </div>
+            <div className="tool-icon tool-figma" title="Figma">
+              <img src="https://cdn.worldvectorlogo.com/logos/figma-icon.svg" alt="Figma" />
+            </div>
+            <div className="tool-icon tool-adobe" title="Adobe">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/200px-Adobe_Corporate_logo.svg.png" alt="Adobe" />
+            </div>
+            <div className="tool-icon tool-gpt" title="ChatGPT">
+              <img src="https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg" alt="ChatGPT" />
+            </div>
+            <div className="tool-icon tool-gemini" title="Google Gemini">
+              <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg" alt="Gemini" />
+            </div>
+            <div className="tool-icon tool-emergent" title="Emergent">
+              <img src="https://asset.brandfetch.io/idNXE2fk6B/idWRxMqH1g.png" alt="Emergent" />
+            </div>
+            <div className="tool-icon tool-pendo" title="Pendo">
+              <img src="https://asset.brandfetch.io/idw9zZu-7c/idMQgjSQkS.svg" alt="Pendo" />
+            </div>
+            <div className="tool-icon tool-mobbin" title="Mobbin">
+              <img src="https://asset.brandfetch.io/idGMYL7T3q/idO-3LgUiA.png" alt="Mobbin" />
+            </div>
           </div>
         </div>
         <div className="hero-scroll-indicator">
@@ -258,7 +279,7 @@ const Home = () => {
           <div className="about-left">
             <div className="about-label">ABOUT</div>
             
-            <h2 className="about-name">Paridhi Sinha</h2>
+            <h2 className="about-name" style={{ display: 'none' }}>Paridhi Sinha</h2>
             
             <h3 className="about-intro-title progressive-reveal">
               I design for systems, not just screens. Building experiences that solve the immediate problem while making what comes next easier.
@@ -282,6 +303,10 @@ const Home = () => {
                 alt="Paridhi Sinha"
                 className="about-profile-image"
               />
+            </div>
+            <div className="about-profile-info">
+              <h2 className="about-profile-name">Paridhi Sinha</h2>
+              <p className="about-profile-title">STAFF PRODUCT DESIGNER</p>
             </div>
           </div>
         </div>

@@ -61,8 +61,8 @@ const BCDRCaseStudy = () => {
             </div>
           </div>
 
-          {/* Article Content */}
-          <div className="article-content-compact">
+          {/* Article Content - Two Column Grid */}
+          <div className="article-content-compact content-two-column">
             
             {/* 01 Context & Problem Discovery */}
             <div className="cs-section">
