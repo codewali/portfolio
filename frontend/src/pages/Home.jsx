@@ -8,7 +8,7 @@ const Home = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
-  const isInitialMount = useRef(true);
+  const hasNavigated = useRef(false);
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'light';
   });
@@ -20,15 +20,11 @@ const Home = () => {
 
   // Handle scroll to section when returning from case study
   useEffect(() => {
-    // Check if this is a fresh page load (not a back navigation)
-    const isPageLoad = !sessionStorage.getItem('navigated');
+    // Only scroll if there's a state AND it's from a navigation (not initial page load)
+    // Check if the page was actually navigated to (vs hard reloaded)
+    const isDirectLoad = !document.referrer || document.referrer === window.location.href;
     
-    if (isPageLoad) {
-      sessionStorage.setItem('navigated', 'true');
-      return; // Don't scroll on fresh page load
-    }
-    
-    if (location.state?.scrollTo) {
+    if (!isDirectLoad && location.state?.scrollTo) {
       const element = document.getElementById(location.state.scrollTo);
       if (element) {
         setTimeout(() => {
