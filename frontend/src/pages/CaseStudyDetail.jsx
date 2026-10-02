@@ -86,7 +86,7 @@ const CaseStudyDetail = () => {
         <div className="content-container">
           
           <h1 className="project-title">Virtual Trial Room</h1>
-          <p className="project-subtitle">A sketch-based exploration of virtual fashion fitting.</p>
+          <p className="project-subtitle">A sketch-based exploration of virtual fashion fitting and style discovery.</p>
 
           {/* Article Content */}
           <div className="article-content-compact">
@@ -98,9 +98,9 @@ const CaseStudyDetail = () => {
               <p>Personal side project exploring whether simplified, illustrated apparel previews could offer a viable alternative to complex AR and 3D body-scanning solutions.</p>
 
               <h3 className="cs-subsection-headline">The problem</h3>
-              <p>Most virtual try-on solutions prioritize realism (3D body scans, AR overlays, AI-powered fit predictions). These are technically impressive but create high barriers: setup friction, uncanny valley, performance issues, accuracy anxiety.</p>
+              <p>Most virtual try-on solutions prioritize realism (3D body scans, AR overlays, AI-powered fit predictions). These are technically impressive but create high barriers: setup friction, uncanny valley effects, performance issues, accuracy anxiety.</p>
 
-              <p>What if we removed the pressure of accuracy altogether and focused on quick visual exploration instead?</p>
+              <p>What if we removed the pressure of accuracy altogether and focused on quick visual exploration of styles instead?</p>
             </div>
 
             {/* 02 My Role */}
@@ -115,10 +115,10 @@ const CaseStudyDetail = () => {
               <h2 className="cs-section-title">DESIGN APPROACH & KEY DECISIONS</h2>
               
               <h3 className="cs-subsection-headline">Embrace illustration over realism</h3>
-              <p>Lean into hand-drawn aesthetic. This sets different expectations (suggestive, not prescriptive). It's about general silhouette, not exact fit.</p>
+              <p>Lean into hand-drawn aesthetic. This sets different expectations (suggestive, not prescriptive). It's about general silhouette and style, not exact fit.</p>
 
               <h3 className="cs-subsection-headline">Minimize cognitive load</h3>
-              <p>Simplified body type selection (Straight, Curvy, Broad) instead of precise measurements. No camera access, no photo uploads, no complex setup. Tap and see results instantly.</p>
+              <p>Simplified body type selection (Straight, Curvy, Broad) instead of precise measurements. No camera access, no photo uploads, no complex setup required. Tap and see results instantly.</p>
 
               <h3 className="cs-subsection-headline">Why sketches over realistic renders?</h3>
               <p>Realistic virtual fitting sets expectations for accuracy that's nearly impossible to meet. Users get frustrated when the "perfect" 3D model doesn't match their body. Sketches are charming and suggestive. Users understand it's about visual composition, not precise sizing.</p>
@@ -127,7 +127,7 @@ const CaseStudyDetail = () => {
               <p>This is proof of concept testing the interaction pattern. Focused on making a small set work beautifully rather than building broad but shallow coverage.</p>
 
               <h3 className="cs-subsection-headline">Why no measurement input?</h3>
-              <p>Asking for measurements creates friction and raises accuracy expectations. Body type selection is intentionally approximate. Keeps the experience fast and low-pressure.</p>
+              <p>Asking for measurements creates friction and raises accuracy expectations. Body type selection is intentionally approximate and judgment-free. Keeps the experience fast and low-pressure.</p>
             </div>
 
             {/* 04 Solution */}
@@ -135,15 +135,15 @@ const CaseStudyDetail = () => {
               <h2 className="cs-section-title">SOLUTION</h2>
               
               <h3 className="cs-subsection-headline">Simple body selection</h3>
-              <p>Choose from three body types without requiring measurements or photos.</p>
+              <p>Choose from three body types without requiring measurements or photo uploads.</p>
 
               <h3 className="cs-subsection-headline">Apparel layering</h3>
               <p>Toggle through tops and bottoms to build outfits. Each item is a separate sketch layer that composites in real-time.</p>
 
               <h3 className="cs-subsection-headline">Instant visual preview</h3>
-              <p>Canvas updates immediately as selections change. No loading, no processing.</p>
+              <p>Canvas updates immediately as selections change. No loading states, no processing delays.</p>
 
-              <p>Built as React prototype with SVG-based sketch overlays for clean scaling and minimal dependencies.</p>
+              <p>Built as React prototype with SVG-based sketch overlays for clean scaling and minimal technical dependencies.</p>
             </div>
 
             {/* 05 Impact */}
@@ -164,11 +164,11 @@ const CaseStudyDetail = () => {
             <div className="cs-section cs-section-last">
               <h2 className="cs-section-title">WHAT I LEARNT</h2>
               
-              <p>The most technically impressive solution isn't always the most enjoyable to use. Sometimes simplicity and charm beat accuracy and complexity.</p>
+              <p>The most technically impressive solution isn't always the most enjoyable to use. Sometimes simplicity and charm beat accuracy and technical complexity.</p>
 
               <p>Constraints breed creativity. Limiting to black-and-white sketches forced focus on form and silhouette, which might be more valuable than color when evaluating how pieces work together.</p>
 
-              <p>Apparel tech doesn't have to chase photorealism to be useful. There's space for experiences that are delightful, fast, and "good enough" for quick exploration.</p>
+              <p>Apparel tech doesn't have to chase photorealism to be useful and engaging. There's space for experiences that are delightful, fast, and "good enough" for quick exploration.</p>
 
               <p>Design is about choices. Choosing to embrace constraints (sketches, limited options) rather than fight them can lead to surprisingly compelling experiences.</p>
             </div>

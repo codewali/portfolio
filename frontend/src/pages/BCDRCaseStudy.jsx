@@ -68,7 +68,7 @@ const BCDRCaseStudy = () => {
         <div className="content-container">
           
           <h1 className="project-title">Real-Time Decision Dashboard</h1>
-          <p className="project-subtitle">Turning passive reports into an active decision system. Leaders went from waiting days for static snapshots to monitoring live data and taking immediate action.</p>
+          <p className="project-subtitle">Turning passive reports into an active decision system. Leaders went from waiting days for static snapshots to monitoring live data and making immediate decisions.</p>
 
           {/* Metrics */}
           <div className="metrics-section metrics-compact">
@@ -90,7 +90,7 @@ const BCDRCaseStudy = () => {
             <div className="cs-section">
               <h2 className="cs-section-title">THE PROBLEM</h2>
               
-              <p>Leaders needed to assess organizational readiness quickly and report with confidence. But critical data existed scattered across spreadsheets, PDFs, and disconnected tools. The question they couldn't answer: "What's our biggest risk right now?" Manual reports took 2-3 days. By the time insights arrived, conditions had changed. This wasn't a data problem. It was a decision-making problem. Information existed, but not in a form that supported fast, confident action.</p>
+              <p>Leaders needed to assess organizational readiness quickly and report with confidence. But critical data existed scattered across spreadsheets, PDFs, and disconnected tools. The question they couldn't answer: "What's our biggest risk right now?" Manual reports took 2-3 days. By the time insights arrived, conditions had changed. This wasn't a data problem. It was a decision-making problem. Information existed, but not in a form that supported fast, confident decision-making.</p>
             </div>
 
             {/* 02 My Role */}
@@ -153,7 +153,7 @@ const BCDRCaseStudy = () => {
 
               <p>Success came from deeply understanding how BC/DR leaders make decisions under pressure, not from adding more features or data points.</p>
 
-              <p>In crisis-oriented domains, the best interface delivers the answer before the question is fully formed. Every pixel should reduce cognitive load.</p>
+              <p>In crisis-oriented domains, the best interface delivers the answer before the question is fully formed. Every pixel should reduce cognitive overhead.</p>
 
               <p><strong>If I did this again:</strong> I'd spend more time observing users during incident response scenarios. Edge cases and real-world constraints that emerge during crises would inform the design earlier.</p>
             </div>

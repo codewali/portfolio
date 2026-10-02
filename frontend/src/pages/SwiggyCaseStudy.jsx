@@ -81,7 +81,7 @@ const SwiggyCaseStudy = () => {
           
           <h1 className="project-title">Swiggy Group Ordering</h1>
           <p className="project-note">Done prior to Swiggy introducing group ordering</p>
-          <p className="project-subtitle">Making coordinated food ordering with friends seamless and delightful.</p>
+          <p className="project-subtitle">Making coordinated food ordering with friends seamless, social, and delightful.</p>
 
           {/* Article Content */}
           <div className="article-content-compact">
@@ -90,7 +90,7 @@ const SwiggyCaseStudy = () => {
             <div className="cs-section">
               <h2 className="cs-section-title">CONTEXT & PROBLEM DISCOVERY</h2>
               
-              <p>Personal project exploring how food delivery apps could better serve group ordering scenarios: office lunches, friend gatherings, family dinners. These situations happen frequently but existing ordering flows treat them as edge cases.</p>
+              <p>Personal project exploring how food delivery apps could better serve group ordering scenarios: office lunches, friend gatherings, family dinners. These situations happen frequently but existing ordering flows treat them as edge cases rather than core experiences.</p>
 
               <h3 className="cs-subsection-headline">The problem</h3>
               <p>Ordering food as a group feels like project management. Through interviews and observation, I identified recurring pain points: screenshot sharing chaos across WhatsApp, Slack, text threads; coordination confusion with no clarity on who ordered what or if the cart is final; payment hassle of chasing people for money after delivery; timing mismatches where some people are ready immediately while others are still browsing 30 minutes later; and complete lack of shared cart visibility.</p>
@@ -111,13 +111,13 @@ const SwiggyCaseStudy = () => {
               <p>Designed the experience to mirror how groups actually decide what to eat: initiation (one person suggests), browsing (everyone explores independently), selection (add items with clear ownership), review (see totals), checkout (each pays individually).</p>
 
               <h3 className="cs-subsection-headline">Individual payment, not group payment</h3>
-              <p>Initial designs had one person pay upfront and others reimburse later. This came up repeatedly in research as the biggest friction point. Built individual payment directly into checkout. Order is placed when everyone has paid. Eliminates post-delivery money collection entirely.</p>
+              <p>Initial designs had one person pay upfront and others reimburse later. This came up repeatedly in research as the biggest friction point. Built individual payment directly into checkout. Order is placed when everyone has paid, eliminating post-delivery money collection entirely.</p>
 
               <h3 className="cs-subsection-headline">Shareable links over in-app invites</h3>
-              <p>In-app invites would require everyone to have Swiggy installed and be logged in before joining. Web-based shareable links let anyone join, creating an account only at checkout if needed. Lower barrier to entry.</p>
+              <p>In-app invites would require everyone to have Swiggy installed and be logged in before joining. Web-based shareable links let anyone join without barriers, creating an account only at checkout if needed. Lower barrier to participation.</p>
 
               <h3 className="cs-subsection-headline">Individual item ownership</h3>
-              <p>Early concepts had a single shared cart where anyone could edit anything. User testing revealed this created anxiety ("What if someone accidentally deletes my order?"). Each person owns their items and can only edit their own. Clear visual attribution (color-coded names) shows who ordered what.</p>
+              <p>Early concepts had a single shared cart where anyone could edit anything. User testing revealed this created anxiety ("What if someone accidentally deletes my order?"). Each person owns their items and can only edit their own selections. Clear visual attribution (color-coded names) shows who ordered what.</p>
             </div>
 
             {/* 04 Solution */}
@@ -131,13 +131,13 @@ const SwiggyCaseStudy = () => {
               <p>All participants see shared cart updating in real-time. Clear attribution shows who ordered what. Status badges indicate who's browsing, who's ready, who's paid.</p>
 
               <h3 className="cs-subsection-headline">Individual item ownership</h3>
-              <p>Each person owns and controls only their items. No one can accidentally delete someone else's order.</p>
+              <p>Each person owns and controls only their items. No one can accidentally delete or modify someone else's order.</p>
 
               <h3 className="cs-subsection-headline">Automatic payment splitting</h3>
-              <p>At checkout, each person pays only for their items through integrated UPI or card. No manual calculations, no post-delivery collection.</p>
+              <p>At checkout, each person pays only for their items through integrated UPI or card payment. No manual calculations, no post-delivery collection hassles.</p>
 
               <h3 className="cs-subsection-headline">Group order tracking</h3>
-              <p>Everyone gets real-time updates on order status. No more "where's the food?" messages flooding the organizer.</p>
+              <p>Everyone gets real-time updates on order status throughout the delivery journey. No more "where's the food?" messages flooding the organizer.</p>
             </div>
 
             {/* 05 Impact */}
@@ -160,7 +160,7 @@ const SwiggyCaseStudy = () => {
             <div className="cs-section cs-section-last">
               <h2 className="cs-section-title">WHAT I LEARNT</h2>
               
-              <p>Group ordering isn't just about food. It's about coordination, trust, and shared experiences.</p>
+              <p>Group ordering isn't just about food. It's about coordination, trust, and creating shared experiences together.</p>
 
               <p>The design decisions that had the biggest impact weren't flashy. They were small details: real-time updates, individual payment, clear ownership indicators. These removed friction points users had learned to accept as "just how it is."</p>
 
