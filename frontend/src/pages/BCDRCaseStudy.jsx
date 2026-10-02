@@ -142,7 +142,6 @@ const BCDRCaseStudy = () => {
                 <li>24+ hours/month saved in manual report generation across the BC/DR team</li>
                 <li>Real-time insights vs. previous 2-3 day reporting lag</li>
                 <li>Faster incident response during actual disruptions</li>
-                <li>Improved plan coverage: 34% increase in documented recovery plans in first 6 months</li>
               </ul>
             </div>
 
